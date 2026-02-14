@@ -1,4 +1,4 @@
-// File: C:\Users\netcom\Desktop\indel-cap-full-page\app\layout.js
+// File: C:\Users\ajith\Desktop\Indel-Capital-full-page\app\layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

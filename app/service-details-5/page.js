@@ -35,10 +35,7 @@ export default function Home() {
                         <div className="col-lg-6 col-md-12 col-sm-12 image-column">
                             <div className="image_block_two">
                             <div className="image-box">
-                                <div className="image-shape">
-                                <div className="shape-3" style={{ backgroundImage: 'url(assets/images/shape/shape-11.png)' }}></div>
-                                <div className="shape-4" style={{ backgroundImage: 'url(assets/images/shape/shape-3.png)' }}></div>
-                                </div>
+            
                                 <figure className="image"><img src="assets/images/resource/about-8.jpg" alt="" /></figure>
                             </div>
                             </div>

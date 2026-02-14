@@ -7,8 +7,6 @@ export default function News() {
             
             <section className="news-section pt_120 pb_90">
                 <div className="pattern-layer">
-                    <div className="pattern-1" style={{ backgroundImage: "url(assets/images/shape/shape-6.png)" }}></div>
-                    <div className="pattern-2" style={{ backgroundImage: "url(assets/images/shape/shape-7.png)" }}></div>
                 </div>
                 <div className="auto-container">
                     <div className="sec-title centred mb_70">

@@ -5,12 +5,11 @@ export default function App() {
         <>        
             
             <section className="apps-section pt_120 pb_120">
-                <div className="light-icon" style={{ backgroundImage: 'url(assets/images/icons/icon-4.png)' }}></div>
+                <div className="light-icon" style={{ backgroundImage: 'url()' }}></div>
                 <div className="auto-container">
                     <div className="inner-container">
                     <div className="shape">
                         <div className="shape-1" style={{ backgroundImage: 'url(assets/images/shape/shape-4.png)' }}></div>
-                        <div className="shape-2" style={{ backgroundImage: 'url(assets/images/shape/shape-3.png)' }}></div>
                     </div>
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-12 col-sm-12 image-column">

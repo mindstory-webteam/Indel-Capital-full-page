@@ -5,16 +5,11 @@ export default function About() {
     return (
         <>
             <section className="about-section pt_120 pb_120">
-                <div className="pattern-layer rotate-me"></div>
                 <div className="auto-container">
                     <div className="row clearfix">
                     <div className="col-lg-6 col-md-12 col-sm-12 image-column">
                         <div className="image_block_three">
                         <div className="image-box pr_110 mr_20">
-                            <div className="image-shape">
-                            <div className="shape-1" style={{ backgroundImage: 'url(assets/images/shape/shape-3.png)' }}></div>
-                            <div className="shape-2" style={{ backgroundImage: 'url(assets/images/shape/shape-11.png)' }}></div>
-                            </div>
                             <figure className="image"><img src="assets/images/resource/about-1.jpg" alt="" /></figure>
                             <div className="rating-box">
                             <ul className="rating mb_5 clearfix">

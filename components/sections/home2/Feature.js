@@ -6,7 +6,6 @@ export default function Feature() {
     return (
         <>            
             <section className="feature-style-two">
-                <div className="pattern-layer" style={{ backgroundImage: "url(assets/images/shape/shape-3.png)" }}></div>
                 <div className="auto-container">
                     <div className="row clearfix">
                     <div className="col-lg-4 col-md-12 col-sm-12 title-column">

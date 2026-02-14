@@ -61,7 +61,6 @@ export default function service() {
                                 </div>
                                 <div className="col-lg-6 col-md-12 col-sm-12 image-column">
                                     <div className="image-box ml_40">
-                                    <div className="image-shape" style={{ backgroundImage: 'url(assets/images/shape/shape-3.png)' }}></div>
                                     <figure className="image">
                                         <img src="assets/images/service/service-1.jpg" alt="" />
                                     </figure>
@@ -93,7 +92,6 @@ export default function service() {
                                     </div>
                                     <div className="col-lg-6 col-md-12 col-sm-12 image-column">
                                         <div className="image-box ml_40">
-                                        <div className="image-shape" style={{ backgroundImage: 'url(assets/images/shape/shape-3.png)' }}></div>
                                         <figure className="image">
                                             <img src="assets/images/service/service-2.jpg" alt="" />
                                         </figure>
@@ -125,7 +123,6 @@ export default function service() {
                                     </div>
                                 <div className="col-lg-6 col-md-12 col-sm-12 image-column">
                                     <div className="image-box ml_40">
-                                    <div className="image-shape" style={{ backgroundImage: 'url(assets/images/shape/shape-3.png)' }}></div>
                                     <figure className="image">
                                         <img src="assets/images/service/service-3.jpg" alt="" />
                                     </figure>
@@ -155,7 +152,6 @@ export default function service() {
                                     </div>
                                     <div className="col-lg-6 col-md-12 col-sm-12 image-column">
                                         <div className="image-box ml_40">
-                                        <div className="image-shape" style={{ backgroundImage: 'url(assets/images/shape/shape-3.png)' }}></div>
                                         <figure className="image">
                                             <img src="assets/images/service/service-4.jpg" alt="" />
                                         </figure>

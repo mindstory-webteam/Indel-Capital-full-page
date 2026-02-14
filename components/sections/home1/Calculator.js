@@ -2,10 +2,8 @@ export default function Calculator() {
     return (
         <>  
             <section className="calculator-section pt_120 pb_120">
-                <div className="light-icon float-bob-y" style={{ backgroundImage: 'url(assets/images/icons/icon-1.png)' }}></div>
                 <div className="auto-container">
                     <div className="inner-container">
-                    <div className="shape" style={{ backgroundImage: 'url(assets/images/shape/shape-3.png)' }}></div>
                     <div className="row clearfix">
                         <div className="col-lg-6 col-md-12 col-sm-12 content-column">
                         <div className="content_block_two">

@@ -7,8 +7,6 @@ export default function Card() {
            
             <section className="card-section centred pt_120 pb_90">
                 <div className="pattern-layer">
-                    <div className="pattern-1 rotate-me"></div>
-                    <div className="pattern-2" style={{ backgroundImage: "url(assets/images/shape/shape-3.png)" }}></div>
                 </div>
                 <div className="auto-container">
                     <div className="sec-title mb_70">

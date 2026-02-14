@@ -5,10 +5,6 @@ export default function Footer1() {
         <>            
             <footer className="main-footer">
                 <div className="widget-section">
-                    <div className="pattern-layer">
-                    <div className="pattern-1" style={{ backgroundImage: 'url(assets/images/shape/shape-8.png)' }}></div>
-                    <div className="pattern-2" style={{ backgroundImage: 'url(assets/images/shape/shape-9.png)' }}></div>
-                    </div>
                     <div className="auto-container">
                     <div className="row clearfix">
                         <div className="col-lg-3 col-md-6 col-sm-12 footer-column">

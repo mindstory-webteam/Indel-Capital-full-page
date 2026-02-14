@@ -57,10 +57,7 @@ export default function Home() {
                             <div className="col-lg-6 col-md-12 col-sm-12 image-column">
                                 <div className="image_block_three">
                                 <div className="image-box pl_80">
-                                    <div className="image-shape">
-                                    <div className="shape-1" style={{ backgroundImage: 'url(assets/images/shape/shape-3.png)' }}></div>
-                                    <div className="shape-2" style={{ backgroundImage: 'url(assets/images/shape/shape-11.png)' }}></div>
-                                    </div>
+                        
                                     <figure className="image">
                                     <img src="assets/images/team/team-9.jpg" alt="" />
                                     </figure>
@@ -83,7 +80,6 @@ export default function Home() {
                     {/* App-section */}
                     <section className="apps-section alternat-2 pt_120 pb_120">
                         <div className="pattern-layer">
-                            <div className="pattern-1" style={{ backgroundImage: 'url(assets/images/shape/shape-3.png)' }}></div>
                             <div className="pattern-2" style={{ backgroundImage: 'url(assets/images/shape/shape-16.png)' }}></div>
                         </div>
                         <div className="image-layer">

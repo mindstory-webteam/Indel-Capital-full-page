@@ -31,10 +31,6 @@ export default function About() {
                     <div className="col-lg-6 col-md-12 col-sm-12 image-column">
                         <div className="image_block_two">
                         <div className="image-box">
-                            <div className="image-shape">
-                            <div className="shape-1" style={{ backgroundImage: "url(assets/images/shape/shape-11.png)" }}></div>
-                            <div className="shape-2" style={{ backgroundImage: "url(assets/images/shape/shape-11.png)" }}></div>
-                            </div>
                             <div className="row clearfix">
                             <div className="col-lg-6 col-md-6 col-sm-12 single-column">
                                 <div className="image-inner">
