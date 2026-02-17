@@ -82,7 +82,7 @@ export default function Footer1() {
                 </div>
                 <div className="footer-bottom centred">
                     <div className="auto-container">
-                        <div className="copyright"><p>Copyright 2023 by <Link href="/">Indel Capital</Link>. All Right Reserved.</p></div>
+                        <div className="copyright"><p>Copyright 2026 by <Link href="/">Indel Capital</Link>. All Right Reserved.</p></div>
                     </div>
                 </div>
             </footer>
