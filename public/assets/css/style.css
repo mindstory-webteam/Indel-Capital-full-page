@@ -742,7 +742,7 @@ img {
   position: relative;
   width: 100%;
   background: #212226;
-  padding: 16px 0px;
+  padding: 10px 0px;
 }
 
 .header-top .top-inner{
@@ -2183,6 +2183,7 @@ button.ltr {
 
   .header-style-two.main-header .outer-box .logo-box .logo{
     max-width: 150px;
+    padding-left: 20px;
   }
 
   .header-top .links-list li{

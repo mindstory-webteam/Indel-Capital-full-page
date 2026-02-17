@@ -30,8 +30,8 @@ export default function Home() {
                 {/* <Calculator /> */}
                 {/* <Video /> */}
                 {/* <Funfacts /> */}
-                <App />
-                {/* <Testimonial /> */}
+                {/* <App /> */}
+                <Testimonial />
                 {/* <News /> */}
                 <Subscribe />
             </Layout>

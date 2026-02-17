@@ -1,6 +1,8 @@
 'use client'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+// Import the data from your assets file
+import { testimonialSliderOneData } from '@/public/assets/assest.js'
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
@@ -25,138 +27,38 @@ const swiperOptions = {
     },
 
     breakpoints: {
-        320: {
-            slidesPerView: 1,
-            // spaceBetween: 30,
-        },
-        575: {
-            slidesPerView: 1,
-            // spaceBetween: 30,
-        },
-        767: {
-            slidesPerView: 2,
-            // spaceBetween: 30,
-        },
-        991: {
-            slidesPerView: 3,
-            // spaceBetween: 30,
-        },
-        1199: {
-            slidesPerView: 3,
-            // spaceBetween: 30,
-        },
-        1350: {
-            slidesPerView: 3,
-            // spaceBetween: 30,
-        },
+        320: { slidesPerView: 1 },
+        575: { slidesPerView: 1 },
+        767: { slidesPerView: 2 },
+        991: { slidesPerView: 3 },
+        1199: { slidesPerView: 3 },
+        1350: { slidesPerView: 3 },
     }
 }
+
 export default function TestimonialSlider1() {
     return (
         <>
             <Swiper {...swiperOptions} className="theme_carousel owl-theme">
-                <SwiperSlide className="slide">
-                    <div className="testimonial-block-one">
-                        <div className="inner-box">
-                            <figure className="thumb-box"><img src="assets/images/resource/testimonial-1.png" alt="" /></figure>
-                            <h4>Sandra Bullock</h4>
-                            <span className="designation">Manager</span>
-                            <ul className="rating mb_6 clearfix">
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            </ul>
-                            <p>“Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque etiam nis quis at arcu nunc neque ac integer sit lobortis diam semper nulla duis in blandit.”</p>
+                {testimonialSliderOneData.map((item) => (
+                    <SwiperSlide className="slide" key={item.id}>
+                        <div className="testimonial-block-one">
+                            <div className="inner-box">
+                                <figure className="thumb-box">
+                                    <img src={item.image} alt={item.name} />
+                                </figure>
+                                <h4>{item.name}</h4>
+                                <span className="designation">{item.designation}</span>
+                                <ul className="rating mb_6 clearfix">
+                                    {[...Array(item.rating)].map((_, i) => (
+                                        <li key={i}><i className="icon-26"></i></li>
+                                    ))}
+                                </ul>
+                                <p>{item.text}</p>
+                            </div>
                         </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className="slide">
-                    <div className="testimonial-block-one">
-                        <div className="inner-box">
-                            <figure className="thumb-box"><img src="assets/images/resource/testimonial-2.png" alt="" /></figure>
-                            <h4>Julien Anthor</h4>
-                            <span className="designation">Manager</span>
-                            <ul className="rating mb_6 clearfix">
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            </ul>
-                            <p>“Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque etiam nis quis at arcu nunc neque ac integer sit lobortis diam semper nulla duis in blandit.”</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className="slide">
-                    <div className="testimonial-block-one">
-                        <div className="inner-box">
-                            <figure className="thumb-box"><img src="assets/images/resource/testimonial-3.png" alt="" /></figure>
-                            <h4>Rolier Demonil</h4>
-                            <span className="designation">Manager</span>
-                            <ul className="rating mb_6 clearfix">
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            </ul>
-                            <p>“Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque etiam nis quis at arcu nunc neque ac integer sit lobortis diam semper nulla duis in blandit.”</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className="slide">
-                    <div className="testimonial-block-one">
-                        <div className="inner-box">
-                            <figure className="thumb-box"><img src="assets/images/resource/testimonial-1.png" alt="" /></figure>
-                            <h4>Sandra Bullock</h4>
-                            <span className="designation">Manager</span>
-                            <ul className="rating mb_6 clearfix">
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            </ul>
-                            <p>“Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque etiam nis quis at arcu nunc neque ac integer sit lobortis diam semper nulla duis in blandit.”</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className="slide">
-                    <div className="testimonial-block-one">
-                        <div className="inner-box">
-                            <figure className="thumb-box"><img src="assets/images/resource/testimonial-2.png" alt="" /></figure>
-                            <h4>Julien Anthor</h4>
-                            <span className="designation">Manager</span>
-                            <ul className="rating mb_6 clearfix">
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            </ul>
-                            <p>“Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque etiam nis quis at arcu nunc neque ac integer sit lobortis diam semper nulla duis in blandit.”</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className="slide">
-                    <div className="testimonial-block-one">
-                        <div className="inner-box">
-                            <figure className="thumb-box"><img src="assets/images/resource/testimonial-3.png" alt="" /></figure>
-                            <h4>Rolier Demonil</h4>
-                            <span className="designation">Manager</span>
-                            <ul className="rating mb_6 clearfix">
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            <li><i className="icon-26"></i></li>
-                            </ul>
-                            <p>“Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque etiam nis quis at arcu nunc neque ac integer sit lobortis diam semper nulla duis in blandit.”</p>
-                        </div>
-                    </div>
-                </SwiperSlide>
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </>
     )
