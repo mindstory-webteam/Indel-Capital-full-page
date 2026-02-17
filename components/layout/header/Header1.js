@@ -35,7 +35,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                     <div className="outer-box">
                         <div className="logo-box">
                         <div className="shape"></div>
-                        <figure className="logo"><Link href="/"><img style={{width:"120px", height:"50px", marginLeft:"35px"}}  src="assets/images/indel-capital-logo.png" alt="" /></Link></figure>
+                        <figure className="logo"><Link href="/"><img style={{width:"120px", height:"50px", marginLeft:"35px" }}  src="assets/images/indel-capital-logo.png" alt="" /></Link></figure>
                         </div>
                         <div className="menu-area">
                         {/* Mobile Navigation Toggler */}

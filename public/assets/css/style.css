@@ -817,17 +817,19 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 15vh;
+  height: 10vh;
 }
 
 .main-header .outer-box .logo-box{
   position: relative;
-  padding: 61px 90px 58px 0px;
-  margin-top: -60px;
+  margin-top: -50px;
+  padding-top: 40px;
+  padding-bottom:35px;
   width: 255px;
   background: var(--theme-color);
   z-index: 1;
 }
+
 
 .main-header .outer-box .logo-box .shape{
   position: absolute;
@@ -838,6 +840,7 @@ img {
   background: var(--theme-color);
   clip-path: polygon(100% 0%, 0% 50%, 100% 100%, 0 100%, 0 50%, 0 0);
 }
+
 
 .main-header .outer-box .logo-box:after{
   position: absolute;
@@ -1209,8 +1212,8 @@ img {
 
 .main-header .sticky-header .outer-box .logo-box{
   margin-top: 0px;
-  padding-top: 21px;
-  padding-bottom: 21px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 
@@ -1502,6 +1505,7 @@ div#mCSB_1_container{
 .main-header .outer-box{
   position: relative;
 }
+
 
 .owl-dots-none .owl-dots,
 .owl-nav-none .owl-nav{
@@ -2056,7 +2060,7 @@ button.ltr {
 
   .main-header .outer-box .logo-box{
     margin-top: 0px;
-    padding: 31px 30px !important;
+    padding: 11.5px 24px !important;
   }
 
   .main-header .outer-box .logo-box:before,
@@ -2183,7 +2187,6 @@ button.ltr {
 
   .header-style-two.main-header .outer-box .logo-box .logo{
     max-width: 150px;
-    padding-left: 20px;
   }
 
   .header-top .links-list li{
