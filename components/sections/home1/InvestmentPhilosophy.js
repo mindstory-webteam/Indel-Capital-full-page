@@ -41,10 +41,7 @@ export default function InvestmentPhilosophy() {
                                                 <figure className="image mb_30">
                                                     <img src={data.images.img1} alt="About" />
                                                 </figure>
-                                                <div className="experience-box">
-                                                    <h2>{data.experience.years}<span>Years</span></h2>
-                                                    <h5>{data.experience.text}</h5>
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                         <div className="col-lg-6 col-md-6 col-sm-12 single-column">

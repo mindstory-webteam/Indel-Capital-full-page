@@ -14,9 +14,8 @@ export default function Menu() {
 
             <ul className="navigation clearfix">
                 
-                <li className="dropdown"><Link href="/">Who We Are</Link>
+                <li className="dropdown"><Link href="/index-2">Who We Are</Link>
                     <ul>
-                        <li><Link href="/">Home Page One</Link></li>
                         <li><Link href="/index-2">Home Page Two</Link></li>
                         <li><Link href="/index-3">Home Page Three</Link></li>
                         <li><Link href="/index-onepage">OnePage Home</Link></li>

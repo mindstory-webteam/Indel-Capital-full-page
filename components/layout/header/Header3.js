@@ -7,7 +7,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
         <>
             <header className={`main-header header-style-one ${scroll ? "fixed-header" : ""}`}>
                 {/* Header Top */}
-                {/* <div className="header-top">
+                <div className="header-top">
                     <div className="large-container">
                         <div className="top-inner">
                         <ul className="links-list clearfix">
@@ -28,12 +28,15 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                         </ul>
                         </div>
                     </div>
-                </div> */}
+                </div>
                 {/* Header lower */}
                 <div className="header-lower">
                     <div className="large-container">
                     <div className="outer-box">
-                        <figure className="logo"  ><Link href="/"><img style={{width:"120px", height:"50px"}} src="assets/images/indel-capital-logo-blue.png" alt=""  /></Link></figure>
+                        <div className="logo-box">
+                        <div className="shape"></div>
+                        <figure className="logo"><Link href="/"><img style={{width:"120px", height:"50px", marginLeft:"35px" }}  src="assets/images/indel-capital-logo.png" alt="" /></Link></figure>
+                        </div>
                         <div className="menu-area">
                         {/* Mobile Navigation Toggler */}
                         <div className="mobile-nav-toggler" onClick={handleMobileMenu}>
@@ -59,7 +62,10 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                 <div className={`sticky-header ${scroll ? "animated slideInDown" : ""}`}>
                     <div className="large-container">
                         <div className="outer-box">
-                            <figure className="logo"><Link href="/"><img style={{width:"120px", height:"50px"}} src="assets/images/indel-capital-logo-blue.png" alt="" /></Link></figure>
+                        <div className="logo-box">
+                            <div className="shape"></div>
+                            <figure className="logo"><Link href="/"><img style={{width:"120px", height:"50px" , marginLeft:"35px" }}  src="assets/images/indel-capital-logo.png" alt="" /></Link></figure>
+                        </div>
                         <div className="menu-area">
                             <nav className="main-menu clearfix">
                                 <div className="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
