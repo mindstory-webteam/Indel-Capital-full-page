@@ -3,7 +3,7 @@
 
 .service-section{
   position: relative;
-  background: #F6F6F6;
+  background: #fff;
 }
 
 .service-block-one .inner-box{
@@ -159,7 +159,7 @@
 
 .service-style-two{
   position: relative;
-  background: #FAFAFA;
+  background: #fff;
 }
 
 .service-style-two:before{

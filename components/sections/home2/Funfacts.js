@@ -16,7 +16,7 @@ export default function Funfacts() {
                             <div className="count-outer count-box">
                             <CounterUp end={50} /><span>k+</span>
                             </div>
-                            <p>Happy Clients</p>
+                            <p>Assets under management</p>
                         </div>
                         </div>
                     </div>

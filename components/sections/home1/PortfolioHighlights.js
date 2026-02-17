@@ -3,7 +3,7 @@ import Link from "next/link"
 import { useState } from "react"
 
 
-export default function Pricing() {
+export default function PortfolioHighlights() {
     const [activeIndex, setActiveIndex] = useState(1)
     const handleOnClick = (index) => {
         setActiveIndex(index)
@@ -11,17 +11,17 @@ export default function Pricing() {
     return (
         <>            
             <section className="service-section pt_120 pb_90">
-                <div className="bg-layer" style={{ backgroundImage: 'url(assets/images/background/service-bg.jpg)' }}></div>
+                {/* <div className="bg-layer" style={{ backgroundImage: 'url(assets/images/background/service-bg.jpg)' }}></div> */}
                 <div className="auto-container">
                     <div className="sec-title centred mb_60">
-                    <h6>Our Services</h6>
+                    <h6>Portfolio Highlights</h6>
                     <h2>Online Banking at Your <br />Fingertips</h2>
                     </div>
                     <div className="row clearfix">
                         <div className="col-lg-3 col-md-6 col-sm-12 service-block">
                                     <div className="service-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                                     <div className="inner-box">
-                                        <div className="shape"></div>
+                                        {/* <div className="shape"></div> */}
                                         <div className="icon-box"><i className="icon-12"></i></div>
                                         <h4><Link href="/service-details">Digital Banking</Link></h4>
                                         <ul className="list-item clearfix">
@@ -35,7 +35,7 @@ export default function Pricing() {
                         <div className="col-lg-3 col-md-6 col-sm-12 service-block">
                             <div className="service-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
                             <div className="inner-box">
-                                <div className="shape"></div>
+                                {/* <div className="shape"></div> */}
                                 <div className="icon-box"><i className="icon-13"></i></div>
                                 <h4><Link href="/service-details-2">Mobile & Web Banking</Link></h4>
                                 <ul className="list-item clearfix">
@@ -49,7 +49,7 @@ export default function Pricing() {
                         <div className="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div className="service-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div className="inner-box">
-                                <div className="shape"></div>
+                                {/* <div className="shape"></div> */}
                                 <div className="icon-box"><i className="icon-14"></i></div>
                                 <h4><Link href="/service-details-3">Insurance Policies</Link></h4>
                                 <ul className="list-item clearfix">
@@ -63,7 +63,7 @@ export default function Pricing() {
                         <div className="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div className="service-block-one wow fadeInUp animated" data-wow-delay="900ms" data-wow-duration="1500ms">
                             <div className="inner-box">
-                                <div className="shape"></div>
+                                {/* <div className="shape"></div> */}
                                 <div className="icon-box"><i className="icon-15"></i></div>
                                 <h4><Link href="/service-details-4">Home & Property Loan</Link></h4>
                                 <ul className="list-item clearfix">
@@ -77,7 +77,7 @@ export default function Pricing() {
                         <div className="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div className="service-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div className="inner-box">
-                                <div className="shape"></div>
+                                {/* <div className="shape"></div> */}
                                 <div className="icon-box"><i className="icon-16"></i></div>
                                 <h4><Link href="/service-details-5">All Bank Account</Link></h4>
                                 <ul className="list-item clearfix">
@@ -91,7 +91,7 @@ export default function Pricing() {
                         <div className="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div className="service-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
                             <div className="inner-box">
-                                <div className="shape"></div>
+                                {/* <div className="shape"></div> */}
                                 <div className="icon-box"><i className="icon-17"></i></div>
                                 <h4><Link href="/service-details-6">borrowing accounts</Link></h4>
                                 <ul className="list-item clearfix">
@@ -105,7 +105,7 @@ export default function Pricing() {
                         <div className="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div className="service-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div className="inner-box">
-                                <div className="shape"></div>
+                                {/* <div className="shape"></div> */}
                                 <div className="icon-box"><i className="icon-18"></i></div>
                                 <h4><Link href="/service-details-7">Private Banking</Link></h4>
                                 <ul className="list-item clearfix">
@@ -119,7 +119,7 @@ export default function Pricing() {
                         <div className="col-lg-3 col-md-6 col-sm-12 service-block">
                         <div className="service-block-one wow fadeInUp animated" data-wow-delay="900ms" data-wow-duration="1500ms">
                             <div className="inner-box">
-                                <div className="shape"></div>
+                                {/* <div className="shape"></div> */}
                                 <div className="icon-box"><i className="icon-19"></i></div>
                                 <h4><Link href="/service-details-8">Fixed term accounts</Link></h4>
                                 <ul className="list-item clearfix">

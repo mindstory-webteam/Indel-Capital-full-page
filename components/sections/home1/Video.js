@@ -8,9 +8,9 @@ export default function About() {
                 <div className="auto-container">
                     <div className="inner-box">
                     <h2>The 3rd Generation Private Commercial Bank</h2>
-                    <div className="video-btn">
+                    {/* <div className="video-btn">
                         <VideoPopup />
-                    </div>
+                    </div> */}
                     </div>
                 </div>
             </section>

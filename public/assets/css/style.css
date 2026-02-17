@@ -139,7 +139,7 @@ body {
 }
 
 .large-container{
-  max-width: 1710px;
+  max-width: 1500px;
   height: 15vh;
   padding: 0px 15px;
   margin: 0 auto;
@@ -918,7 +918,7 @@ img {
   position:relative;
   display:block;
   text-align:center;
-  font-size:18px;
+  font-size:15px;
   line-height:26px;
   padding-top: 37px;
   padding-bottom: 37px;

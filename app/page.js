@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout"
 import About from "@/components/sections/home1/About"
 import Banner from "@/components/sections/home1/Banner"
-import Services from "@/components/sections/home1/Services"
+import Services from "@/components/sections/home1/PortfolioHighlights"
 import Calculator from "@/components/sections/home1/Calculator"
 import Video from "@/components/sections/home1/Video"
 import Features from "@/components/sections/home1/Features"
@@ -10,6 +10,10 @@ import App from "@/components/sections/home1/App"
 import News from "@/components/sections/home1/News"
 import Testimonial from "@/components/sections/home1/Testimonial"
 import Subscribe from "@/components/sections/home1/Subscribe"
+import WhatWeDo from "@/components/sections/home1/WhatWeDo"
+import InvestmentPhilosophy from "@/components/sections/home1/InvestmentPhilosophy"
+import FeaturedStrategies from "@/components/sections/home1/FeaturedStrategies"
+import Insights from "@/components/sections/home1/Insights"
 export default function Home() {
 
     return (
@@ -18,13 +22,17 @@ export default function Home() {
                 <Banner />
                 <Features />
                 <About />
+                <WhatWeDo/>
+                <InvestmentPhilosophy/>
+                <FeaturedStrategies/>
                 <Services />
-                <Calculator />
-                <Video />
-                <Funfacts />
+                <Insights/>
+                {/* <Calculator /> */}
+                {/* <Video /> */}
+                {/* <Funfacts /> */}
                 <App />
-                <Testimonial />
-                <News />
+                {/* <Testimonial /> */}
+                {/* <News /> */}
                 <Subscribe />
             </Layout>
         </>

@@ -99,7 +99,7 @@ export default function Home() {
                                     <div className="count-outer count-box">
                                         <CounterUp end={50} /><span>k+</span>
                                     </div>
-                                    <p>Happy Clients</p>
+                                    <p>Assets under management</p>
                                 </div>
                             </div>
                             <div className="funfact-block-one">
@@ -108,7 +108,7 @@ export default function Home() {
                                     <div className="count-outer count-box">
                                         <CounterUp end={90} /><span>Bn</span>
                                     </div>
-                                    <p>Total Transactions</p>
+                                    <p>Portfolio companies</p>
                                 </div>
                             </div>
                             <div className="funfact-block-one">
@@ -117,7 +117,7 @@ export default function Home() {
                                     <div className="count-outer count-box">
                                         <CounterUp end={40} /><span>+</span>
                                     </div>
-                                    <p>Branches in USA</p>
+                                    <p>Years of track record</p>
                                 </div>
                             </div>
                         </div>
@@ -131,9 +131,9 @@ export default function Home() {
                     <div className="auto-container">
                         <div className="inner-box">
                         <h2>The 3rd Generation Private Commercial Bank</h2>
-                            <div className="video-btn">
+                            {/* <div className="video-btn">
                                 <VideoPopup />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </section>

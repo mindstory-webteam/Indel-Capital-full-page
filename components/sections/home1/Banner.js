@@ -34,7 +34,7 @@ export default function Banner() {
     return (
         <>
             <section className="banner-section p_relative">
-                <Swiper {...swiperOptions} className="banner-carousel">                    
+                <Swiper {...swiperOptions} className="banner-carousel">
                     <SwiperSlide className="slide-item p_relative">
                         <div className="bg-layer" style={{ backgroundImage: 'url(assets/images/banner/banner-1.jpg)' }}></div>
                         <div className="pattern-layer">
@@ -46,8 +46,7 @@ export default function Banner() {
                                 <p>This statistic is based on our average personal current account online opening time from the last 12 months.</p>
                                 <div className="btn-box">
                                     <Link href="/" className="theme-btn btn-one">
-                                    Explore Strategies
-                                    </Link>
+                                        Explore Strategies                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -63,8 +62,8 @@ export default function Banner() {
                                 <p>This statistic is based on our average personal current account online opening time from the last 12 months.</p>
                                 <div className="btn-box">
                                     <Link href="/" className="theme-btn btn-one">
-                                    Explore Strategies
-                                    </Link>
+                                        Explore Strategies                             
+                                               </Link>
                                 </div>
                             </div>
                         </div>
@@ -80,8 +79,7 @@ export default function Banner() {
                                 <p>This statistic is based on our average personal current account online opening time from the last 12 months.</p>
                                 <div className="btn-box">
                                     <Link href="/" className="theme-btn btn-one">
-                                    Explore Strategies
-                                    </Link>
+                                        Explore Strategies                                    </Link>
                                 </div>
                             </div>
                         </div>

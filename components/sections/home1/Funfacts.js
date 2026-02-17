@@ -14,7 +14,7 @@ export default function Funfacts() {
                                 <div className="count-outer count-box">
                                     <CounterUp end={50} /><span>k+</span>
                                 </div>
-                                <p>Happy Clients</p>
+                                <p>Assets under management</p>
                             </div>
                         </div>
                         <div className="funfact-block-one">
@@ -23,7 +23,7 @@ export default function Funfacts() {
                                 <div className="count-outer count-box">
                                     <CounterUp end={90} /><span>Bn</span>
                                 </div>
-                                <p>Total Transactions</p>
+                                <p>Portfolio companies</p>
                             </div>
                         </div>
                         <div className="funfact-block-one">
@@ -32,7 +32,7 @@ export default function Funfacts() {
                                 <div className="count-outer count-box">
                                     <CounterUp end={40} /><span>+</span>
                                 </div>
-                                <p>Branches in USA</p>
+                                <p>Years of track record</p>
                             </div>
                         </div>
                     </div>

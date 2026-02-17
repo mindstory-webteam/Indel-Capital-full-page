@@ -14,7 +14,7 @@ export default function Menu() {
 
             <ul className="navigation clearfix">
                 
-                <li className="dropdown"><Link href="/">About</Link>
+                <li className="dropdown"><Link href="/">Who We Are</Link>
                     <ul>
                         <li><Link href="/">Home Page One</Link></li>
                         <li><Link href="/index-2">Home Page Two</Link></li>
@@ -22,10 +22,8 @@ export default function Menu() {
                         <li><Link href="/index-onepage">OnePage Home</Link></li>
                     </ul>
                 </li>
-                
-                <li><Link href="/about/">Investment Approach</Link></li>
-                
-                <li className="dropdown"><Link href="/">Products</Link>
+                      
+                <li className="dropdown"><Link href="/">Investment Approach</Link>
                     <ul>
                         <li><Link href="/service">Our Services 1</Link></li>
                         <li><Link href="/service-2">Our Services 2</Link></li>
@@ -40,7 +38,7 @@ export default function Menu() {
                     </ul>
                 </li>
                 
-                <li className="dropdown"><Link href="/">Investments</Link>
+                <li className="dropdown"><Link href="/">Portfolio</Link>
                     <ul>
                         <li className="dropdown"><Link href="/">dropdownn</Link>
                             <ul>
@@ -68,9 +66,10 @@ export default function Menu() {
                         <li><Link href="/error">404 Error</Link></li>
                     </ul>
                 </li>
-                <li><Link href="/activities">Insights</Link></li>
-                <li><Link href="#">Investor Relations</Link></li>
-                <li><Link href="#">Contact</Link></li>
+                <li><Link href="/activities">Insights & Research</Link></li>
+                <li><Link href="#">Investor Resources</Link></li>
+                <li><Link href="#">Contact Us</Link></li>
+                <li><Link href="#">Careers</Link></li>
 
             </ul>
         </>
