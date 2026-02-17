@@ -140,7 +140,6 @@ body {
 
 .large-container{
   max-width: 1500px;
-  height: 15vh;
   padding: 0px 15px;
   margin: 0 auto;
 }
@@ -823,8 +822,9 @@ img {
 
 .main-header .outer-box .logo-box{
   position: relative;
-  padding: 61px 90px 61px 0px;
+  padding: 61px 90px 58px 0px;
   margin-top: -60px;
+  width: 255px;
   background: var(--theme-color);
   z-index: 1;
 }
@@ -898,7 +898,7 @@ img {
   position:inherit;
   float:left;
   z-index:2;
-  margin: 0px 20px;
+  margin: 0px 10px;
   -webkit-transition:all 300ms ease;
   -moz-transition:all 300ms ease;
   -ms-transition:all 300ms ease;
