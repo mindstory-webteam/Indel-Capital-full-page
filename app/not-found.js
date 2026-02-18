@@ -6,7 +6,7 @@ export default function Error404() {
 
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="404 Error">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="404 Error" breadcrumbImg='assets/images/background/page-title.jpg' >
             <section className="error-section centred pt_120 pb_120">
                 <div className="auto-container">
                     <div className="inner-box">

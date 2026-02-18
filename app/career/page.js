@@ -7,7 +7,7 @@ export default function Home() {
 
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Career Page">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Career Page" breadcrumbImg='assets/images/background/page-title.jpg'>
                 <div>
                      {/* About-section  */}
                     <section className="about-style-two pt_120 pb_120">
