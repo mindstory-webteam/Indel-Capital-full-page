@@ -17,12 +17,12 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                         </ul>
                         <ul className="info-list clearfix">
                             <li>
-                            <i className="icon-1"></i>
+                            {/* <i className="icon-1"></i> */}
                             <Link href="mailto:info@example.com">info@example.com</Link>
                             </li>
                             <li>
-                            <i className="icon-2"></i>
-                            Find Nearest Branch
+                            {/* <i className="icon-2"></i> */}
+                            +91 3284794327
                             </li>
                         </ul>
                         </div>
