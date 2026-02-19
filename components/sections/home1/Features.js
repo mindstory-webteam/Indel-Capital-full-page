@@ -86,7 +86,7 @@ export default function Features() {
 
                 .feature-item:hover .icon-box-new {
                     background: var(--theme-color, #eb2525);
-                    transform: rotateY(180deg);
+                    transform: rotateY(360deg);
                 }
 
                 .feature-item:hover .icon-box-new i {
