@@ -28,36 +28,38 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                         </div>
                     </div>
                 </div>
-                {/* Header lower */}
                 <div className="header-lower">
-                    <div className="large-container">
-                    <div className="outer-box">
-                        <div className="logo-box">
-                        <div className="shape"></div>
-                        <figure className="logo"><Link href="/"><img style={{width:"120px", height:"50px", marginLeft:"35px" }}  src="assets/images/indel-capital-logo.png" alt="" /></Link></figure>
-                        </div>
-                        <div className="menu-area">
-                        {/* Mobile Navigation Toggler */}
-                        <div className="mobile-nav-toggler" onClick={handleMobileMenu}>
-                            <i className="icon-bar"></i>
-                            <i className="icon-bar"></i>
-                            <i className="icon-bar"></i>
-                        </div>
-                        <nav className="main-menu navbar-expand-md navbar-light clearfix">
-                            <div className="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                                <Menu />
-                            </div>
-                        </nav>
-                        {/* <div className="menu-right-content ml_70">
-                            <Link href="/" className="theme-btn btn-two mr_20">Login</Link>
-                            <Link href="/contact" className="theme-btn btn-one">Open Account</Link>
-                        </div> */}
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                {/*End Header lower*/}
-                {/* Sticky Header  */}
+  <div className="large-container">
+    <div className="outer-box">
+      <div className="logo-box">
+        <div className="shape"></div>
+        <figure className="logo">
+          <Link href="/">
+            <img 
+              style={{ width: "100px", height: "auto" }} 
+              src="assets/images/indel-capital-logo.png" 
+              alt="Indel Capital" 
+            />
+          </Link>
+        </figure>
+      </div>
+      
+      <div className="menu-area">
+        <div className="mobile-nav-toggler" onClick={handleMobileMenu}>
+          <i className="icon-bar"></i>
+          <i className="icon-bar"></i>
+          <i className="icon-bar"></i>
+        </div>
+        <nav className="main-menu navbar-expand-md navbar-light clearfix">
+          <div className="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+            <Menu />
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
                 <div className={`sticky-header ${scroll ? "animated slideInDown" : ""}`}>
                     <div className="large-container">
                         <div className="outer-box">

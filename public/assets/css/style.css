@@ -402,7 +402,7 @@ img {
   display: inline-block;
   max-width: 100%;
   height: auto;
-  padding-left: 20px;
+  padding-left: 0px;
   transition-delay: .1s;
   transition-timing-function: ease-in-out;
   transition-duration: .7s;
@@ -817,41 +817,48 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 10vh;
+  height: 70px;
 }
 
-.main-header .outer-box .logo-box{
+.main-header .outer-box .logo-box {
   position: relative;
-  margin-top: -50px;
-  padding-top: 40px;
-  padding-bottom:35px;
-  width: 255px;
+  margin-top: -30px; 
+  padding: 15px 0px; 
+  width: 190px;
+  height: 100px;
   background: var(--theme-color);
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-.main-header .outer-box .logo-box .shape{
+.main-header .outer-box .logo-box .shape {
   position: absolute;
-  top: 0px;
-  right: -24px;
-  width: 24px;
+  top: 0;
+  right: -30px; 
+  width: 30px;
   height: 100%;
   background: var(--theme-color);
-  clip-path: polygon(100% 0%, 0% 50%, 100% 100%, 0 100%, 0 50%, 0 0);
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
 }
 
+.main-header .outer-box .logo-box .logo img {
+  width: 100px !important;
+  height: auto !important;
+  margin-left: 0 !important; 
+}
 
-.main-header .outer-box .logo-box:after{
+.main-header .outer-box .logo-box:after {
   position: absolute;
   content: '';
   top: 0px;
-  right: -32px;
+  right: -32px; 
   width: 32px;
   height: 100%;
   background: var(--theme-color);
-  clip-path: polygon(100% 0%, 25% 50%, 100% 100%, 0 100%, 0 50%, 0 0);
-  opacity: 0.15;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  opacity: 1; 
 }
 
 .main-header .outer-box .logo-box:before{
@@ -1212,8 +1219,8 @@ img {
 
 .main-header .sticky-header .outer-box .logo-box{
   margin-top: 0px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-bottom: 12px;
+  height: 70px;
 }
 
 
@@ -2061,6 +2068,7 @@ button.ltr {
   .main-header .outer-box .logo-box{
     margin-top: 0px;
     padding: 11.5px 24px !important;
+    height: 70px;
   }
 
   .main-header .outer-box .logo-box:before,
