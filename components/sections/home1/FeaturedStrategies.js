@@ -6,8 +6,7 @@ export default function FeaturedStrategies() {
 
     return (
         <>
-            {/* testimonial-style-two */}
-            <section className="testimonial-style-two pt_120 pb_90">
+            <section className="testimonial-style-two  pb_90">
                 <div className="auto-container">
                     <div className="row clearfix">
                         <div className="col-lg-4 col-md-12 col-sm-12 title-column">
@@ -25,7 +24,6 @@ export default function FeaturedStrategies() {
                     </div>
                 </div>
             </section>
-            {/* testimonial-style-two end */}
         </>
     )
 }

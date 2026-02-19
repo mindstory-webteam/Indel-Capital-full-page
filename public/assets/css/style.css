@@ -750,7 +750,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 350px;
+  padding-left: 215px;
 }
 
 .header-top .links-list{
@@ -2069,6 +2069,7 @@ button.ltr {
     margin-top: 0px;
     padding: 11.5px 24px !important;
     height: 70px;
+    margin-left: -17px;
   }
 
   .main-header .outer-box .logo-box:before,
