@@ -9,7 +9,7 @@ export default function InvestmentPhilosophy() {
         <>
             <style jsx>{`
                 .philosophy-section {
-                    padding: 60px 0;
+                    padding: 80px 0;
                     background-color: #ffffff;
                 }
                 
@@ -30,7 +30,7 @@ export default function InvestmentPhilosophy() {
                 }
                 
                 .main-title {
-                    font-size: 38px;
+                    font-size: clamp(28px, 5vw, 38px);
                     line-height: 1.2;
                     font-weight: 800;
                     color: #17479d;
@@ -107,26 +107,22 @@ export default function InvestmentPhilosophy() {
                     transition: transform 0.5s ease;
                 }
 
-                .main-img-wrapper:hover img {
-                    transform: scale(1.05);
-                }
-
-                @media (max-width: 991px) {
-                    .image-holder { margin-top: 40px; }
-                    .main-title { font-size: 32px; }
-                    .container-compact { padding: 0 20px; }
-                }
-                
-                /* Grid system for the internal row */
                 .flex-row {
                     display: flex;
                     flex-wrap: wrap;
                     align-items: center;
                     gap: 40px;
                 }
+
                 .flex-col {
                     flex: 1;
                     min-width: 300px;
+                }
+
+                @media (max-width: 991px) {
+                    .philosophy-section { padding: 40px 0; }
+                    .image-holder { margin-top: 20px; }
+                    .flex-row { gap: 30px; }
                 }
             `}</style>
 
@@ -152,10 +148,7 @@ export default function InvestmentPhilosophy() {
                         <div className="flex-col">
                             <div className="image-holder">
                                 <div className="main-img-wrapper">
-                                    <img 
-                                        src={data.images.img1} 
-                                        alt="Investment Philosophy" 
-                                    />
+                                    <img src={data.images.img1} alt="Investment Philosophy" />
                                 </div>
                             </div>
                         </div>
