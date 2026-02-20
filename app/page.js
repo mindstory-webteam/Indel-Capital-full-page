@@ -23,11 +23,11 @@ export default function Home() {
                 <Features />
                 <About />
                 <WhatWeDo/>
-                <InvestmentPhilosophy/>
-                <PortfolioHighlights />
                 <FeaturedStrategies/>
-                <Testimonial />
+                <PortfolioHighlights />
+                <InvestmentPhilosophy/>
                 <Insights/>
+                <Testimonial />
                 {/* <Calculator /> */}
                 {/* <Video /> */}
                 {/* <Funfacts /> */}

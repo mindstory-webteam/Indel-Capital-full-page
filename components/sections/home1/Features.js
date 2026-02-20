@@ -52,19 +52,13 @@ export default function Features() {
                 .feature-item {
                     padding: 50px 35px;
                     border-right: 1px solid #f0f0f0;
-                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
                     position: relative;
                     background: #fff;
+                    /* Hover translation and background change removed */
                 }
 
                 .feature-item:last-child {
                     border-right: none;
-                }
-
-                .feature-item:hover {
-                    background: #17479d;
-                    transform: translateY(-5px);
-                    z-index: 2;
                 }
 
                 .icon-box-new {
@@ -81,12 +75,14 @@ export default function Features() {
 
                 .icon-box-new i {
                     font-size: 35px;
-                    color: var(--theme-color, #eb2525);
+                    color: #eb2525;
+                    transition: color 0.4s ease;
                 }
 
+                /* Only the icon box turns red on card hover */
                 .feature-item:hover .icon-box-new {
-                    background: var(--theme-color, #eb2525);
-                    transform: rotateY(360deg);
+                    background: #eb2525;
+                    /* Rotation removed */
                 }
 
                 .feature-item:hover .icon-box-new i {
@@ -99,20 +95,15 @@ export default function Features() {
                     line-height: 1.4;
                     margin-bottom: 15px;
                     color: #1a1a1a;
-                    transition: color 0.4s ease;
                 }
 
                 .feature-item p {
                     font-size: 15px;
                     color: #666;
-                    transition: color 0.4s ease;
                     margin-bottom: 0;
                 }
 
-                .feature-item:hover h4, 
-                .feature-item:hover p {
-                    color: #fff;
-                }
+                /* Text color changes on hover removed to keep cards static */
 
                 @media (max-width: 1200px) {
                     .features-grid { grid-template-columns: repeat(2, 1fr); }

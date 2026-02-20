@@ -1,6 +1,8 @@
 "use client";
 
+import CounterUp from "@/components/elements/CounterUp";
 import React, { useEffect, useRef, useState } from "react";
+// Import your CounterUp component here
 
 const portfolioData = [
   {
@@ -10,9 +12,9 @@ const portfolioData = [
     ticker: "NXF",
     description: "Institutional-grade liquidity protocols streamlining cross-border settlement through blockchain efficiency.",
     status: "Series B",
-    irr: "24.3%",
+    irr: 24.3, // Changed to numbers for the counter
     vintage: "2022",
-    multiple: "2.1×",
+    multiple: 2.1, // Changed to numbers
   },
   {
     id: 2,
@@ -21,9 +23,9 @@ const portfolioData = [
     ticker: "GGS",
     description: "Smart-grid solutions utilizing proprietary AI to reduce urban energy waste by 40%.",
     status: "Seed",
-    irr: "38.7%",
+    irr: 38.7,
     vintage: "2023",
-    multiple: "1.6×",
+    multiple: 1.6,
   },
   {
     id: 3,
@@ -32,9 +34,9 @@ const portfolioData = [
     ticker: "BPL",
     description: "AI-driven diagnostic platforms for early-stage oncology detection and pathology automation.",
     status: "Series A",
-    irr: "31.2%",
+    irr: 31.2,
     vintage: "2023",
-    multiple: "1.9×",
+    multiple: 1.9,
   },
 ];
 
@@ -112,11 +114,15 @@ export default function PortfolioHighlights() {
                   <div className="ph-metrics">
                     <div className="ph-metric">
                       <span className="ph-label">Target IRR</span>
-                      <span className="ph-value">{item.irr}</span>
+                      <span className="ph-value">
+                        <CounterUp end={item.irr} />%
+                      </span>
                     </div>
                     <div className="ph-metric">
                       <span className="ph-label">MOIC</span>
-                      <span className="ph-value">{item.multiple}</span>
+                      <span className="ph-value">
+                        <CounterUp end={item.multiple} />×
+                      </span>
                     </div>
                     <div className="ph-metric">
                       <span className="ph-label">Vintage</span>

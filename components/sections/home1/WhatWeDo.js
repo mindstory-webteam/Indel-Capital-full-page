@@ -6,19 +6,25 @@ import { WhatWeDoData } from '@/public/assets/assest.js'
 export default function WhatWeDo() {
     const [activeIndex, setActiveIndex] = useState(1)
 
+    // Handler for hover on desktop
+    const handleMouseEnter = (id) => {
+        if (window.innerWidth > 991) {
+            setActiveIndex(id)
+        }
+    }
+
     return (
         <>
             <style jsx>{`
                 .wwd-container {
                     padding: 80px 0;
                     background: #fafafa;
-                    /* Removed fixed height 900px */
                 }
 
                 .accordion-wrapper {
                     display: flex;
                     flex-direction: row;
-                    height: 600px; /* Kept for desktop */
+                    height: 600px;
                     gap: 15px;
                     transition: all 0.5s ease;
                 }
@@ -33,6 +39,7 @@ export default function WhatWeDo() {
                     background: #000;
                 }
 
+                /* This ensures the expansion is smooth */
                 .panel.active { flex: 5; }
 
                 .panel-image {
@@ -123,7 +130,7 @@ export default function WhatWeDo() {
                     .wwd-container { padding: 60px 0; }
                     .accordion-wrapper {
                         flex-direction: column;
-                        height: auto; /* IMPORTANT: Allows section to grow */
+                        height: auto;
                         gap: 20px;
                     }
 
@@ -183,7 +190,8 @@ export default function WhatWeDo() {
                             <div 
                                 key={item.id}
                                 className={`panel ${activeIndex === item.id ? 'active' : ''}`}
-                                onClick={() => setActiveIndex(item.id)}
+                                onClick={() => setActiveIndex(item.id)} // Keep click for mobile
+                                onMouseEnter={() => handleMouseEnter(item.id)} // Add hover for desktop
                             >
                                 <img src={item.image} className="panel-image" alt={item.title} />
                                 <div className="panel-content">
