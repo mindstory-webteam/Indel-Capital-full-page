@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const portfolioData = [
   {
@@ -46,8 +46,15 @@ const statusColors = {
 
 export default function PortfolioHighlights() {
   const cardsRef = useRef([]);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -59,13 +66,16 @@ export default function PortfolioHighlights() {
       },
       { threshold: 0.1 }
     );
+
     cardsRef.current.forEach((el) => el && observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, [mounted]);
+
+  if (!mounted) return null;
 
   return (
     <>
-      <style>{css}</style>
+      <style dangerouslySetInnerHTML={{ __html: css }} />
       <section className="ph-section">
         <div className="ph-container">
           <div className="ph-header">
@@ -119,9 +129,9 @@ export default function PortfolioHighlights() {
           </div>
 
           <div className="ph-footer">
-            <a className="theme-btn btn-one">
+            <button className="theme-btn btn-one">
               Explore Full Portfolio
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -134,8 +144,7 @@ const css = `
     padding-bottom: 60px;
     padding-top: 60px;
     background-color: #fafafa;
-    /* Updated to match About section body font stack */
-    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Outfit', sans-serif;
     color: #212226;
   }
 
@@ -161,7 +170,6 @@ const css = `
   }
 
   .ph-title {
-    /* Matches .main-t from About section */
     font-size: clamp(32px, 5vw, 42px);
     font-weight: 800;
     color: #212226;
@@ -245,7 +253,6 @@ const css = `
   }
 
   .ph-company {
-    /* Matches feature-item h3 or main-t style */
     font-size: 24px;
     font-weight: 800;
     margin: 0 0 16px;
@@ -283,10 +290,6 @@ const css = `
     font-size: 18px;
     font-weight: 800;
     color: #17479e;
-  }
-
-  .ph-footer {
-    text-align: center;
   }
 
   @media (max-width: 1024px) {

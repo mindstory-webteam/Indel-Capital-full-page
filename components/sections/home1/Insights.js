@@ -32,15 +32,15 @@ export default function Insights() {
                                             <h3>
                                                 <Link href={post.link}>{post.title}</Link>
                                             </h3>
-                                            <ul className="post-info mb_25">
-                                                <li>
+                                            {/* <ul className="post-info mb_25"> */}
+                                                {/* <li>
                                                     <i className="icon-28"></i>
                                                     <Link href={post.link}>{post.author}</Link>
-                                                </li>
-                                                <li>
+                                                </li> */}
+                                                {/* <li>
                                                     <i className="icon-29"></i>{post.commentCount}
                                                 </li>
-                                            </ul>
+                                            </ul> */}
                                             <div className="btn-box">
                                                 <Link href={post.link} className="theme-btn btn-three">
                                                     Read More
