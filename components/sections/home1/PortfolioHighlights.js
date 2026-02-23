@@ -45,7 +45,6 @@ const statusColors = {
   "Series B": { text: "#17479e", bg: "rgba(23,71,158,0.12)" },
 };
 
-// Custom Counter Component using Framer Motion
 function MotionCounter({ value, decimals = 1 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -60,9 +59,8 @@ function MotionCounter({ value, decimals = 1 }) {
     }
   }, [isInView, value, count]);
 
-  // Subscribe to the motion value to update state
   useEffect(() => {
-    return rounded.onChange((v) => setDisplay(v));
+    return rounded.on("change", (v) => setDisplay(v));
   }, [rounded]);
 
   return <span ref={ref}>{display}</span>;
@@ -80,7 +78,7 @@ export default function PortfolioHighlights() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: css }} />
-      <section className="ph-section">
+      <section className="ph-section" style={{ position: 'relative' }}>
         <div className="ph-container">
           <div className="ph-header">
             <span className="ph-eyebrow">Strategic Investments</span>

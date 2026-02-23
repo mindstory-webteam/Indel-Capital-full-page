@@ -1,44 +1,123 @@
+'use client'
 import Link from "next/link";
-
-
 export default function Whoweare() {
     return (
-        <> 
-            <section className="about-style-two pt_120 pb_120">
-                    <div className="auto-container">
-                        <div className="row align-items-center">
+        <>
+            <style jsx>{`
+                .about-section {
+                    position: relative;
+                    background: #ffffff;
+                }
+
+                .clipped-image {
+                    clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+                    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.05);
+                    transition: all 0.5s ease-in-out;
+                }
+
+                .clipped-image:hover {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+                }
+
+                .image-wrapper {
+                    position: relative;
+                    padding: 20px;
+                }
+
+                .image-wrapper::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2317479d' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                    z-index: 0;
+                    transform: translate(-30px, 30px);
+                }
+
+                .list-style-custom {
+                    list-style: none;
+                    padding: 0;
+                }
+
+                .list-style-custom li {
+                    position: relative;
+                    padding-left: 35px;
+                    margin-bottom: 15px;
+                    font-weight: 500;
+                    color: #333;
+                }
+
+                .list-style-custom li span {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: #eb2525;
+                    font-size: 18px;
+                }
+            `}</style>
+
+            <section className="about-style-two pt_120 pb_120 about-section">
+                <div className="auto-container">
+                    <div className="row align-items-center">
                         <div className="col-lg-6 col-md-12 col-sm-12 content-column">
                             <div className="content_block_three">
-                            <div className="content-box mr_110">
-                                <div className="sec-title mb_20">
-                                <h6>Who we are</h6>
-                                <h2>The Finance Guide on All Stage of Life.</h2>
+                                <div className="content-box mr_110">
+                                    <div className="sec-title mb_20">
+                                        <h6 style={{ color: '#eb2525', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700', marginBottom: '10px' }}>
+                                            Who we are
+                                        </h6>
+                                        <h2 style={{ color: '#17479d', fontSize: '42px', fontWeight: '800', lineHeight: '1.2' }}>
+                                            Your Trusted Finance Partner for Every Stage of Life.
+                                        </h2>
+                                    </div>
+                                    <div className="text-box mb_40">
+                                        <p style={{ fontSize: '17px', color: '#555', marginBottom: '20px' }}>
+                                            At Indel Capital, we help individuals and businesses make confident financial decisions with clarity and expert guidance. Our approach is built on trust, transparency, and a deep understanding of what people need to grow and secure their futures.
+                                        </p>
+                                        <p style={{ fontSize: '16px', color: '#777', fontStyle: 'italic', borderLeft: '3px solid #eb2525', paddingLeft: '15px', marginBottom: '30px' }}>
+                                            We simplify finance through personalised solutions, smart insights, and continuous support — ensuring you’re always moving in the right direction.
+                                        </p>
+                                        <ul className="list-style-custom">
+                                            <li><span>✔️</span> Unlocking better financial possibilities</li>
+                                            <li><span>✔️</span> Fast, practical solutions for everyday financial needs</li>
+                                            <li><span>✔️</span> A growing community built on trust and progress</li>
+                                        </ul>
+                                    </div>
+                                    <div className="btn-box">
+                                        <Link href="/about" className="theme-btn btn-one">Discover More</Link>
+                                    </div>
                                 </div>
-                                <div className="text-box mb_40">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis, suscipit you take action against fraud. See it the Security Center for and Mobile and Online Banking.</p>
-                                <ul className="list-style-one clearfix">
-                                    <li>Improving all types of opportunities</li>
-                                    <li>Quick solutions for daily problems</li>
-                                    <li>Community that grows larger</li>
-                                </ul>
-                                </div>
-                                <div className="btn-box">
-                                <Link href="/about" className="theme-btn btn-one">Discover More</Link>
-                                </div>
-                            </div>
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-12 col-sm-12 image-column">
                             <div className="image_block_two">
-                            <div className="image-box">
-                              
-                                <figure className="image"><img src="assets/images/resource/about-6.jpg" alt="" /></figure>
+                                <div className="image-wrapper">
+                                    <figure className="image clipped-image">
+                                        <img src="assets/images/resource/about-6.jpg" alt="About Indel Capital" style={{ width: '100%', display: 'block' }} />
+                                    </figure>
+                                    
+                                    <div style={{
+                                        position: 'absolute',
+                                        bottom: '40px',
+                                        right: '-20px',
+                                        backgroundColor: '#fff',
+                                        padding: '25px',
+                                        color: 'white',
+                                        borderRadius: '5px',
+                                        zIndex: '2',
+                                        boxShadow: '10px 10px 30px rgba(0,0,0,0.1)'
+                                    }}>
+                                        <h3 style={{ color: 'white', margin: 0, fontSize: '30px', color:"red" }}>35+</h3>
+                                        <p style={{ margin: 0, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Years Experience</p>
+                                    </div>
+                                </div>
                             </div>
-                            </div>
-                        </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
         </>
-    )
+    );
 }

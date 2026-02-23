@@ -20,6 +20,11 @@ export default function WhatWeDo() {
                     background: #ffffff;
                 }
 
+                .sec-title {
+                    text-align: center;
+                    margin-bottom: 50px;
+                }
+
                 .accordion-wrapper {
                     display: flex;
                     flex-direction: row;
@@ -31,7 +36,7 @@ export default function WhatWeDo() {
                 .panel {
                     position: relative;
                     flex: 1; 
-                    overflow: hidden; /* Crucial: Keeps content inside during shrink */
+                    overflow: hidden;
                     border-radius: 16px;
                     transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
                     cursor: pointer;
@@ -65,7 +70,6 @@ export default function WhatWeDo() {
                     padding: 35px;
                     color: white;
                     z-index: 2;
-                    /* Prevent content from shifting during flex change */
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
@@ -87,11 +91,12 @@ export default function WhatWeDo() {
                     letter-spacing: 1px;
                 }
 
+                /* MODIFIED: Title is now smaller when active/hovered */
                 .panel.active h3 {
                     transform: rotate(0);
                     position: relative;
                     bottom: 0; left: 0;
-                    font-size: 28px;
+                    font-size: 22px; /* Decreased from 28px to make it smaller on hover */
                     margin-bottom: 12px;
                     white-space: normal;
                     line-height: 1.2;
@@ -164,7 +169,7 @@ export default function WhatWeDo() {
                     .panel-image { position: relative; height: 220px; opacity: 1; }
                     .panel::after { display: none; }
                     .panel-content { position: relative; padding: 20px; color: #000; height: auto; }
-                    .panel h3 { position: relative; transform: rotate(0); bottom: 0; left: 0; color: #17479d; font-size: 22px; white-space: normal; }
+                    .panel h3 { position: relative; transform: rotate(0); bottom: 0; left: 0; color: #17479d; font-size: 20px; white-space: normal; }
                     .panel-details { display: none; height: auto; opacity: 1; visibility: visible; }
                     .panel.active .panel-details { display: block; }
                     .panel-details p { color: #555; }
@@ -174,7 +179,7 @@ export default function WhatWeDo() {
 
             <section className="wwd-container">
                 <div className="container">
-                    <div className="sec-title centred mb_60" style={{ textAlign: 'center', marginBottom: '50px' }}>
+                    <div className="sec-title">
                         <h6 style={{ color: '#eb2525', textTransform: 'uppercase', letterSpacing: '3px', fontWeight: '700', fontSize: '14px', marginBottom: '10px' }}>What we do</h6>
                         <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#17479d', letterSpacing: '-0.5px' }}>Strategic Investment Solutions</h2>
                     </div>

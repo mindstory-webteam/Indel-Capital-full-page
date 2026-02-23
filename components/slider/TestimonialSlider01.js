@@ -36,7 +36,7 @@ export default function TestimonialSlider1() {
         setMounted(true);
     }, []);
 
-    if (!mounted) return null; 
+    if (!mounted) return null;
 
     return (
         <>
@@ -53,8 +53,8 @@ export default function TestimonialSlider1() {
 
             <div className="slider-wrapper">
                 <Swiper {...swiperOptions} className="theme_carousel owl-theme">
-                    {testimonialSliderOneData.map((item) => (
-                        <SwiperSlide className="slide" key={item.id}>
+                    {testimonialSliderOneData.map((item, index) => (
+                        <SwiperSlide className="slide" key={`${item.id}-${index}`}>
                             <div className="testimonial-block-one">
                                 <div className="inner-box">
                                     <figure className="thumb-box">
@@ -64,7 +64,7 @@ export default function TestimonialSlider1() {
                                     <span className="designation">{item.designation}</span>
                                     <ul className="rating mb_6 clearfix">
                                         {[...Array(item.rating)].map((_, i) => (
-                                            <li key={`star-${item.id}-${i}`}><i className="icon-26"></i></li>
+                                            <li key={`star-${item.id}-${index}-${i}`}><i className="icon-26"></i></li>
                                         ))}
                                     </ul>
                                     <p>{item.text}</p>

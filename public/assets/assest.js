@@ -227,7 +227,7 @@ export const insightsData = {
 
 export const testimonialSliderOneData = [
     {
-        id: 1,
+        id: "t1",
         name: "Aravind Menon",
         designation: "Managing Director",
         image: "assets/images/resource/testimonial-1.png",
@@ -235,7 +235,7 @@ export const testimonialSliderOneData = [
         text: "“Indel Capital has been a dependable partner in our financial planning. Their structured approach and clear communication made every decision easier for us.”"
     },
     {
-        id: 2,
+        id: "t2",
         name: "Priya Nair",
         designation: "CFO",
         image: "assets/images/resource/testimonial-2.png",
@@ -243,7 +243,7 @@ export const testimonialSliderOneData = [
         text: "“The team provided tailored insights that genuinely helped us optimise our investments. We appreciate the transparency and consistent guidance.”"
     },
     {
-        id: 3,
+        id: "t3",
         name: "Rohit Shetty",
         designation: "Director",
         image: "assets/images/resource/testimonial-3.png",
@@ -251,7 +251,7 @@ export const testimonialSliderOneData = [
         text: "“Our experience with Indel has been smooth and professional. The timely updates and strategic recommendations added real value to our portfolio.”"
     },
     {
-        id: 1,
+        id: "t4",
         name: "Aravind Menon",
         designation: "Managing Director",
         image: "assets/images/resource/testimonial-1.png",
@@ -259,7 +259,7 @@ export const testimonialSliderOneData = [
         text: "“Indel Capital has been a dependable partner in our financial planning. Their structured approach and clear communication made every decision easier for us.”"
     },
     {
-        id: 2,
+        id: "t5",
         name: "Priya Nair",
         designation: "CFO",
         image: "assets/images/resource/testimonial-2.png",
@@ -267,7 +267,7 @@ export const testimonialSliderOneData = [
         text: "“The team provided tailored insights that genuinely helped us optimise our investments. We appreciate the transparency and consistent guidance.”"
     },
     {
-        id: 3,
+        id: "t6",
         name: "Rohit Shetty",
         designation: "Director",
         image: "assets/images/resource/testimonial-3.png",
