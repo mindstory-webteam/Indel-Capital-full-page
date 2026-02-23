@@ -228,50 +228,50 @@ export const insightsData = {
 export const testimonialSliderOneData = [
     {
         id: 1,
-        name: "Strategic LP Partner",
-        designation: "Institutional Investor",
+        name: "Aravind Menon",
+        designation: "Managing Director",
         image: "assets/images/resource/testimonial-1.png",
         rating: 5,
-        text: "“Indel Capital's disciplined approach to asset securitization and their deep understanding of the NBFC landscape in India have consistently delivered robust risk-adjusted returns for our portfolio.”"
+        text: "“Indel Capital has been a dependable partner in our financial planning. Their structured approach and clear communication made every decision easier for us.”"
     },
     {
         id: 2,
-        name: "Financial Director",
-        designation: "Associate Entity",
+        name: "Priya Nair",
+        designation: "CFO",
         image: "assets/images/resource/testimonial-2.png",
         rating: 5,
-        text: "“Their expertise in structured corporate lending and capital allocation has been pivotal in driving our expansion. The transparency and financial rigor they bring to every transaction are truly commendable.”"
+        text: "“The team provided tailored insights that genuinely helped us optimise our investments. We appreciate the transparency and consistent guidance.”"
     },
     {
         id: 3,
-        name: "Venture Partner",
-        designation: "Growth Capital Lead",
+        name: "Rohit Shetty",
+        designation: "Director",
         image: "assets/images/resource/testimonial-3.png",
         rating: 5,
-        text: "“Managing multi-sector SPVs requires a unique blend of market insight and operational discipline. Indel Capital excels in unlocking value within emerging markets and high-growth infrastructure sectors.”"
+        text: "“Our experience with Indel has been smooth and professional. The timely updates and strategic recommendations added real value to our portfolio.”"
     },
     {
-        id: 4,
-        name: "Compliance Head",
-        designation: "Banking Partner",
+        id: 1,
+        name: "Aravind Menon",
+        designation: "Managing Director",
         image: "assets/images/resource/testimonial-1.png",
         rating: 5,
-        text: "“Working with Indel Capital ensures a high level of confidence. Their commitment to governance and long-term value creation sets a benchmark in the Indian strategic investment space.”"
+        text: "“Indel Capital has been a dependable partner in our financial planning. Their structured approach and clear communication made every decision easier for us.”"
     },
     {
-        id: 5,
-        name: "Chief Investment Officer",
-        designation: "Strategic Asset Mgmt",
+        id: 2,
+        name: "Priya Nair",
+        designation: "CFO",
         image: "assets/images/resource/testimonial-2.png",
         rating: 5,
-        text: "“Their focus on marketable fixed-coupon securities and liquid planning provides the stability needed in volatile market conditions. A truly professional arm of the Indel Group.”"
+        text: "“The team provided tailored insights that genuinely helped us optimise our investments. We appreciate the transparency and consistent guidance.”"
     },
     {
-        id: 6,
-        name: "Senior Analyst",
-        designation: "Equity Research Firm",
+        id: 3,
+        name: "Rohit Shetty",
+        designation: "Director",
         image: "assets/images/resource/testimonial-3.png",
         rating: 5,
-        text: "“Indel Capital demonstrates a rare ability to balance aggressive growth in hospitality and automotive sectors with prudent risk assessment and long-term sustainability.”"
+        text: "“Our experience with Indel has been smooth and professional. The timely updates and strategic recommendations added real value to our portfolio.”"
     }
 ];

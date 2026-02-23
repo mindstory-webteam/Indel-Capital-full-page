@@ -68,7 +68,7 @@ export default function FeaturedStrategies() {
                                     <span className="indicator">ASSET-BACKED LENDING</span>
                                 </div>
                                 <div className="content-mid">
-                                    <h3 className="card-big-stat">
+                                    <h3 className="card-big-stat" style={{color:"white !important"}}>
                                         <Counter value={data.stats.security} />%
                                     </h3>
                                 </div>

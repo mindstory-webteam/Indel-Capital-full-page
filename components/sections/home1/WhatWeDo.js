@@ -97,13 +97,12 @@ export default function WhatWeDo() {
                     line-height: 1.2;
                 }
 
-                /* FIXED SECTION: Content handling during collapse */
                 .panel-details {
                     max-width: 520px;
                     opacity: 0;
                     visibility: hidden;
                     height: 0;
-                    overflow: hidden; /* Prevents text bleeding out bottom */
+                    overflow: hidden; 
                     transform: translateY(10px);
                     transition: opacity 0.3s ease, transform 0.3s ease, height 0.3s ease, visibility 0.3s;
                 }
@@ -114,14 +113,13 @@ export default function WhatWeDo() {
                     height: auto;
                     transform: translateY(0);
                     margin-top: 5px;
-                    /* Delay expansion slightly to wait for flex growth */
                     transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s, height 0.5s ease;
                 }
 
                 .panel-details p {
                     font-size: 15px;
                     line-height: 1.6;
-                    color: rgba(255,255,255,0.9);
+                    color: #b2a0a0;
                     margin-bottom: 20px;
                 }
 
@@ -139,7 +137,7 @@ export default function WhatWeDo() {
                     text-transform: uppercase;
                     letter-spacing: 1px;
                     font-weight: 500;
-                    color: #eb2525; 
+                    color: rgba(255,255,255,0.9); 
                 }
 
                 .btn-red {
