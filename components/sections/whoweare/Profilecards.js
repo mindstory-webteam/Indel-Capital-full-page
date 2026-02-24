@@ -3,7 +3,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 
 const teamMembers = [
-    { name: "Wade Warren",       role: "Founder",          img: "assets/images/team/team-1.jpg" },
+    { name: "Wade Warren",       role: "Founder",           img: "assets/images/team/team-1.jpg" },
     { name: "Guy Hawkins",       role: "Co-Founder",        img: "assets/images/team/team-2.jpg" },
     { name: "Bessie Cooper",     role: "Chairman",          img: "assets/images/team/team-3.jpg" },
     { name: "Devon Lane",        role: "Vice Chairman",     img: "assets/images/team/team-4.jpg" },
@@ -50,7 +50,7 @@ export default function Profilecards() {
                 .image-box {
                     position: relative;
                     overflow: hidden;
-                    aspect-ratio: 4/5; /* Keeps all headshots aligned perfectly */
+                    aspect-ratio: 4/5;
                 }
                 .image-box img {
                     width: 100%;
@@ -74,10 +74,6 @@ export default function Profilecards() {
                 .lower-content h3 a {
                     text-decoration: none;
                     color: inherit;
-                    transition: color 0.3s ease;
-                }
-                .lower-content h3 a:hover {
-                    color: #17479e;
                 }
                 .designation {
                     font-size: 13px;
@@ -85,6 +81,26 @@ export default function Profilecards() {
                     color: #ee3824;
                     text-transform: uppercase;
                     letter-spacing: 0.5px;
+                }
+
+                @media (max-width: 575px) {
+                    .lower-content {
+                        padding: 12px 5px; 
+                    }
+                    .lower-content h3 {
+                        font-size: 15px; 
+                    }
+                    .designation {
+                        font-size: 10px;
+                    }
+                    .row {
+                        margin-left: -5px; 
+                        margin-right: -5px;
+                    }
+                    .team-block {
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
                 }
             `}</style>
 
@@ -103,7 +119,7 @@ export default function Profilecards() {
 
                     <div className="row clearfix">
                         {teamMembers.map((member, index) => (
-                            <div key={index} className="col-lg-3 col-md-6 col-sm-12 team-block">
+                            <div key={index} className="col-lg-3 col-md-6 col-6 team-block">
                                 <motion.div
                                     className="team-block-one"
                                     custom={index}
