@@ -29,14 +29,14 @@ export default function ContactPage() {
     };
 
     return (
-        <Layout 
-            headerStyle={1} 
-            footerStyle={1} 
-            breadcrumbTitle="Get in Touch" 
+        <Layout
+            headerStyle={1}
+            footerStyle={1}
+            breadcrumbTitle="Get in Touch"
             breadcrumbImg={'assets/images/background/page-title.jpg'}
         >
             <div style={{
-                ...containerStyle, 
+                ...containerStyle,
                 padding: isMobile ? '0 1rem' : isTablet ? '0 3rem' : '0 6rem'
             }}>
                 <style jsx global>{`
@@ -45,11 +45,11 @@ export default function ContactPage() {
                         opacity: 1;
                     }
                 `}</style>
-                
-                <motion.section 
+
+                <motion.section
                     style={{
-                        ...heroSection, 
-                        flexDirection: (isMobile || isTablet) ? 'column' : 'row', 
+                        ...heroSection,
+                        flexDirection: (isMobile || isTablet) ? 'column' : 'row',
                         paddingTop: isMobile ? '40px' : '80px',
                         paddingBottom: '80px',
                         gap: '60px'
@@ -58,22 +58,19 @@ export default function ContactPage() {
                     animate="animate"
                 >
                     <motion.div style={{ flex: '1' }} variants={fadeInUp}>
-                        <div style={taglineRow}>
-                            <span style={taglineText}>START A PARTNERSHIP</span>
-                        </div>
+
                         <h1 style={{
-                            ...heroTitle, 
+                            ...heroTitle,
                             fontSize: isMobile ? '38px' : isTablet ? '60px' : 'clamp(50px, 6vw, 90px)',
                             lineHeight: 1.1
                         }}>
                             LET'S <br /> <span style={{ color: '#ee3824' }}>CONNECT.</span>
                         </h1>
-                        <p style={{...heroSub, fontSize: isMobile ? '16px' : '18px'}}>
-                            Engage with Indel Capital’s investment specialists. We typically respond to institutional inquiries within 2 business hours.
-                        </p>
+                        <p style={{ ...heroSub, fontSize: isMobile ? '16px' : '18px' }}>
+                            For inquiries or additional information regarding our investment strategies and structured solutions, please contact Indel Capital’s team.</p>
                     </motion.div>
 
-                    <motion.div 
+                    <motion.div
                         style={{
                             ...formWrapper,
                             flex: '1',
@@ -81,28 +78,28 @@ export default function ContactPage() {
                             padding: '40px',
                             borderRadius: '20px',
                             width: '100%'
-                        }} 
+                        }}
                         variants={fadeInUp}
                     >
-                        <h2 style={{...sectionHeading, fontSize: '24px', marginBottom: '30px'}}>Send a Message</h2>
-                        <form style={{...formGrid, gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '20px'}}>
+                        <h2 style={{ ...sectionHeading, fontSize: '24px', marginBottom: '30px' }}>Send a Message</h2>
+                        <form style={{ ...formGrid, gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '20px' }}>
                             <div style={inputGroup}>
                                 <label style={labelStyle}>Full Name</label>
-                                <input type="text" placeholder="Ajith k v" style={inputStyle} required />
+                                <input type="text" placeholder="Full Name" style={inputStyle} required />
                             </div>
                             <div style={inputGroup}>
-                                <label style={labelStyle}>Corporate Email</label>
-                                <input type="email" placeholder="ajith@company.com" style={inputStyle} required />
+                                <label style={labelStyle}>Email</label>
+                                <input type="email" placeholder="username@company.com" style={inputStyle} required />
                             </div>
                             <div style={{ ...inputGroup, gridColumn: isMobile ? 'auto' : 'span 2' }}>
                                 <label style={labelStyle}>Message</label>
                                 <textarea placeholder="Describe your inquiry..." style={textareaStyle} required></textarea>
                             </div>
-                            <motion.button 
+                            <motion.button
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="theme-btn btn-one" 
-                                style={{...submitBtn, width: isMobile ? '100%' : 'fit-content'}}
+                                className="theme-btn btn-one"
+                                style={{ ...submitBtn, width: isMobile ? '100%' : 'fit-content' }}
                             >
                                 Send Inquiry
                             </motion.button>
@@ -111,50 +108,52 @@ export default function ContactPage() {
                 </motion.section>
 
                 <section style={{
-                    ...splitSection, 
-                    gridTemplateColumns: (isMobile || isTablet) ? '1fr' : '0.8fr 1.2fr', 
+                    ...splitSection,
+                    gridTemplateColumns: (isMobile || isTablet) ? '1fr' : '0.8fr 1.2fr',
                     padding: isMobile ? '40px 0' : '80px 0',
                     borderTop: '1px solid #eee',
                     gap: '40px'
                 }}>
-                    <motion.div 
+                    <motion.div
                         style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
                     >
-                        <motion.div style={infoCard} variants={fadeInUp}>
-                            <span style={cardLabel}>Corporate Office</span>
-                            <div style={cardValue}>Indel Capital Tower, <br />Mumbai, MH 400001</div>
+
+                        <motion.div style={statBox} variants={fadeInUp}>
+                            <span style={statLabel}>BUSINESS FOCUS</span>
+                            <div style={{ ...statValue, fontSize: '18px' }}>Investments & Financial Services</div>
+                        </motion.div>
+
+                        <motion.div style={statBox} variants={fadeInUp}>
+                            <span style={statLabel}>CORE VALUES</span>
+                            <div style={{ ...statValue, fontSize: '18px' }}>Integrity, Transparency, Responsible Growth</div>
                         </motion.div>
 
                         <motion.div style={infoCard} variants={fadeInUp}>
-                            <span style={cardLabel}>Email Channels</span>
+                            <span style={cardLabel}>Corporate Office</span>
+                            <div style={cardValue}>Corporate office located at Indel House, Changampuzha Nagar, South Kalamassery, Ernakulam<br />Kerala 682033,</div>
+                        </motion.div>
+
+                        <motion.div style={infoCard} variants={fadeInUp}>
+                            <span style={cardLabel}>Email </span>
                             <div style={cardValue}>
-                                <Link href="mailto:invest@indelcapital.com" style={linkHover}>invest@indelcapital.com</Link><br/>
-                                <Link href="mailto:partners@indelcapital.com" style={linkHover}>partners@indelcapital.com</Link>
+                                <Link href="mailto:invest@indelcapital.com" style={linkHover}>your@domain.com</Link><br />
                             </div>
                         </motion.div>
 
                         <motion.div style={infoCard} variants={fadeInUp}>
-                            <span style={cardLabel}>Direct Line</span>
-                            <div style={cardValue}>+91 22 0000 0000 <br /> <small style={{opacity: 0.6}}>Mon-Fri, 9am - 6pm</small></div>
+                            <span style={cardLabel}>Phone</span>
+                            <div style={cardValue}>+91 90726 06615<br /> <small style={{ opacity: 0.6 }}>Mon - Sat, 10am - 6pm</small></div>
                         </motion.div>
 
-                        <motion.div style={statBox} variants={fadeInUp}>
-                            <span style={statLabel}>GLOBAL PRESENCE</span>
-                            <div style={{...statValue, fontSize: '18px'}}>Mumbai • Dubai • London</div>
-                        </motion.div>
 
-                        <motion.div style={statBox} variants={fadeInUp}>
-                            <span style={statLabel}>OUR COMMITMENT</span>
-                            <div style={{...statValue, fontSize: '18px'}}>Transparent Growth & Sustainable Capital</div>
-                        </motion.div>
                     </motion.div>
 
-                    <motion.div 
+                    <motion.div
                         style={{
-                            ...mapWrapper, 
+                            ...mapWrapper,
                             height: isMobile ? '300px' : '100%',
                             minHeight: '500px'
                         }}
@@ -163,8 +162,8 @@ export default function ContactPage() {
                         viewport={{ once: true }}
                     >
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160990422!2d72.74109995!3d19.08219785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                            style={iframeStyle}
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3928.676646751186!2d76.317418!3d10.043519!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080dcb2aa099af%3A0x2284420553f1c1b1!2sIndel%20Corporate%20Office!5e0!3m2!1sen!2sin!4v1771934308320!5m2!1sen!2sin" 
+                             style={iframeStyle}
                             allowFullScreen
                             loading="lazy"
                         />
@@ -200,18 +199,6 @@ const heroSub = {
     lineHeight: '1.6',
 };
 
-const taglineRow = {
-    display: 'flex',
-    alignItems: 'center',
-    marginBottom: '15px',
-};
-
-const taglineText = {
-    fontSize: '12px',
-    fontWeight: '700',
-    letterSpacing: '2px',
-    color: '#ee3824',
-};
 
 const statBox = { display: 'flex', flexDirection: 'column', gap: '5px' };
 

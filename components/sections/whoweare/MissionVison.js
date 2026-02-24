@@ -130,10 +130,7 @@ export default function MissionVision() {
                             variants={contentReveal}
                             style={styles.text}
                         >
-                            To become the most sought-after financial solution provider in the country 
-                            by blending traditional Indian elements with global excellence. Indel Capital 
-                            aspires to build lasting relationships based on trust, transparency, and 
-                            efficiency, positioning ourselves as the "financial supermarket" for the common man.
+                            To be a trusted and forward-looking capital partner that empowers businesses and individuals to unlock sustainable growth and long-term financial strength. We aspire to build a resilient financial ecosystem where opportunity, innovation, and integrity come together to create enduring value. We aim to inspire confidence in every financial decision and drive meaningful impact across industries. Our goal is to shape a future where growth and responsibility go hand in hand.
                         </motion.p>
                     </div>
 
@@ -168,10 +165,7 @@ export default function MissionVision() {
                             variants={contentReveal}
                             style={styles.text}
                         >
-                            At Indel Capital, we are driven by a mission to serve society and improve the 
-                            world through strategic, diversified investments. Our mission is to prioritize 
-                            "Humanity First, then Business," ensuring that every financial solution we craft 
-                            is precisely tailored to the unique aspirations and circumstances of our clients.
+                            At Indel Capital, our mission is to deliver strategic, responsible, and growth-focused financial solutions tailored to the evolving needs of our clients. We are committed to operating with transparency, discipline, and insight, fostering lasting partnerships built on trust, performance, and shared success. We continuously innovate to meet changing market demands and empower our clients with knowledge and confidence. Our mission is to create value that transcends numbers, building lasting impact for communities and stakeholders alike.
                         </motion.p>
                     </div>
                 </div>
