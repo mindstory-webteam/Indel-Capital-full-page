@@ -9,17 +9,6 @@ export default function Home() {
             <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Career Page" breadcrumbImg='assets/images/background/page-title.jpg'>
                 <div>
                     <style jsx>{`
-                        .about-section { padding: 60px 0; background: #fff; }
-                        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 15px; }
-                        .image-wrapper { position: relative; padding-bottom: 30px; }
-                        .main-image { width: 90%; border-radius: 20px; box-shadow: 20px 20px 60px rgba(0,0,0,0.1); clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); display: block; margin-left: auto; }
-                        .exp-card { position: absolute; bottom: 0; left: 0; background: #fff; color: #17479e; padding: 30px; border-radius: 15px; text-align: center; border: 5px solid #fff; box-shadow: 10px 10px 30px rgba(0,0,0,0.1); }
-                        .exp-card h2 { font-size: 40px; font-weight: 800; line-height: 1; margin: 0; }
-                        .exp-card span { font-size: 12px; text-transform: uppercase; font-weight: 700; line-height: 1.2; display: block; }
-                        .sub-t { color: #eb2525; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; display: block; }
-                        .main-t { font-size: 42px; font-weight: 800; color: #212226; line-height: 1.2; margin-bottom: 20px; }
-                        .exprnc{ color: #ee3824 !important; }
-
                         .custom-career-section { 
                             background: #f8fafc; 
                             padding: 60px 0; 
@@ -106,7 +95,6 @@ export default function Home() {
                             transform: scale(1.05);
                         }
 
-                        /* RESPONSIVENESS */
                         @media (max-width: 1200px) {
                             .job-card {
                                 grid-template-columns: 80px 1fr 1fr;
@@ -139,26 +127,9 @@ export default function Home() {
                         }
                     `}</style>
 
-                    {/* About-section */}
-                    <section className="about-section">
-                        <div className="about-grid">
-                            <div className="content-side">
-                                <span className="sub-t">{aboutData.subTitle}</span>
-                                <h2 className="main-t">{aboutData.mainTitle}</h2>
-                                <p>{aboutData.description}</p>
-                                <Link href="/about" className="theme-btn btn-one">Discover More</Link>
-                            </div>
-                            <div className="image-wrapper">
-                                <img src="assets/images/resource/about-1.jpg" alt="About" className="main-image" />
-                                <div className="exp-card">
-                                    <h2 className="exprnc">{aboutData.experienceYears}</h2>
-                                    <span>Years of<br />Experience</span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                 
 
-                    {/* BIGGER Career-section */}
+                    {/*  Career-section */}
                     <section className="custom-career-section">
                         <div className="career-container">
                             <div className="career-header">
