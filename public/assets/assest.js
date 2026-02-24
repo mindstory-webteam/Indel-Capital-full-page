@@ -16,7 +16,7 @@ export const AboutFeatures = [
 export const aboutData = {
   experienceYears: 5, 
   ratingText: "Investment Arm of Indel Group",
-  subTitle: "FINANCE CONSULTING",
+  subTitle: "About Us",
   mainTitle: "Our Strategic Investment Management - Since 2021",
   description: "Indel Capital Ventures and Investments Private Limited is the investment arm of the Indel Group, incorporated in 2021 and headquartered in Mumbai with a Corporate Office in Kochi. We focus on the prudent deployment and professional management of funds, driven by financial discipline, transparency, and a long-term value creation approach.",
 };
@@ -59,13 +59,15 @@ export const WhatWeDoData = [
 
 
 export const investmentPhilosophyData = {
-    subTitle: "Investment Philosophy",
-    title: "Capital Preservation Through Strategic Rigor.",
-    description: "We follow a disciplined investment mandate focused on unlocking value within the NBFC landscape. By prioritizing asset-backed opportunities and maintaining strict financial governance, we ensure sustainable growth for our institutional and private stakeholders.",
+    subTitle: "OUR INVESTMENT PHILOSOPHY",
+    title: "A Disciplined Strategy for Sustainable Wealth Creation",
+    description: "At Indel Capital, our investment philosophy is built on discipline, transparency, and long-term value creation. Our framework combines in-depth market research with proactive portfolio management to help clients navigate volatility while capturing meaningful growth opportunities.",
+    descriptionExtended: "We believe successful investing is not about chasing trends — it’s about applying structured strategies, managing risk intelligently, and staying focused on clearly defined financial goals. Every decision is guided by data, prudence, and a commitment to protecting and growing your capital responsibly.",
     points: [
-        "Prudent Risk-Adjusted Capital Allocation",
-        "Focus on Marketable Fixed-Coupon Securities",
-        "Strategic Management of High-Growth SPVs"
+        "Risk-First Planning – Focus on capital preservation",
+        "Research-Driven Decisions – Backed by thorough analysis",
+        "Long-Term Perspective – Sustainable growth over speculation",
+        "Active Monitoring – Continuous performance tracking"
     ],
     experience: {
         years: 5, 

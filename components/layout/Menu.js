@@ -37,9 +37,9 @@ export default function Menu() {
                     </ul>
                 </li>
                 {/* <li><Link href="#"></Link>Portfolio</li> */}
-                <li className="dropdown"><Link href="#">Strategies</Link>
+                <li className="dropdown"><Link href="/strategies">Strategies</Link>
                     <ul>
-                        <li className="dropdown"><Link href="/strategies">dropdownn</Link>
+                        <li className="dropdown"><Link href="/">dropdownn</Link>
                             <ul>
                                 <li><Link href="/team">Board of Directors</Link></li>
                                 <li><Link href="/team-details">Director Details</Link></li>

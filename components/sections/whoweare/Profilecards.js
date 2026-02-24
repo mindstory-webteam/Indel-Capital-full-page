@@ -91,7 +91,6 @@ export default function Profilecards() {
             <section className="team-section pt_120 pb_75">
                 <div className="auto-container">
                     
-                    {/* Header */}
                     <motion.div 
                         className="sec-title mb_70 centred"
                         initial={{ opacity: 0, y: -20 }}

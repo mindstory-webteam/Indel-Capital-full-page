@@ -6,7 +6,7 @@ export default function ValueCreation() {
         <>
             <style jsx>{`
                 .value-section {
-                    padding: 80px 0;
+                    padding: 60px 0;
                     background-color: #fff; 
                     position: relative;
                 }

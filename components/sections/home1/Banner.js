@@ -24,7 +24,9 @@ const swiperOptions = {
 
 export default function Banner() {
     const h2Style = {
-        fontSize: '60px', 
+        // clamp(min, preferred, max) 
+        // 32px on mobile, grows with screen width, maxes at 60px on desktop
+        fontSize: 'clamp(32px, 8vw, 60px)', 
         fontWeight: '800',
         lineHeight: '1.1',
         marginBottom: '30px',
@@ -36,20 +38,27 @@ export default function Banner() {
     };
 
     const lineStyle = {
-        whiteSpace: 'nowrap',
+        whiteSpace: 'normal', // Changed from nowrap so long words wrap on tiny screens
         display: 'block',
         fontStyle: 'normal',
         fontWeight: 'inherit',
         color: 'inherit' 
     };
 
-    const highlightStyle = {
-        color: '#eb2525',
-        fontStyle: 'normal'
-    };
-
     return (
         <>
+            {/* Adding a small global style for the paragraph responsiveness too */}
+            <style jsx>{`
+                @media (max-width: 767px) {
+                    .content-box p br {
+                        display: none;
+                    }
+                    .content-box p {
+                        font-size: 16px;
+                    }
+                }
+            `}</style>
+
             <section className="banner-section p_relative">
                 <Swiper {...swiperOptions} className="banner-carousel">
                     
@@ -63,12 +72,12 @@ export default function Banner() {
                                 <h2 style={h2Style}>
                                     <strong style={lineStyle}> Invest With Confidence.</strong>
                                     <strong style={lineStyle}> 
-                                        <em style={highlightStyle}>Grow</em> With Clarity.
+                                        Grow With Clarity.
                                     </strong>
                                 </h2>
                                 <p> At Indel Capital, we help individuals and businesses build a stronger financial future <br/>through disciplined investing, transparent practices, and well-designed financial strategies.</p>
                                 <div className="btn-box">
-                                    <Link href="/about" className="theme-btn btn-one">Our Heritage</Link>
+                                    <Link href="/about" className="theme-btn btn-one">Get Started</Link>
                                 </div>
                             </div>
                         </div>
@@ -82,9 +91,9 @@ export default function Banner() {
                         <div className="auto-container">
                             <div className="content-box" style={{ maxWidth: '100%' }}>
                                 <h2 style={h2Style}>
-                                    <strong style={lineStyle}>Empowering Assets</strong>
+                                    <strong style={lineStyle}>Structured Investing for a </strong>
                                     <strong style={lineStyle}>
-                                        Through <em style={highlightStyle}>Smart</em> Capital
+                                        Strong Financial Future.
                                     </strong>
                                 </h2>
                                 <p>Unlock the value of your investments with our specialized <br/> gold loan products and strategic credit solutions.</p>
@@ -105,7 +114,7 @@ export default function Banner() {
                                 <h2 style={h2Style}>
                                     <strong style={lineStyle}>Accelerating Your</strong>
                                     <strong style={lineStyle}>
-                                        <em style={highlightStyle}>Wealth</em> Journey Online
+                                        Wealth Journey Online
                                     </strong>
                                 </h2>
                                 <p>Experience seamless, technology-driven financial growth <br/> with Indel Capital's digital-first investment platforms.</p>

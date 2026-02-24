@@ -6,7 +6,7 @@ export default function RiskManagement() {
         <>
             <style jsx>{`
                 .risk-section {
-                    padding: 80px 0;
+                    padding: 60px 0;
                     background-color: #ffffff;
                     position: relative;
                     overflow: hidden;
@@ -34,17 +34,22 @@ export default function RiskManagement() {
                     padding: 30px 20px;
                     border-radius: 15px;
                     text-align: center;
+                    /* Use a transparent border initially to prevent layout jumping */
                     border: 1px solid #f1f5f9;
-                    transition: all 0.4s ease;
+                    transition: border-color 0.4s ease;
+                    box-sizing: border-box;
                 }
                 .pillar-card:nth-child(even) {
-                    transform: translateY(30px); /* Staggered effect */
+                    transform: translateY(30px); /* Keep the initial staggered layout */
                 }
+
+                /* UPDATED HOVER STATE */
                 .pillar-card:hover {
-                    transform: translateY(-5px);
+                    /* Only changing the border color */
                     border-color: #eb2525;
-                    background: #ffffff;
+                    /* Removed transform, background, and scale */
                 }
+
                 .pillar-icon {
                     width: 50px;
                     height: 50px;

@@ -1,5 +1,6 @@
 'use client'
 import Link from "next/link";
+
 export default function Whoweare() {
     return (
         <>
@@ -36,29 +37,33 @@ export default function Whoweare() {
                     transform: translate(-30px, 30px);
                 }
 
-                .list-style-custom {
+                .framework-list {
                     list-style: none;
                     padding: 0;
                 }
 
-                .list-style-custom li {
+                .framework-list li {
                     position: relative;
-                    padding-left: 35px;
+                    padding-left: 30px;
                     margin-bottom: 15px;
                     font-weight: 500;
                     color: #333;
+                    font-size: 16px;
                 }
 
-                .list-style-custom li span {
+                .framework-list li::before {
+                    content: '✓';
                     position: absolute;
+                    padding-top:4px;
                     left: 0;
-                    top: 0;
                     color: #eb2525;
+                    font-weight: 900;
                     font-size: 18px;
+                    line-height: 1;
                 }
             `}</style>
 
-            <section className="about-style-two pt_120 pb_120 about-section">
+            <section className="about-style-two pt_120 about-section">
                 <div className="auto-container">
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-md-12 col-sm-12 content-column">
@@ -79,10 +84,10 @@ export default function Whoweare() {
                                         <p style={{ fontSize: '16px', color: '#777', fontStyle: 'italic', borderLeft: '3px solid #eb2525', paddingLeft: '15px', marginBottom: '30px' }}>
                                             We simplify finance through personalised solutions, smart insights, and continuous support ensuring you’re always moving in the right direction.
                                         </p>
-                                        <ul className="list-style-custom">
-                                            <li><span>✔️</span> Unlocking better financial possibilities</li>
-                                            <li><span>✔️</span> Fast, practical solutions for everyday financial needs</li>
-                                            <li><span>✔️</span> A growing community built on trust and progress</li>
+                                        <ul className="framework-list">
+                                            <li>Unlocking better financial possibilities</li>
+                                            <li>Fast, practical solutions for everyday financial needs</li>
+                                            <li>A growing community built on trust and progress</li>
                                         </ul>
                                     </div>
                                     <div className="btn-box">
@@ -103,14 +108,15 @@ export default function Whoweare() {
                                         bottom: '40px',
                                         right: '-20px',
                                         backgroundColor: '#fff',
-                                        padding: '10px',
-                                        color: 'white',
+                                        padding: '20px',
                                         borderRadius: '5px',
                                         zIndex: '2',
-                                        boxShadow: '10px 10px 30px rgba(0,0,0,0.1)'
+                                        boxShadow: '10px 10px 30px rgba(0,0,0,0.1)',
+                                        textAlign: 'center',
+                                        minWidth: '150px'
                                     }}>
-                                        <h3 style={{ color: 'white', margin: 0, fontSize: '30px', color:"red" }}>5</h3>
-                                        <p style={{ margin: 0, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px' }}>Years Experience</p>
+                                        <h3 style={{ color: '#eb2525', margin: 0, fontSize: '36px', fontWeight: '800' }}>5</h3>
+                                        <p style={{ color: '#17479d', margin: 0, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Years Experience</p>
                                     </div>
                                 </div>
                             </div>

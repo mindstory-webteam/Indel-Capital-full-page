@@ -10,8 +10,8 @@ const Home = () => {
     <>
       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Who we are" breadcrumbImg='assets/images/background/page-title.jpg'>
        <Whoweare/>
-       <Funfact/>
-       <Milestone/>
+       {/* <Funfact/> */}
+       {/* <Milestone/> */}
        <Profilecards/>
       </Layout>
     </>

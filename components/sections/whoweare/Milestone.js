@@ -4,7 +4,7 @@ const Milestone = () => {
   return (
     <>    
     <section className="process-section centred pt_95 pb_90">
-                    <div className="bg-layer" style={{ backgroundImage: "url(assets/images/background/process-bg.jpg)" }}></div>
+                    {/* <div className="bg-layer" style={{ backgroundImage: "url(assets/images/background/process-bg.jpg)" }}></div> */}
                     <div className="auto-container">
                         <div className="sec-title mb_110">
                         <h6>Milestone</h6>

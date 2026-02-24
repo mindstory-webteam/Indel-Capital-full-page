@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { FaWhatsapp, FaInstagram, FaYoutube, FaXTwitter } from "react-icons/fa6";
 
 const quickLinks = [
   { label: "About", href: "/about" },
@@ -108,6 +109,23 @@ export default function Footer() {
       transform: translateX(8px);
     }
 
+    .social-links {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .social-icon {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 22px;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      color: #ee3824;
+      transform: translateY(-3px);
+    }
+
     .footer-bottom {
       margin-top: 120px;
       padding-top: 40px;
@@ -165,9 +183,13 @@ export default function Footer() {
               <p className="footer-desc">
                 We design financial futures with <span>uncompromising</span> precision.
               </p>
-              <Link href="/contact" style={{ borderBottom: '2px solid #ee3824', color: '#fff', textDecoration: 'none', paddingBottom: '5px', fontWeight: '600' }}>
-                Work with us
-              </Link>
+              
+              <div className="social-links">
+                <Link href="#" className="social-icon"><FaWhatsapp /></Link>
+                <Link href="#" className="social-icon"><FaInstagram /></Link>
+                <Link href="#" className="social-icon"><FaYoutube /></Link>
+                <Link href="#" className="social-icon"><FaXTwitter /></Link>
+              </div>
             </div>
 
             <div className="footer-col">
