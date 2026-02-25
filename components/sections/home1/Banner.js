@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { slides } from "@/public/assets/assest"
+import LiquidButton from "@/components/LiquidButton" // Adjust path as needed
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
@@ -24,7 +25,6 @@ const swiperOptions = {
 }
 
 export default function Banner() {
-
 
     const h2Style = {
         fontSize: 'clamp(32px, 8vw, 60px)', 
@@ -57,6 +57,21 @@ export default function Banner() {
                         font-size: 16px;
                     }
                 }
+
+                /* Liquid Button Integration */
+                .liquid-banner-wrapper {
+                    width: 220px;
+                    height: 60px;
+                    position: relative;
+                    margin-top: 20px;
+                }
+
+                @media (max-width: 575px) {
+                    .liquid-banner-wrapper {
+                        width: 180px;
+                        height: 50px;
+                    }
+                }
             `}</style>
 
             <section className="banner-section p_relative">
@@ -77,8 +92,16 @@ export default function Banner() {
                                         </strong>
                                     </h2>
                                     <p>{slide.description}</p>
+                                    
                                     <div className="btn-box">
-                                        <Link href={slide.btnLink} className="theme-btn btn-one">{slide.btnText}</Link>
+                                        <div className="liquid-banner-wrapper">
+                                            <Link href={slide.btnLink} style={{ textDecoration: 'none' }}>
+                                                <LiquidButton 
+                                                    text={slide.btnText} 
+                                                    bgcolor="#ee3824" 
+                                                />
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
