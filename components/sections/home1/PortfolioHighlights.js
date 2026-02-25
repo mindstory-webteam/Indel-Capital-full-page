@@ -2,42 +2,8 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
+import { portfolioData } from "@/public/assets/assest";
 
-const portfolioData = [
-  {
-    id: 1,
-    name: "Nexus Fintech",
-    sector: "Financial Services",
-    ticker: "NXF",
-    description: "Institutional-grade liquidity protocols streamlining cross-border settlement through blockchain efficiency.",
-    status: "Series B",
-    irr: 24.3,
-    vintage: "2022",
-    multiple: 2.1, 
-  },
-  {
-    id: 2,
-    name: "GreenGrid Systems",
-    sector: "Renewable Energy",
-    ticker: "GGS",
-    description: "Smart-grid solutions utilizing proprietary AI to reduce urban energy waste by 40%.",
-    status: "Seed",
-    irr: 38.7,
-    vintage: "2023",
-    multiple: 1.6,
-  },
-  {
-    id: 3,
-    name: "BioPath Labs",
-    sector: "Healthcare",
-    ticker: "BPL",
-    description: "AI-driven diagnostic platforms for early-stage oncology detection and pathology automation.",
-    status: "Series A",
-    irr: 31.2,
-    vintage: "2023",
-    multiple: 1.9,
-  },
-];
 
 const statusColors = {
   Seed: { text: "#ee3824", bg: "rgba(238,56,36,0.06)" },

@@ -1,8 +1,10 @@
 'use client'
 import { motion } from "framer-motion"
-import { Eye, Rocket, ShieldCheck, Landmark, Lightbulb, Users } from 'lucide-react'
-
+import { mainCards,valueStrip } from "@/public/assets/assest"
 export default function MissionVision() {
+  
+    
+
     const contentReveal = {
         hidden: { color: "#94a3b8", opacity: 0.5 },
         visible: { 
@@ -98,76 +100,42 @@ export default function MissionVision() {
         <section style={styles.section}>
             <div style={styles.container}>
                 <div style={styles.grid}>
-                    
-                    <div style={styles.card}>
-                        <motion.div 
-                            initial={{ filter: 'grayscale(1)', opacity: 0.3 }}
-                            whileInView={{ filter: 'grayscale(0)', opacity: 1 }}
-                            transition={{ duration: 1 }}
-                            style={{ 
-                                ...styles.iconWrapper, 
-                                background: 'linear-gradient(135deg, #17479e 0%, #3b82f6 100%)',
-                                color: '#fff' 
-                            }}
-                        >
-                            <Eye size={32} />
-                        </motion.div>
-                        
-                        <motion.h2 
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: false, amount: 0.5 }}
-                            variants={titleReveal}
-                            style={styles.title}
-                        >
-                            Our Vision
-                        </motion.h2>
-                        
-                        <motion.p 
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: false, amount: 0.5 }}
-                            variants={contentReveal}
-                            style={styles.text}
-                        >
-                            To be a trusted and forward-looking capital partner that empowers businesses and individuals to unlock sustainable growth and long-term financial strength. We aspire to build a resilient financial ecosystem where opportunity, innovation, and integrity come together to create enduring value. We aim to inspire confidence in every financial decision and drive meaningful impact across industries. Our goal is to shape a future where growth and responsibility go hand in hand.
-                        </motion.p>
-                    </div>
-
-                    <div style={styles.card}>
-                        <motion.div 
-                            initial={{ filter: 'grayscale(1)', opacity: 0.3 }}
-                            whileInView={{ filter: 'grayscale(0)', opacity: 1 }}
-                            transition={{ duration: 1 }}
-                            style={{ 
-                                ...styles.iconWrapper, 
-                                background: 'linear-gradient(135deg, #ee3824 0%, #f87171 100%)',
-                                color: '#fff' 
-                            }}
-                        >
-                            <Rocket size={32} />
-                        </motion.div>
-
-                        <motion.h2 
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: false, amount: 0.5 }}
-                            variants={titleReveal}
-                            style={styles.title}
-                        >
-                            Our Mission
-                        </motion.h2>
-
-                        <motion.p 
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: false, amount: 0.5 }}
-                            variants={contentReveal}
-                            style={styles.text}
-                        >
-                            At Indel Capital, our mission is to deliver strategic, responsible, and growth-focused financial solutions tailored to the evolving needs of our clients. We are committed to operating with transparency, discipline, and insight, fostering lasting partnerships built on trust, performance, and shared success. We continuously innovate to meet changing market demands and empower our clients with knowledge and confidence. Our mission is to create value that transcends numbers, building lasting impact for communities and stakeholders alike.
-                        </motion.p>
-                    </div>
+                    {mainCards.map((card) => (
+                        <div key={card.id} style={styles.card}>
+                            <motion.div 
+                                initial={{ filter: 'grayscale(1)', opacity: 0.3 }}
+                                whileInView={{ filter: 'grayscale(0)', opacity: 1 }}
+                                transition={{ duration: 1 }}
+                                style={{ 
+                                    ...styles.iconWrapper, 
+                                    background: card.gradient,
+                                    color: '#fff' 
+                                }}
+                            >
+                                {card.icon}
+                            </motion.div>
+                            
+                            <motion.h2 
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: false, amount: 0.5 }}
+                                variants={titleReveal}
+                                style={styles.title}
+                            >
+                                {card.title}
+                            </motion.h2>
+                            
+                            <motion.p 
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: false, amount: 0.5 }}
+                                variants={contentReveal}
+                                style={styles.text}
+                            >
+                                {card.text}
+                            </motion.p>
+                        </div>
+                    ))}
                 </div>
 
                 <motion.div 
@@ -176,34 +144,15 @@ export default function MissionVision() {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
-                    <div style={styles.valueItem}>
-                        <ShieldCheck size={28} color="#ffd700" />
-                        <div>
-                            <span style={styles.valueTitle}>Trust</span>
-                            <div style={styles.valueSub}>38 Years of Legacy</div>
+                    {valueStrip.map((item, index) => (
+                        <div key={index} style={styles.valueItem}>
+                            {item.icon}
+                            <div>
+                                <span style={styles.valueTitle}>{item.title}</span>
+                                <div style={styles.valueSub}>{item.sub}</div>
+                            </div>
                         </div>
-                    </div>
-                    <div style={styles.valueItem}>
-                        <Landmark size={28} color="#ffd700" />
-                        <div>
-                            <span style={styles.valueTitle}>Transparency</span>
-                            <div style={styles.valueSub}>Ethical Operations</div>
-                        </div>
-                    </div>
-                    <div style={styles.valueItem}>
-                        <Lightbulb size={28} color="#ffd700" />
-                        <div>
-                            <span style={styles.valueTitle}>Innovation</span>
-                            <div style={styles.valueSub}>Tech-Driven Growth</div>
-                        </div>
-                    </div>
-                    <div style={styles.valueItem}>
-                        <Users size={28} color="#ffd700" />
-                        <div>
-                            <span style={styles.valueTitle}>Empowerment</span>
-                            <div style={styles.valueSub}>Financial Inclusion</div>
-                        </div>
-                    </div>
+                    ))}
                 </motion.div>
             </div>
         </section>

@@ -1,35 +1,9 @@
 'use client'
-import Link from "next/link"
-// Import Lucide icons
-import { ShieldCheck, Headphones, TrendingUp, Timer } from "lucide-react"
+import Link from "next/link" 
+import {featureData} from "@/public/assets/assest"
 
 export default function Features() {
-    const featureData = [
-        {
-            icon: <ShieldCheck size={35} />,
-            title: "Secure Investment Solutions",
-            desc: "Your capital is protected with robust risk-managed strategies and disciplined financial oversight.",
-            delay: "0ms"
-        },
-        {
-            icon: <Headphones size={35} />,
-            title: "Expert Advisory Support",
-            desc: "Our financial specialists guide you with data-driven insights for smarter wealth decisions.",
-            delay: "200ms"
-        },
-   {
-            icon: <TrendingUp size={35} strokeWidth={1.5} />,
-            title: "Competitive Returns Strategy",
-            desc: "Optimised investment models designed to deliver strong, stable, and long-term performance.",
-            delay: "400ms"
-        },
-        {
-            icon: <Timer size={35} strokeWidth={1.5} />,
-            title: "Fast & Hassle-Free Execution",
-            desc: "Streamlined digital processes ensure quick onboarding and seamless strategy deployment.",
-            delay: "600ms"
-        }
-    ];
+
 
     return (
         <>
@@ -75,14 +49,13 @@ export default function Features() {
                     color: #eb2525; /* Icon color */
                 }
 
-                /* Target the SVG specifically for Lucide */
                 .icon-box-new :global(svg) {
                     transition: color 0.4s ease;
                 }
 
                 .feature-item:hover .icon-box-new {
                     background: #eb2525;
-                    color: #fff; /* Changes Lucide icon color on hover */
+                    color: #fff; 
                 }
 
                 .feature-item h4 {

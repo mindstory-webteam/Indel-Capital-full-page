@@ -1,17 +1,8 @@
 'use client'
 import Link from "next/link"
 import { motion } from "framer-motion"
+import { teamMembers } from "@/public/assets/assest"
 
-const teamMembers = [
-    { name: "Wade Warren",       role: "Founder",           img: "assets/images/team/team-1.jpg" },
-    { name: "Guy Hawkins",       role: "Co-Founder",        img: "assets/images/team/team-2.jpg" },
-    { name: "Bessie Cooper",     role: "Chairman",          img: "assets/images/team/team-3.jpg" },
-    { name: "Devon Lane",        role: "Vice Chairman",     img: "assets/images/team/team-4.jpg" },
-    { name: "Brooklyn Simmons",  role: "Head of Marketing", img: "assets/images/team/team-5.jpg" },
-    { name: "Robert Fox",        role: "Head of Finance",   img: "assets/images/team/team-6.jpg" },
-    { name: "Darlene Robertson", role: "Managing Director", img: "assets/images/team/team-7.jpg" },
-    { name: "Albert Flores",     role: "Chief Marketer",    img: "assets/images/team/team-8.jpg" },
-]
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },

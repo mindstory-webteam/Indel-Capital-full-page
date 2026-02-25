@@ -2,6 +2,7 @@
 import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { slides } from "@/public/assets/assest"
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
@@ -23,9 +24,9 @@ const swiperOptions = {
 }
 
 export default function Banner() {
+
+
     const h2Style = {
-        // clamp(min, preferred, max) 
-        // 32px on mobile, grows with screen width, maxes at 60px on desktop
         fontSize: 'clamp(32px, 8vw, 60px)', 
         fontWeight: '800',
         lineHeight: '1.1',
@@ -38,7 +39,7 @@ export default function Banner() {
     };
 
     const lineStyle = {
-        whiteSpace: 'normal', // Changed from nowrap so long words wrap on tiny screens
+        whiteSpace: 'normal', 
         display: 'block',
         fontStyle: 'normal',
         fontWeight: 'inherit',
@@ -47,7 +48,6 @@ export default function Banner() {
 
     return (
         <>
-            {/* Adding a small global style for the paragraph responsiveness too */}
             <style jsx>{`
                 @media (max-width: 767px) {
                     .content-box p br {
@@ -62,68 +62,28 @@ export default function Banner() {
             <section className="banner-section p_relative">
                 <Swiper {...swiperOptions} className="banner-carousel">
                     
-                    <SwiperSlide className="slide-item p_relative">
-                        <div className="bg-layer" style={{ backgroundImage: 'url(assets/images/banner/banner-1.jpg)' }}></div>
-                        <div className="pattern-layer">
-                            <div className="pattern-1" style={{ backgroundImage: 'url(assets/images/shape/shape-1.png)' }}></div>
-                        </div>
-                        <div className="auto-container">
-                            <div className="content-box" style={{ maxWidth: '100%' }}>
-                                <h2 style={h2Style}>
-                                    <strong style={lineStyle}> Invest With Confidence.</strong>
-                                    <strong style={lineStyle}> 
-                                        Grow With Clarity.
-                                    </strong>
-                                </h2>
-                                <p> At Indel Capital, we help individuals and businesses build a stronger financial future <br/>through disciplined investing, transparent practices, and well-designed financial strategies.</p>
-                                <div className="btn-box">
-                                    <Link href="/about" className="theme-btn btn-one">Get Started</Link>
+                    {slides.map((slide, index) => (
+                        <SwiperSlide key={index} className="slide-item p_relative">
+                            <div className="bg-layer" style={{ backgroundImage: slide.bgImage }}></div>
+                            <div className="pattern-layer">
+                                <div className="pattern-1" style={{ backgroundImage: 'url(assets/images/shape/shape-1.png)' }}></div>
+                            </div>
+                            <div className="auto-container">
+                                <div className="content-box" style={{ maxWidth: '100%' }}>
+                                    <h2 style={h2Style}>
+                                        <strong style={lineStyle}>{slide.titleLine1}</strong>
+                                        <strong style={lineStyle}> 
+                                            {slide.titleLine2}
+                                        </strong>
+                                    </h2>
+                                    <p>{slide.description}</p>
+                                    <div className="btn-box">
+                                        <Link href={slide.btnLink} className="theme-btn btn-one">{slide.btnText}</Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
-
-                    <SwiperSlide className="slide-item p_relative">
-                        <div className="bg-layer" style={{ backgroundImage: 'url(assets/images/banner/banner-2.jpg)' }}></div>
-                        <div className="pattern-layer">
-                            <div className="pattern-1" style={{ backgroundImage: 'url(assets/images/shape/shape-1.png)' }}></div>
-                        </div>
-                        <div className="auto-container">
-                            <div className="content-box" style={{ maxWidth: '100%' }}>
-                                <h2 style={h2Style}>
-                                    <strong style={lineStyle}>Structured Investing for a </strong>
-                                    <strong style={lineStyle}>
-                                        Strong Financial Future.
-                                    </strong>
-                                </h2>
-                                <p>Unlock the value of your investments with our specialized <br/> gold loan products and strategic credit solutions.</p>
-                                <div className="btn-box">
-                                    <Link href="/services" className="theme-btn btn-one">View Solutions</Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-
-                    <SwiperSlide className="slide-item p_relative">
-                        <div className="bg-layer" style={{ backgroundImage: 'url(assets/images/banner/banner-3.jpg)' }}></div>
-                        <div className="pattern-layer">
-                            <div className="pattern-1" style={{ backgroundImage: 'url(assets/images/shape/shape-1.png)' }}></div>
-                        </div>
-                        <div className="auto-container">
-                            <div className="content-box" style={{ maxWidth: '100%' }}>
-                                <h2 style={h2Style}>
-                                    <strong style={lineStyle}>Accelerating Your</strong>
-                                    <strong style={lineStyle}>
-                                        Wealth Journey Online
-                                    </strong>
-                                </h2>
-                                <p>Experience seamless, technology-driven financial growth <br/> with Indel Capital's digital-first investment platforms.</p>
-                                <div className="btn-box">
-                                    <Link href="/contact" className="theme-btn btn-one">Get Started</Link>
-                                </div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
+                        </SwiperSlide>
+                    ))}
 
                     <div className="owl-nav">
                         <button type="button" className="owl-prev h1p"><span className="icon-3"></span></button>

@@ -34,6 +34,64 @@ function Counter({ value, suffix = "" }) {
 export default function FeaturedStrategies() {
     const data = featuredStrategiesData;
 
+    const strategies = [
+        {
+            id: 0,
+            className: "bento-card card-red card-wide",
+            type: "main-stat",
+            label: "ASSET-BACKED LENDING",
+            value: data.stats.security,
+            suffix: "%",
+            title: "Gold-Collateralized Framework",
+            description: "Our core strategy focuses on highly liquid gold assets, providing a safety net that significantly mitigates institutional credit risk."
+        },
+        {
+            id: 1,
+            className: "bento-card card-blue",
+            type: "growth",
+            label: "GROWTH METRICS",
+            title: "Target AUM",
+            value: data.stats.aum,
+            prefix: "₹",
+            suffix: "Cr",
+            description: "Scaling operations for the 2026 fiscal cycle."
+        },
+        {
+            id: 2,
+            className: "bento-card card-white",
+            type: "yield",
+            icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 2v20M17 5H9.5a4.5 4.5 0 000 9h5a4.5 4.5 0 010 9H7"/></svg>,
+            iconClass: "blue",
+            title: "Alpha Generation",
+            value: data.stats.yield,
+            suffix: "%",
+            subLabel: "Average Portfolio IRR",
+            description: "Delivering superior risk-adjusted returns through disciplined NCD issuances and credit monitoring."
+        },
+        {
+            id: 3,
+            className: "bento-card card-white",
+            type: "tech",
+            icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>,
+            iconClass: "red",
+            title: "Digital Ecosystem",
+            description: "Proprietary FinTech stack enabling instant gold appraisal and automated loan lifecycle management.",
+            tags: [
+                { text: "Instant-Disburse", color: "blue" },
+                { text: "LMS-Proprietary", color: "red" }
+            ]
+        },
+        {
+            id: 4,
+            className: "bento-card card-blue",
+            type: "map",
+            label: "PAN-INDIA REACH",
+            value: data.stats.branches,
+            suffix: " Locations",
+            description: "A massive physical footprint supported by a hub-and-spoke digital service model."
+        }
+    ];
+
     const cardVariants = {
         hidden: { opacity: 0, y: 20 },
         visible: (i) => ({
@@ -55,127 +113,107 @@ export default function FeaturedStrategies() {
                     </div>
 
                     <div className="bento-layout">
-                        <motion.div 
-                            custom={0}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={cardVariants}
-                            className="bento-card card-red card-wide"
-                        >
-                            <div className="card-inner">
-                                <div className="label-group">
-                                    <span className="indicator">ASSET-BACKED LENDING</span>
-                                </div>
-                                <div className="content-mid">
-                                   <h3 className="card-big-stat">
-        <Counter value={data.stats.security} />%
-    </h3>
-                                </div>
-                                <div className="card-footer">
-                                    <h4 className="white-text">Gold-Collateralized Framework</h4>
-                                    <p className="white-text-dim">Our core strategy focuses on highly liquid gold assets, providing a safety net that significantly mitigates institutional credit risk.</p>
-                                </div>
-                            </div>
-                        </motion.div>
+                        {strategies.map((item, index) => (
+                            <motion.div 
+                                key={item.id}
+                                custom={index}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                variants={cardVariants}
+                                className={item.className}
+                            >
+                                <div className="card-inner">
+                                    {item.type === "main-stat" && (
+                                        <>
+                                            <div className="label-group">
+                                                <span className="indicator">{item.label}</span>
+                                            </div>
+                                            <div className="content-mid">
+                                                <h3 className="card-big-stat">
+                                                    <Counter value={item.value} />{item.suffix}
+                                                </h3>
+                                            </div>
+                                            <div className="card-footer">
+                                                <h4 className="white-text">{item.title}</h4>
+                                                <p className="white-text-dim">{item.description}</p>
+                                            </div>
+                                        </>
+                                    )}
 
-                        <motion.div 
-                            custom={1}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={cardVariants}
-                            className="bento-card card-blue"
-                        >
-                            <div className="card-inner">
-                                <span className="pill-outline">GROWTH METRICS</span>
-                                <div className="center-content">
-                                    <span className="scaling-label">Target AUM</span>
-                                    <div className="scaling-value">
-                                        ₹<Counter value={data.stats.aum} /><span>Cr</span>
-                                    </div>
-                                    <p className="mini-desc">Scaling operations for the 2026 fiscal cycle.</p>
-                                </div>
-                                <div className="growth-viz">
-                                    <motion.div initial={{ height: 0 }} whileInView={{ height: '40%' }} transition={{ duration: 1 }} className="viz-bar"></motion.div>
-                                    <motion.div initial={{ height: 0 }} whileInView={{ height: '60%' }} transition={{ duration: 1, delay: 0.2 }} className="viz-bar"></motion.div>
-                                    <motion.div initial={{ height: 0 }} whileInView={{ height: '80%' }} transition={{ duration: 1, delay: 0.4 }} className="viz-bar"></motion.div>
-                                    <motion.div initial={{ height: 0 }} whileInView={{ height: '100%' }} transition={{ duration: 1, delay: 0.6 }} className="viz-bar active"></motion.div>
-                                </div>
-                            </div>
-                        </motion.div>
+                                    {item.type === "growth" && (
+                                        <>
+                                            <span className="pill-outline">{item.label}</span>
+                                            <div className="center-content">
+                                                <span className="scaling-label">{item.title}</span>
+                                                <div className="scaling-value">
+                                                    {item.prefix}<Counter value={item.value} /><span>{item.suffix}</span>
+                                                </div>
+                                                <p className="mini-desc">{item.description}</p>
+                                            </div>
+                                            <div className="growth-viz">
+                                                <motion.div initial={{ height: 0 }} whileInView={{ height: '40%' }} transition={{ duration: 1 }} className="viz-bar"></motion.div>
+                                                <motion.div initial={{ height: 0 }} whileInView={{ height: '60%' }} transition={{ duration: 1, delay: 0.2 }} className="viz-bar"></motion.div>
+                                                <motion.div initial={{ height: 0 }} whileInView={{ height: '80%' }} transition={{ duration: 1, delay: 0.4 }} className="viz-bar"></motion.div>
+                                                <motion.div initial={{ height: 0 }} whileInView={{ height: '100%' }} transition={{ duration: 1, delay: 0.6 }} className="viz-bar active"></motion.div>
+                                            </div>
+                                        </>
+                                    )}
 
-                        <motion.div 
-                            custom={2}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={cardVariants}
-                            className="bento-card card-white"
-                        >
-                            <div className="card-inner">
-                                <div className="header-small">
-                                    <div className="icon-box blue">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 2v20M17 5H9.5a4.5 4.5 0 000 9h5a4.5 4.5 0 010 9H7"/></svg>
-                                    </div>
-                                    <h5>Alpha Generation</h5>
-                                </div>
-                                <div className="yield-content">
-                                    <span className="yield-value">
-                                        <Counter value={data.stats.yield} />%
-                                    </span>
-                                    <span className="yield-sub">Average Portfolio IRR</span>
-                                    <p className="reach-text">Delivering superior risk-adjusted returns through disciplined NCD issuances and credit monitoring.</p>
-                                </div>
-                            </div>
-                        </motion.div>
+                                    {item.type === "yield" && (
+                                        <>
+                                            <div className="header-small">
+                                                <div className={`icon-box ${item.iconClass}`}>
+                                                    {item.icon}
+                                                </div>
+                                                <h5>{item.title}</h5>
+                                            </div>
+                                            <div className="yield-content">
+                                                <span className="yield-value">
+                                                    <Counter value={item.value} />{item.suffix}
+                                                </span>
+                                                <span className="yield-sub">{item.subLabel}</span>
+                                                <p className="reach-text">{item.description}</p>
+                                            </div>
+                                        </>
+                                    )}
 
-                        <motion.div 
-                            custom={3}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={cardVariants}
-                            className="bento-card card-white"
-                        >
-                            <div className="card-inner">
-                                <div className="header-small">
-                                    <div className="icon-box red">
-                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                                    </div>
-                                    <h5>Digital Ecosystem</h5>
-                                </div>
-                                <p className="reach-text">Proprietary FinTech stack enabling instant gold appraisal and automated loan lifecycle management.</p>
-                                <div className="tag-group">
-                                    <span className="tag blue">Instant-Disburse</span>
-                                    <span className="tag red">LMS-Proprietary</span>
-                                </div>
-                            </div>
-                        </motion.div>
+                                    {item.type === "tech" && (
+                                        <>
+                                            <div className="header-small">
+                                                <div className={`icon-box ${item.iconClass}`}>
+                                                    {item.icon}
+                                                </div>
+                                                <h5>{item.title}</h5>
+                                            </div>
+                                            <p className="reach-text">{item.description}</p>
+                                            <div className="tag-group">
+                                                {item.tags.map((tag, idx) => (
+                                                    <span key={idx} className={`tag ${tag.color}`}>{tag.text}</span>
+                                                ))}
+                                            </div>
+                                        </>
+                                    )}
 
-                        <motion.div 
-                            custom={4}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={cardVariants}
-                            className="bento-card card-blue"
-                        >
-                            <div className="card-inner">
-                                <span className="pill-outline">PAN-INDIA REACH</span>
-                                <div className="footer-content">
-                                    <h4 className="white-text">
-                                        <Counter value={data.stats.branches} /> Locations
-                                    </h4>
-                                    <p className="white-text-dim">A massive physical footprint supported by a hub-and-spoke digital service model.</p>
+                                    {item.type === "map" && (
+                                        <>
+                                            <span className="pill-outline">{item.label}</span>
+                                            <div className="footer-content">
+                                                <h4 className="white-text">
+                                                    <Counter value={item.value} />{item.suffix}
+                                                </h4>
+                                                <p className="white-text-dim">{item.description}</p>
+                                            </div>
+                                            <div className="network-map">
+                                                <div className="map-dot" style={{top:'25%', left:'45%'}}></div>
+                                                <div className="map-dot" style={{top:'55%', left:'55%'}}></div>
+                                                <div className="map-dot" style={{top:'75%', left:'35%'}}></div>
+                                            </div>
+                                        </>
+                                    )}
                                 </div>
-                                <div className="network-map">
-                                    <div className="map-dot" style={{top:'25%', left:'45%'}}></div>
-                                    <div className="map-dot" style={{top:'55%', left:'55%'}}></div>
-                                    <div className="map-dot" style={{top:'75%', left:'35%'}}></div>
-                                </div>
-                            </div>
-                        </motion.div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>

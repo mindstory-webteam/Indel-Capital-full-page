@@ -1,3 +1,7 @@
+import { ShieldCheck, Headphones, TrendingUp, Timer } from "lucide-react"
+import { Eye, Rocket, Landmark, Lightbulb, Users } from 'lucide-react'
+
+
 export const AboutFeatures = [
   {
     id: 1,
@@ -21,6 +25,69 @@ export const aboutData = {
   description: "Indel Capital Ventures and Investments Private Limited is the investment arm of the Indel Group, incorporated in 2021 and headquartered in Mumbai with a Corporate Office in Kochi. We focus on the prudent deployment and professional management of funds, driven by financial discipline, transparency, and a long-term value creation approach.",
 };
 
+ export   const featureData = [
+        {
+            icon: <ShieldCheck size={35} />,
+            title: "Secure Investment Solutions",
+            desc: "Your capital is protected with robust risk-managed strategies and disciplined financial oversight.",
+            delay: "0ms"
+        },
+        {
+            icon: <Headphones size={35} />,
+            title: "Expert Advisory Support",
+            desc: "Our financial specialists guide you with data-driven insights for smarter wealth decisions.",
+            delay: "200ms"
+        },
+   {
+            icon: <TrendingUp size={35} strokeWidth={1.5} />,
+            title: "Competitive Returns Strategy",
+            desc: "Optimised investment models designed to deliver strong, stable, and long-term performance.",
+            delay: "400ms"
+        },
+        {
+            icon: <Timer size={35} strokeWidth={1.5} />,
+            title: "Fast & Hassle-Free Execution",
+            desc: "Streamlined digital processes ensure quick onboarding and seamless strategy deployment.",
+            delay: "600ms"
+        }
+    ];
+
+
+   export  const portfolioData = [
+  {
+    id: 1,
+    name: "Nexus Fintech",
+    sector: "Financial Services",
+    ticker: "NXF",
+    description: "Institutional-grade liquidity protocols streamlining cross-border settlement through blockchain efficiency.",
+    status: "Series B",
+    irr: 24.3,
+    vintage: "2022",
+    multiple: 2.1, 
+  },
+  {
+    id: 2,
+    name: "GreenGrid Systems",
+    sector: "Renewable Energy",
+    ticker: "GGS",
+    description: "Smart-grid solutions utilizing proprietary AI to reduce urban energy waste by 40%.",
+    status: "Seed",
+    irr: 38.7,
+    vintage: "2023",
+    multiple: 1.6,
+  },
+  {
+    id: 3,
+    name: "BioPath Labs",
+    sector: "Healthcare",
+    ticker: "BPL",
+    description: "AI-driven diagnostic platforms for early-stage oncology detection and pathology automation.",
+    status: "Series A",
+    irr: 31.2,
+    vintage: "2023",
+    multiple: 1.9,
+  },
+];
 
 export const WhatWeDoData = [
   {
@@ -79,6 +146,36 @@ export const investmentPhilosophyData = {
     }
 };
 
+
+export const slides = [
+        {
+            bgImage: 'url(assets/images/banner/banner-1.jpg)',
+            titleLine1: 'Invest With Confidence.',
+            titleLine2: 'Grow With Clarity.',
+            description: <>At Indel Capital, we help individuals and businesses build a stronger financial future <br/>through disciplined investing, transparent practices, and well-designed financial strategies.</>,
+            btnText: 'Get Started',
+            btnLink: '/about'
+        },
+        {
+            bgImage: 'url(assets/images/banner/banner-2.jpg)',
+            titleLine1: 'Structured Investing for a ',
+            titleLine2: 'Strong Financial Future.',
+            description: <>Unlock the value of your investments with our specialized <br/> gold loan products and strategic credit solutions.</>,
+            btnText: 'View Solutions',
+            btnLink: '/services'
+        },
+        {
+            bgImage: 'url(assets/images/banner/banner-3.jpg)',
+            titleLine1: 'Accelerating Your',
+            titleLine2: 'Wealth Journey Online',
+            description: <>Experience seamless, technology-driven financial growth <br/> with Indel Capital's digital-first investment platforms.</>,
+            btnText: 'Get Started',
+            btnLink: '/contact'
+        }
+    ];
+
+    
+
 export const featuredStrategiesData = {
     subTitle: "Institutional Roadmap",
     mainTitle: "Strategies for Sustainable Value",
@@ -126,69 +223,6 @@ export const testimonialData = [
     }
 ];
 
-export const portfolioHighlightsData = {
-    subTitle: "Portfolio Highlights",
-    title: <>Online Banking at Your <br />Fingertips</>,
-    bgImage: "assets/images/background/service-bg.jpg",
-    services: [
-        {
-            delay: "00ms",
-            icon: "icon-12",
-            title: "Digital Banking",
-            link: "/service-details",
-            items: ["Bank & savings accounts", "Credit cards", "Personal loans"]
-        },
-        {
-            delay: "300ms",
-            icon: "icon-13",
-            title: "Mobile & Web Banking",
-            link: "/service-details-2",
-            items: ["Instant Access", "Savings Fixed Term", "Savings Instant"]
-        },
-        {
-            delay: "600ms",
-            icon: "icon-14",
-            title: "Insurance Policies",
-            link: "/service-details-3",
-            items: ["Pet insurance", "Transport Insurance", "Accident insurance"]
-        },
-        {
-            delay: "900ms",
-            icon: "icon-15",
-            title: "Home & Property Loan",
-            link: "/service-details-4",
-            items: ["Residential Mortgages", "Buy-to-let Mortgages", "Building Mortgages"]
-        },
-        {
-            delay: "00ms",
-            icon: "icon-16",
-            title: "All Bank Account",
-            link: "/service-details-5",
-            items: ["nstant Access Savings", "Instant Access Cash", "Young Savers Account"]
-        },
-        {
-            delay: "300ms",
-            icon: "icon-17",
-            title: "borrowing accounts",
-            link: "/service-details-6",
-            items: ["Bank Credit Card", "Setter personal loan", "Overdraft"]
-        },
-        {
-            delay: "600ms",
-            icon: "icon-18",
-            title: "Private Banking",
-            link: "/service-details-7",
-            items: ["Dedicated personal service", "Specialist teams", "Tailored products"]
-        },
-        {
-            delay: "900ms",
-            icon: "icon-19",
-            title: "Fixed term accounts",
-            link: "/service-details-8",
-            items: ["Fixed Term Saving", "Fixed Rate Cash", "Resume your Current"]
-        }
-    ]
-};
 
 export const insightsData = {
     subTitle: "Insights",
@@ -277,3 +311,71 @@ export const testimonialSliderOneData = [
         text: "“Our experience with Indel has been smooth and professional. The timely updates and strategic recommendations added real value to our portfolio.”"
     }
 ];
+
+
+  export const whoweareData = {
+        subTitle: "Who we are",
+        mainTitle: "Your Trusted Finance Partner for Every Stage of Life.",
+        descriptionMain: "At Indel Capital, we help individuals and businesses make confident financial decisions with clarity and expert guidance. Our approach is built on trust, transparency, and a deep understanding of what people need to grow and secure their futures.",
+        descriptionQuote: "We simplify finance through personalised solutions, smart insights, and continuous support ensuring you’re always moving in the right direction.",
+        experienceYears: "5",
+        experienceText: "Years Experience",
+        imagePath: "assets/images/resource/about-6.jpg",
+        points: [
+            "Unlocking better financial possibilities",
+            "Fast, practical solutions for everyday financial needs",
+            "A growing community built on trust and progress"
+        ]
+    };
+
+    export  const mainCards = [
+        {
+            id: 'vision',
+            title: 'Our Vision',
+            text: 'To be a trusted and forward-looking capital partner that empowers businesses and individuals to unlock sustainable growth and long-term financial strength. We aspire to build a resilient financial ecosystem where opportunity, innovation, and integrity come together to create enduring value. We aim to inspire confidence in every financial decision and drive meaningful impact across industries. Our goal is to shape a future where growth and responsibility go hand in hand.',
+            icon: <Eye size={32} />,
+            gradient: 'linear-gradient(135deg, #17479e 0%, #3b82f6 100%)'
+        },
+        {
+            id: 'mission',
+            title: 'Our Mission',
+            text: 'At Indel Capital, our mission is to deliver strategic, responsible, and growth-focused financial solutions tailored to the evolving needs of our clients. We are committed to operating with transparency, discipline, and insight, fostering lasting partnerships built on trust, performance, and shared success. We continuously innovate to meet changing market demands and empower our clients with knowledge and confidence. Our mission is to create value that transcends numbers, building lasting impact for communities and stakeholders alike.',
+            icon: <Rocket size={32} />,
+            gradient: 'linear-gradient(135deg, #ee3824 0%, #f87171 100%)'
+        }
+    ];
+
+    export const valueStrip = [
+        {
+            title: 'Trust',
+            sub: '38 Years of Legacy',
+            icon: <ShieldCheck size={28} color="#ffd700" />
+        },
+        {
+            title: 'Transparency',
+            sub: 'Ethical Operations',
+            icon: <Landmark size={28} color="#ffd700" />
+        },
+        {
+            title: 'Innovation',
+            sub: 'Tech-Driven Growth',
+            icon: <Lightbulb size={28} color="#ffd700" />
+        },
+        {
+            title: 'Empowerment',
+            sub: 'Financial Inclusion',
+            icon: <Users size={28} color="#ffd700" />
+        }
+    ];
+
+
+ export const teamMembers = [
+    { name: "Wade Warren",       role: "Founder",           img: "assets/images/team/team-1.jpg" },
+    { name: "Guy Hawkins",       role: "Co-Founder",        img: "assets/images/team/team-2.jpg" },
+    { name: "Bessie Cooper",     role: "Chairman",          img: "assets/images/team/team-3.jpg" },
+    { name: "Devon Lane",        role: "Vice Chairman",     img: "assets/images/team/team-4.jpg" },
+    { name: "Brooklyn Simmons",  role: "Head of Marketing", img: "assets/images/team/team-5.jpg" },
+    { name: "Robert Fox",        role: "Head of Finance",   img: "assets/images/team/team-6.jpg" },
+    { name: "Darlene Robertson", role: "Managing Director", img: "assets/images/team/team-7.jpg" },
+    { name: "Albert Flores",     role: "Chief Marketer",    img: "assets/images/team/team-8.jpg" },
+]

@@ -1,7 +1,9 @@
 'use client'
 import Link from "next/link";
+import { whoweareData } from "@/public/assets/assest";
 
 export default function Whoweare() {
+ 
     return (
         <>
             <style jsx>{`
@@ -71,23 +73,23 @@ export default function Whoweare() {
                                 <div className="content-box mr_110">
                                     <div className="sec-title mb_20">
                                         <h6 style={{ color: '#eb2525', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700', marginBottom: '10px' }}>
-                                            Who we are
+                                            {whoweareData.subTitle}
                                         </h6>
                                         <h2 style={{ color: '#17479d', fontSize: '42px', fontWeight: '800', lineHeight: '1.2' }}>
-                                            Your Trusted Finance Partner for Every Stage of Life.
+                                            {whoweareData.mainTitle}
                                         </h2>
                                     </div>
                                     <div className="text-box mb_40">
                                         <p style={{ fontSize: '17px', color: '#555', marginBottom: '20px' }}>
-                                            At Indel Capital, we help individuals and businesses make confident financial decisions with clarity and expert guidance. Our approach is built on trust, transparency, and a deep understanding of what people need to grow and secure their futures.
+                                            {whoweareData.descriptionMain}
                                         </p>
                                         <p style={{ fontSize: '16px', color: '#777', fontStyle: 'italic', borderLeft: '3px solid #eb2525', paddingLeft: '15px', marginBottom: '30px' }}>
-                                            We simplify finance through personalised solutions, smart insights, and continuous support ensuring you’re always moving in the right direction.
+                                            {whoweareData.descriptionQuote}
                                         </p>
                                         <ul className="framework-list">
-                                            <li>Unlocking better financial possibilities</li>
-                                            <li>Fast, practical solutions for everyday financial needs</li>
-                                            <li>A growing community built on trust and progress</li>
+                                            {whoweareData.points.map((point, index) => (
+                                                <li key={index}>{point}</li>
+                                            ))}
                                         </ul>
                                     </div>
                                     <div className="btn-box">
@@ -100,7 +102,7 @@ export default function Whoweare() {
                             <div className="image_block_two">
                                 <div className="image-wrapper">
                                     <figure className="image clipped-image">
-                                        <img src="assets/images/resource/about-6.jpg" alt="About Indel Capital" style={{ width: '100%', display: 'block' }} />
+                                        <img src={whoweareData.imagePath} alt="About Indel Capital" style={{ width: '100%', display: 'block' }} />
                                     </figure>
                                     
                                     <div style={{
@@ -115,8 +117,8 @@ export default function Whoweare() {
                                         textAlign: 'center',
                                         minWidth: '150px'
                                     }}>
-                                        <h3 style={{ color: '#eb2525', margin: 0, fontSize: '36px', fontWeight: '800' }}>5</h3>
-                                        <p style={{ color: '#17479d', margin: 0, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>Years Experience</p>
+                                        <h3 style={{ color: '#eb2525', margin: 0, fontSize: '36px', fontWeight: '800' }}>{whoweareData.experienceYears}</h3>
+                                        <p style={{ color: '#17479d', margin: 0, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700' }}>{whoweareData.experienceText}</p>
                                     </div>
                                 </div>
                             </div>
