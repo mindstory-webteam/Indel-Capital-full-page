@@ -73,7 +73,6 @@ const LiquidButton = ({ text, bgcolor }) => {
           left: 0;
           right: 0;
           bottom: 0;
-          /* We check if bgcolor is a class or hex. Hex is safer for internal CSS */
           background-color: ${bgcolor && !bgcolor.startsWith('bg-') ? bgcolor : '#fb923c'};
           pointer-events: none;
           z-index: 1;

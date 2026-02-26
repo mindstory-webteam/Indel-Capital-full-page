@@ -379,3 +379,32 @@ export const testimonialSliderOneData = [
     { name: "Darlene Robertson", role: "Managing Director", img: "assets/images/team/team-7.jpg" },
     { name: "Albert Flores",     role: "Chief Marketer",    img: "assets/images/team/team-8.jpg" },
 ]
+
+
+export const coreFaqs = [
+    {
+        id: 1,
+        q: "What is Indel Capital?",
+        a: "Indel Capital is a professional investment and financial services company helping individuals and businesses achieve long-term financial growth and stability."
+    },
+    {
+        id: 2,
+        q: "What kinds of investment solutions do you offer?",
+        a: "We offer tailored investment strategies, wealth management, and financial advisory solutions designed to match different financial goals and risk profiles."
+    },
+    {
+        id: 3,
+        q: "How does Indel Capital support clients beyond funding?",
+        a: "We blend deep market research, strategy planning, and ongoing performance tracking to help clients grow and protect their capital over time."
+    },
+    {
+        id: 4,
+        q: "Who can invest with Indel Capital?",
+        a: "Individuals, professionals, entrepreneurs, and businesses seeking structured, disciplined, and transparent investment planning can work with us."
+    },
+    {
+        id: 5,
+        q: "How can I start investing or get personalised advice?",
+        a: "To begin, submit an enquiry through the contact form or request a consultation — our team will guide you through onboarding and planning your investment path."
+    }
+]

@@ -2,215 +2,125 @@
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
 import { useState } from 'react'
+import { coreFaqs } from "@/public/assets/assest"
+import LiquidButton from '@/components/LiquidButton.js'
+
 export default function Home() {
-    const [isActive, setIsActive] = useState({
-        status: false,
-        key: 1,
-    })
+    const [activeKey, setActiveKey] = useState(1)
 
     const handleToggle = (key) => {
-        if (isActive.key === key) {
-            setIsActive({
-                status: false,
-            })
-        } else {
-            setIsActive({
-                status: true,
-                key,
-            })
-        }
+        setActiveKey(activeKey === key ? null : key)
     }
+
+    const css = `
+        .indel-faq-section { background: #ffffff; padding: 100px 0; }
+        .faq-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
+        
+        .faq-sidebar h6 { color: #ee3824; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
+        .faq-sidebar h2 { color: #17479e; font-size: 42px; font-weight: 800; line-height: 1.2; margin-bottom: 25px; }
+        .faq-sidebar p { color: #666; font-size: 17px; line-height: 1.7; }
+
+        .faq-accordion { border-top: 2px solid #f0f4fa; }
+        .faq-item { border-bottom: 1px solid #f0f4fa; transition: all 0.3s ease; }
+        .faq-header { 
+            padding: 25px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; 
+            transition: all 0.3s ease;
+        }
+        .faq-header h4 { font-size: 19px; font-weight: 700; color: #333; transition: color 0.3s; padding-right: 30px; }
+        .faq-item.active .faq-header h4 { color: #17479e; }
+        
+        .faq-icon { 
+            width: 24px; height: 24px; position: relative; 
+            transition: transform 0.3s ease; transform: rotate(0deg);
+        }
+        .faq-icon::before, .faq-icon::after {
+            content: ''; position: absolute; background: #ee3824; transition: all 0.3s;
+        }
+        .faq-icon::before { width: 100%; height: 2px; top: 50%; left: 0; margin-top: -1px; }
+        .faq-icon::after { width: 2px; height: 100%; left: 50%; top: 0; margin-left: -1px; }
+        .faq-item.active .faq-icon { transform: rotate(135deg); }
+        .faq-item.active .faq-icon::after, .faq-item.active .faq-icon::before { background: #17479e; }
+
+        .faq-content { 
+            max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+        .faq-item.active .faq-content { max-height: 250px; }
+        .faq-text { padding-bottom: 25px; color: #555; line-height: 1.7; font-size: 15px; }
+
+        .premium-cta {
+            background: #17479e; border-radius: 12px; padding: 60px; color: #fff;
+            display: flex; justify-content: space-between; align-items: center; margin-top: 80px;
+            position: relative; overflow: hidden;
+        }
+        .premium-cta::before {
+            content: ''; position: absolute; top: -50%; right: -10%; width: 400px; height: 400px;
+            background: rgba(238, 56, 36, 0.1); border-radius: 50%;
+        }
+
+        /* Essential for Liquid Button to show up */
+        .btn-wrapper {
+            width: 240px;
+            height: 60px;
+            position: relative;
+            z-index: 5;
+        }
+
+        @media (max-width: 991px) {
+            .faq-grid { grid-template-columns: 1fr; gap: 40px; }
+            .premium-cta { flex-direction: column; text-align: center; gap: 40px; padding: 40px 20px; }
+            .btn-wrapper { margin: 0 auto; }
+        }
+    `
+
     return (
         <>
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="General FAQ’s">
-                <div>
-                    
-
-                    <section className="faq-section pt_120 pb_100">
-                        <div className="auto-container">
-                            <div className="sec-title centred mb_70">
-                                <h6>Regular FAQ’S</h6>
-                                <h2>Frequently Asked Questions</h2>
-                            </div>
-                            <div className="row clearfix">
-                                <div className="col-lg-6 col-md-12 col-sm-12 accordion-column">
-                                    <ul className="accordion-box">
-                                        {/*Accordion Block*/}
-                                        <li className="accordion block">
-                                            <div className={isActive.key == 1 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(1)}>
-                                                <div className="icon-box"></div>
-                                                <h4>Quick Response</h4>
-                                            </div>
-                                            <div className={isActive.key == 1 ? "acc-content current" : "acc-content"}>
-                                                <div className="content">
-                                                    <div className="text"><p>Pulvinar dolor aliquet netus ultrices neque, mi non accumsan ullamco reper. Et nunc donen scelerisque turpis on facilisis pretium ut facilisis pharetra, ultrices. Duis imperdiet habitant arcu.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        {/*Accordion Block*/}
-                                        <li className="accordion block">
-                                            <div className={isActive.key == 2 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(2)}>
-                                                <div className="icon-box"></div>
-                                                <h4>Document Requirement</h4>
-                                            </div>
-                                            <div className={isActive.key == 2 ? "acc-content current" : "acc-content"}>
-                                                <div className="content">
-                                                    <div className="text"><p>Pulvinar dolor aliquet netus ultrices neque, mi non accumsan ullamco reper. Et nunc donen scelerisque turpis on facilisis pretium ut facilisis pharetra, ultrices. Duis imperdiet habitant arcu.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        {/*Accordion Block*/}
-                                        <li className="accordion block">
-                                            <div className={isActive.key == 3 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(3)}>
-                                                <div className="icon-box"></div>
-                                                <h4>Flexible Payment</h4>
-                                            </div>
-                                            <div className={isActive.key == 3 ? "acc-content current" : "acc-content"}>
-                                                <div className="content">
-                                                    <div className="text"><p>Pulvinar dolor aliquet netus ultrices neque, mi non accumsan ullamco reper. Et nunc donen scelerisque turpis on facilisis pretium ut facilisis pharetra, ultrices. Duis imperdiet habitant arcu.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        {/*Accordion Block*/}
-                                        <li className="accordion block">
-                                            <div className={isActive.key == 4 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(4)}>
-                                                <div className="icon-box"></div>
-                                                <h4>What is the Duration</h4>
-                                            </div>
-                                            <div className={isActive.key == 4 ? "acc-content current" : "acc-content"}>
-                                                <div className="content">
-                                                    <div className="text"><p>Pulvinar dolor aliquet netus ultrices neque, mi non accumsan ullamco reper. Et nunc donen scelerisque turpis on facilisis pretium ut facilisis pharetra, ultrices. Duis imperdiet habitant arcu.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-lg-6 col-md-12 col-sm-12 accordion-column">
-                                <ul className="accordion-box">
-                                        {/*Accordion Block*/}
-                                        <li className="accordion block">
-                                            <div className={isActive.key == 5 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(5)}>
-                                                <div className="icon-box"></div>
-                                                <h4>Quick Response</h4>
-                                            </div>
-                                            <div className={isActive.key == 5 ? "acc-content current" : "acc-content"}>
-                                                <div className="content">
-                                                    <div className="text"><p>Pulvinar dolor aliquet netus ultrices neque, mi non accumsan ullamco reper. Et nunc donen scelerisque turpis on facilisis pretium ut facilisis pharetra, ultrices. Duis imperdiet habitant arcu.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        {/*Accordion Block*/}
-                                        <li className="accordion block">
-                                            <div className={isActive.key == 6 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(6)}>
-                                                <div className="icon-box"></div>
-                                                <h4>Flexible Payment</h4>
-                                            </div>
-                                            <div className={isActive.key == 6 ? "acc-content current" : "acc-content"}>
-                                                <div className="content">
-                                                    <div className="text"><p>Pulvinar dolor aliquet netus ultrices neque, mi non accumsan ullamco reper. Et nunc donen scelerisque turpis on facilisis pretium ut facilisis pharetra, ultrices. Duis imperdiet habitant arcu.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        {/*Accordion Block*/}
-                                        <li className="accordion block">
-                                            <div className={isActive.key == 7 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(7)}>
-                                                <div className="icon-box"></div>
-                                                <h4>What is the Duration</h4>
-                                            </div>
-                                            <div className={isActive.key == 7 ? "acc-content current" : "acc-content"}>
-                                                <div className="content">
-                                                    <div className="text"><p>Pulvinar dolor aliquet netus ultrices neque, mi non accumsan ullamco reper. Et nunc donen scelerisque turpis on facilisis pretium ut facilisis pharetra, ultrices. Duis imperdiet habitant arcu.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        {/*Accordion Block*/}
-                                        <li className="accordion block">
-                                            <div className={isActive.key == 8 ? "acc-btn active" : "acc-btn"} onClick={() => handleToggle(8)}>
-                                                <div className="icon-box"></div>
-                                                <h4>What is the Duration</h4>
-                                            </div>
-                                            <div className={isActive.key == 8 ? "acc-content current" : "acc-content"}>
-                                                <div className="content">
-                                                    <div className="text"><p>Pulvinar dolor aliquet netus ultrices neque, mi non accumsan ullamco reper. Et nunc donen scelerisque turpis on facilisis pretium ut facilisis pharetra, ultrices. Duis imperdiet habitant arcu.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+            <style dangerouslySetInnerHTML={{ __html: css }} />
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Core Investor FAQ" breadcrumbImg='assets/images/background/page-title.jpg'>
+                
+                <section className="indel-faq-section">
+                    <div className="auto-container">
+                        <div className="faq-grid">
+                            <div className="faq-sidebar">
+                                <h6>Core FAQ'S</h6>
+                                <h2>Your Path to Financial Clarity</h2>
+                                <p>We believe transparency is the foundation of a successful partnership. Explore our most common queries regarding Indel Capital's investment methodology and client services.</p>
+                                <div className="mt-4" >
+                                    <span style={{color: "#17479e", fontWeight: "700"}}>Expert Led Advisory</span>
+                                    <br/>
+                                    <small>Regulated and transparent frameworks for your peace of mind.</small>
                                 </div>
                             </div>
-                        </div>
-                    </section>
 
-
-                    {/* faq-form-section end */}
-                    <section className="faq-form-section pt_120 pb_120">
-                        <div className="auto-container">
-                            <div className="sec-title mb_70 centred">
-                                <h6>Asked Question</h6>
-                                <h2>Get Your Answer</h2>
-                            </div>
-                            <div className="form-inner">
-                                <form  action="faq">
-                                    <div className="row clearfix">
-                                        <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input type="text" name="name" placeholder="Your name" required />
+                            <div className="faq-accordion">
+                                {coreFaqs.map((faq) => (
+                                    <div key={faq.id} className={`faq-item ${activeKey === faq.id ? 'active' : ''}`}>
+                                        <div className="faq-header" onClick={() => handleToggle(faq.id)}>
+                                            <h4>{faq.q}</h4>
+                                            <div className="faq-icon"></div>
                                         </div>
-                                        <div className="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input type="email" name="email" placeholder="Your email" required />
-                                        </div>
-                                        <div className="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <input type="text" name="phone" placeholder="Phone number" required />
-                                        </div>
-                                        <div className="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <textarea name="message" placeholder="Type message"></textarea>
-                                        </div>
-                                        <div className="col-lg-12 col-md-12 col-sm-12 form-group message-btn centred">
-                                            <button type="submit" className="theme-btn btn-one">Send Message</button>
+                                        <div className="faq-content">
+                                            <div className="faq-text">{faq.a}</div>
                                         </div>
                                     </div>
-                                </form>
+                                ))}
                             </div>
                         </div>
-                    </section>
-                    {/* faq-form-section end */}
 
-                    {/* subscribe-section */}
-                    <section className="subscribe-section">
-                        <div className="pattern-layer" style={{ backgroundImage: "url(assets/images/shape/shape-5.png)" }}></div>
-                        <div className="auto-container">
-                            <div className="row align-items-center">
-                            <div className="col-lg-6 col-md-12 col-sm-12 text-column">
-                                <div className="text-box">
-                                <h2>Subscribe us to Receive Latest Updates</h2>
-                                </div>
+                        <div className="premium-cta">
+                            <div className="cta-content">
+                                <h3 className="mb-2" style={{fontWeight: 800}}>Ready to secure your future?</h3>
+                                <p className="mb-0 text-white-50">Speak with our wealth managers to design your bespoke investment framework.</p>
                             </div>
-                            <div className="col-lg-6 col-md-12 col-sm-12 form-column">
-                                <div className="form-inner ml_40">
-                                <form method="post" action="contact">
-                                    <div className="form-group">
-                                    <input type="email" name="email" placeholder="Your email" required />
-                                    <button type="submit" className="theme-btn btn-two">Subscribe Now</button>
-                                    </div>
-                                </form>
-                                </div>
-                            </div>
+                            
+                            <div className="btn-wrapper">
+                                <Link href="/contact" style={{ display: 'block', width: '100%', height: '100%', textDecoration: 'none' }}>
+                                    <LiquidButton text="Book a Consultation" bgcolor="#ee3824" />
+                                </Link>
                             </div>
                         </div>
-                    </section>
-                    {/* subscribe-section end */}
-                    
-                </div>
-
+                    </div>
+                </section>
             </Layout>
         </>
     )
 }
-
