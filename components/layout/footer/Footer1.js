@@ -9,8 +9,9 @@ const quickLinks = [
   { label: "Who We Are", href: "/who-we-are" },
   { label: "Investment Approach", href: "/investment-approach" },
   { label: "Strategies", href: "/strategies" },
-  { label: "Careers", href: "/careers" },
-  { label: "Contact", href: "/contact" },
+  { label: "Blogs", href: "/blogs" },
+  { label: "Careers", href: "/career" },
+  { label: "Contact", href: "/contact-us" },
 ];
 
 export default function Footer() {
