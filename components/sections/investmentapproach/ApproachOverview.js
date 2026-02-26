@@ -7,7 +7,7 @@ export default function ApproachOverview() {
         <>
             <style jsx>{`
                 .approach-section {
-                    padding: 80px 0;
+                    padding: 65px 0;
                     background-color: #fcfdfe;
                     overflow: hidden;
                 }
@@ -19,46 +19,94 @@ export default function ApproachOverview() {
                     flex-wrap: wrap;
                     align-items: center;
                 }
+
                 .approach-image-col {
                     flex: 0 0 50%;
                     max-width: 50%;
                     position: relative;
                 }
 
-                .img-wrapper {
+                .img-frame {
                     position: relative;
-                    padding: 40px;
+                    padding: 40px 40px 40px 20px;
                 }
-                .img-wrapper img {
-                    width: 100%;
-                    height: auto;
-                    border-radius: 60px 5px 60px 5px;
-                    z-index: 2;
+
+                .photo-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto auto;
+                    gap: 10px;
                     position: relative;
+                    z-index: 2;
+                }
+
+                .photo-a {
+                    grid-column: 1;
+                    grid-row: 1 / 3;
+                    border-radius: 3px;
+                    overflow: hidden;
+                }
+                .photo-a img {
+                    width: 100%;
+                    height: 100%;
                     object-fit: cover;
                     display: block;
+                    filter: saturate(0.85);
+                    min-height: 320px;
                 }
-                .img-shape {
-                    position: absolute;
-                    top: 10px;
-                    left: 10px;
-                    right: 70px;
-                    bottom: 10px;
-                    border: 2px solid #eb2525;
-                    border-radius: 60px 5px 60px 5px;
-                    z-index: 1;
+
+                .photo-b {
+                    grid-column: 2;
+                    grid-row: 1;
+                    border-radius: 3px;
+                    overflow: hidden;
+                    margin-top: 30px;
                 }
-                .img-wrapper::after {
-                    content: "";
-                    position: absolute;
-                    top: 70px;
-                    left: 70px;
-                    right: 10px;
-                    bottom: -20px;
-                    background: #f1f5f9; 
-                    border-radius: 60px 5px 60px 5px;
-                    z-index: 0;
+                .photo-b img {
+                    width: 100%;
+                    height: 160px;
+                    object-fit: cover;
+                    object-position: center top;
+                    display: block;
+                    filter: saturate(0.85);
                 }
+
+                .accent-card {
+                    grid-column: 2;
+                    grid-row: 2;
+                    background: #17479e;
+                    border-radius: 3px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding: 20px 18px;
+                    margin-top: 0;
+                }
+                .accent-card .ac-icon {
+                    width: 32px;
+                    height: 32px;
+                    margin-bottom: 10px;
+                }
+                .accent-card .ac-icon svg {
+                    width: 32px;
+                    height: 32px;
+                    stroke: #fff;
+                    fill: none;
+                    stroke-width: 1.8;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+                .accent-card .ac-text {
+                    font-size: 13px;
+                    font-weight: 700;
+                    color: #fff;
+                    text-transform: uppercase;
+                    letter-spacing: 0.8px;
+                    line-height: 1.4;
+                }
+
+            
 
                 .approach-content-col {
                     flex: 0 0 50%;
@@ -105,12 +153,11 @@ export default function ApproachOverview() {
                     margin-right: 12px;
                 }
 
-                /* Container for Liquid Button */
                 .btn-wrapper {
                     width: 200px;
                     height: 55px;
                 }
-                
+
                 @media (max-width: 991px) {
                     .approach-image-col, .approach-content-col {
                         flex: 0 0 100%;
@@ -120,21 +167,46 @@ export default function ApproachOverview() {
                         padding-left: 15px;
                         margin-top: 50px;
                     }
-                    .img-wrapper {
+                    .img-frame {
                         padding: 20px;
                     }
+                    .photo-a img {
+                        min-height: 220px;
+                    }
                     .btn-wrapper {
-                        margin: 0 auto; /* Optional: Center button on mobile */
+                        margin: 0 auto;
                     }
                 }
             `}</style>
 
             <section className="approach-section">
                 <div className="approach-container">
+
                     <div className="approach-image-col">
-                        <div className="img-wrapper">
-                            <div className="img-shape"></div>
-                            <img src="assets/images/service/service-1.jpg" alt="Our Approach Strategy" />
+                        <div className="img-frame">
+
+                            <div className="photo-grid">
+
+                                <div className="photo-a">
+                                    <img src="assets/images/service/service-1.jpg" alt="Financial Strategy" />
+                                </div>
+
+                                <div className="photo-b">
+                                    <img src="assets/images/service/service-1.jpg" alt="Market Analysis" />
+                                </div>
+
+                                <div className="accent-card">
+                                    <div className="ac-icon">
+                                        <svg viewBox="0 0 24 24">
+                                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                            <path d="M2 17l10 5 10-5"/>
+                                            <path d="M2 12l10 5 10-5"/>
+                                        </svg>
+                                    </div>
+                                    <span className="ac-text">Structured<br />Investment<br />Framework</span>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
 
@@ -161,6 +233,7 @@ export default function ApproachOverview() {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </section>
         </>
