@@ -10,6 +10,7 @@
     "sass": "sass --watch public/assets/scss/main.scss:public/assets/css/main.css"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "bootstrap-touchspin": "^4.7.3",
     "framer-motion": "^12.34.3",
     "gsap": "^3.14.2",
