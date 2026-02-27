@@ -143,7 +143,7 @@ export default function ContactPage() {
 
                         <motion.div style={infoCard} variants={fadeInUp}>
                             <span style={cardLabel}>Corporate Office</span>
-                            <div style={cardValue}>Indel House, Changampuzha Nagar, South Kalamassery, Ernakulam<br />Kerala 682033,</div>
+                            <div style={cardValue}>Indel House, Changampuzha Nagar, South Kalamassery, Ernakulam<br />Kerala 682033</div>
                         </motion.div>
 
                         <motion.div style={infoCard} variants={fadeInUp}>

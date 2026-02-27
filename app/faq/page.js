@@ -113,7 +113,7 @@ export default function Home() {
                             </div>
                             
                             <div className="btn-wrapper">
-                                <Link href="/contact" style={{ display: 'block', width: '100%', height: '100%', textDecoration: 'none' }}>
+                                <Link href="/contact-us" style={{ display: 'block', width: '100%', height: '100%', textDecoration: 'none' }}>
                                     <LiquidButton text="Book a Consultation" bgcolor="#ee3824" />
                                 </Link>
                             </div>
