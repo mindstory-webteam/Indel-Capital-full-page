@@ -3,8 +3,7 @@ import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { slides } from "@/public/assets/assest"
-import LiquidButton from "@/components/LiquidButton" // Adjust path as needed
-
+import LiquidButton from "@/components/LiquidButton"
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
     slidesPerView: 1,
@@ -27,7 +26,7 @@ const swiperOptions = {
 export default function Banner() {
 
     const h2Style = {
-        fontSize: 'clamp(32px, 8vw, 60px)', 
+        fontSize: 'clamp(32px, 8vw, 60px)',
         fontWeight: '800',
         lineHeight: '1.1',
         marginBottom: '30px',
@@ -35,30 +34,36 @@ export default function Banner() {
         flexDirection: 'column',
         alignItems: 'flex-start',
         width: '100%',
-        color: '#ffffff', 
+        color: '#ffffff',
     };
 
     const lineStyle = {
-        whiteSpace: 'normal', 
+        whiteSpace: 'normal',
         display: 'block',
         fontStyle: 'normal',
         fontWeight: 'inherit',
-        color: 'inherit' 
+        color: 'inherit'
     };
 
     return (
         <>
             <style jsx>{`
                 @media (max-width: 767px) {
-                    .content-box p br {
-                        display: none;
-                    }
-                    .content-box p {
-                        font-size: 16px;
-                    }
-                }
+    .content-box p br {
+        display: none;
+    }
+    .content-box p {
+        font-size: 16px;
+    }
+    .banner-section,
+    .banner-carousel,
+    .slide-item {
+        height: 500px !important;
+        min-height: 490px !important;
+        max-height: 490px !important;
+    }
+}
 
-                /* Liquid Button Integration */
                 .liquid-banner-wrapper {
                     width: 220px;
                     height: 60px;
@@ -76,7 +81,7 @@ export default function Banner() {
 
             <section className="banner-section p_relative">
                 <Swiper {...swiperOptions} className="banner-carousel">
-                    
+
                     {slides.map((slide, index) => (
                         <SwiperSlide key={index} className="slide-item p_relative">
                             <div className="bg-layer" style={{ backgroundImage: slide.bgImage }}></div>
@@ -87,18 +92,18 @@ export default function Banner() {
                                 <div className="content-box" style={{ maxWidth: '100%' }}>
                                     <h2 style={h2Style}>
                                         <strong style={lineStyle}>{slide.titleLine1}</strong>
-                                        <strong style={lineStyle}> 
+                                        <strong style={lineStyle}>
                                             {slide.titleLine2}
                                         </strong>
                                     </h2>
                                     <p>{slide.description}</p>
-                                    
+
                                     <div className="btn-box">
                                         <div className="liquid-banner-wrapper">
                                             <Link href={slide.btnLink} style={{ textDecoration: 'none' }}>
-                                                <LiquidButton 
-                                                    text={slide.btnText} 
-                                                    bgcolor="#ee3824" 
+                                                <LiquidButton
+                                                    text={slide.btnText}
+                                                    bgcolor="#ee3824"
                                                 />
                                             </Link>
                                         </div>

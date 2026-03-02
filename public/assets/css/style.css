@@ -1168,7 +1168,7 @@ img {
   font-size: 40px;
   line-height: 50px;
   cursor: pointer;
-  background: var(--secondary-color);
+  background:#17479e;
   display: none;
 }
 
