@@ -152,15 +152,15 @@ export const slides = [
         titleLine2: 'Grow With Clarity.',
         description:<>Build a secure financial future through disciplined investing and well-designed strategies.</>,
         btnText: 'Get Started',
-        btnLink: '/about'
+        btnLink: '/contact'
     },
     {
         bgImage: 'url(assets/images/banner/banner-2.jpg)',
         titleLine1: 'Structured Investing for',
         titleLine2: 'Financial Future.',
-        description:<>Unlock investment value with specialized gold loan products and strategic credit solutions.</>,
+        description:<>Unlock investment value with specialized asset yield products and strategic credit solutions.</>,
         btnText: 'View Solutions',
-        btnLink: '/services'
+        btnLink: '/strategies'
     },
     {
         bgImage: 'url(assets/images/banner/banner-3.jpg)',
