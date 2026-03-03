@@ -51,7 +51,6 @@ export default function Banner() {
     return (
         <>
             <style jsx>{`
-                /* Desktop and Tablet Height (LG / MD) */
                 .banner-section,
                 .banner-carousel,
                 .slide-item {
@@ -70,7 +69,6 @@ export default function Banner() {
                     background-repeat: no-repeat;
                 }
 
-                /* Mobile Screen Height (SM) */
                 @media (max-width: 767px) {
                     .banner-section,
                     .banner-carousel,
@@ -84,6 +82,8 @@ export default function Banner() {
                     }
                     .content-box p {
                         font-size: 16px;
+                        line-height: 1.4;
+                        margin-bottom: 20px;
                     }
                     .title-line1 {
                         font-size: clamp(18px, 4.5vw, 28px) !important;
