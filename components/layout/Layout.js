@@ -11,7 +11,7 @@ import Header2 from './header/Header2'
 import Header3 from "./header/Header3"
 import Header4 from "./header/Header4"
 
-export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children, wrapperCls,breadcrumbImg }) {
+export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children, wrapperCls, breadcrumbImg }) {
     const [scroll, setScroll] = useState(0)
     // Mobile Menu
     const [isMobileMenu, setMobileMenu] = useState(false)
@@ -27,21 +27,31 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
     // Sidebar
     const [isSidebar, setSidebar] = useState(false)
     const handleSidebar = () => setSidebar(!isSidebar)
+useEffect(() => {
+    const wowModule = require('wowjs')
+    const WOW = wowModule.WOW || wowModule.default
 
-    useEffect(() => {
-        const WOW = require('wowjs')
-        window.wow = new WOW.WOW({
+    if (WOW) {
+        window.wow = new WOW({
             live: false
         })
         window.wow.init()
+    }
 
-        document.addEventListener("scroll", () => {
-            const scrollCheck = window.scrollY > 100
-            if (scrollCheck !== scroll) {
-                setScroll(scrollCheck)
-            }
-        })
-    }, [])
+    const handleScroll = () => {
+        const scrollCheck = window.scrollY > 100
+        if (scrollCheck !== scroll) {
+            setScroll(scrollCheck)
+        }
+    }
+
+    document.addEventListener("scroll", handleScroll)
+
+    return () => {
+        document.removeEventListener("scroll", handleScroll)
+    }
+}, [])
+
     return (
         <>
             <DataBg />
@@ -54,9 +64,9 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
 
 
                 <Sidebar isSidebar={isSidebar} handleSidebar={handleSidebar} />
-                
 
-                {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle}  breadcrumbImg={breadcrumbImg} />}
+
+                {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} breadcrumbImg={breadcrumbImg} />}
 
                 {children}
 

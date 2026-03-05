@@ -1,27 +1,28 @@
 import "@/node_modules/react-modal-video/css/modal-video.css"
-import "public/assets/css/bootstrap.css"
-import "public/assets/css/style.css"
-import "public/assets/css/color.css"
+import "@/public/assets/css/bootstrap.css"
+import "@/public/assets/css/style.css"
+import "@/public/assets/css/color.css"
 import 'swiper/css'
-// import "swiper/css/navigation"
 import "swiper/css/pagination"
 import 'swiper/css/free-mode';
 import { inter, manrope } from '@/lib/font'
 
 export const metadata = {
+    metadataBase: new URL("http://localhost:3000"),
     title: 'Indel Capital',
     openGraph: {
         title: 'Indel Capital',
         description: 'A Structured Path to Financial Freedom',
         images: [
             {
-                url: './favicon.ico', 
+                url: '/favicon.ico',
                 width: 800,
                 height: 600,
             },
         ],
     },
 }
+
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className={`${manrope.variable} ${inter.variable}`}>
