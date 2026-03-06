@@ -174,7 +174,7 @@ export default function About() {
           <div style={{ textAlign: 'center' }}>
             <div className="image-wrapper">
               <img 
-                src="assets/images/resource/about-1.jpg" 
+                src="/assets/images/resource/about-1.jpg" 
                 alt="About Professional Team" 
                 className="main-image" 
               />

@@ -27,7 +27,7 @@ export default function Footer() {
 
   const cssStyles = `
     .awwwards-footer {
-      background: #050b27;
+      background: #0c1951;
       color: #ffffff;
       font-family: 'Outfit', sans-serif;
       padding: 160px 0 60px 0;

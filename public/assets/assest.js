@@ -141,7 +141,7 @@ export const investmentPhilosophyData = {
         text: "Years of Specialized Strategic Investment"
     },
     images: {
-        img1: "assets/images/resource/about-2.jpg",
+        img1: "/assets/images/background/video-bg.jpg",
         img2: "assets/images/resource/about-3.jpg"
     }
 };

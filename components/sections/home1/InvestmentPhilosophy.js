@@ -80,30 +80,11 @@ export default function InvestmentPhilosophy() {
                     font-size: 10px;
                 }
 
-                /* Container for the Liquid Button */
                 .btn-wrapper {
                     width: 200px;
                     height: 55px;
                     margin-top: 10px;
                 }
-
-                // .image-holder {
-                //     position: relative;
-                //     padding: 20px; 
-                //     width: 100%;
-                // }
-
-                // .image-holder::before {
-                //     content: '';
-                //     position: absolute;
-                //     top: 0;
-                //     left: 0;
-                //     width: 80%;
-                //     height: 85%;
-                //     border: 8px solid #f0f4f9;
-                //     border-radius: 30px; 
-                //     z-index: 0;
-                // }
 
                 .main-img-wrapper {
                     position: relative;
@@ -111,13 +92,17 @@ export default function InvestmentPhilosophy() {
                     border-radius: 30px; 
                     overflow: hidden; 
                     box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+                    height: 450px; 
+                    width: 100%;
                 }
 
                 .main-img-wrapper img {
                     width: 100%;
+                    height: 100%; 
                     display: block;
                     border-radius: 30px;
                     transition: transform 0.5s ease;
+                    object-fit: cover; 
                 }
 
                 .flex-row {
@@ -137,15 +122,18 @@ export default function InvestmentPhilosophy() {
                     .philosophy-section { padding: 60px 0; }
                     .flex-row { flex-direction: column; align-items: flex-start; gap: 30px; }
                     .flex-col { width: 100%; }
-                    // .image-holder { margin-top: 20px; padding: 10px 0; }
                     .sub-title, .main-title, .description-text, .philosophy-list {
                         text-align: left !important;
                     }
-                    .btn-wrapper { margin: 0 auto; } /* Center button on mobile if preferred */
+                    .btn-wrapper { margin: 0 auto; }
+                    
+                    /* Optional: adjust height for mobile if needed */
+                    .main-img-wrapper { height: 300px; }
                 }
 
                 @media (max-width: 576px) {
                     .main-title { font-size: 26px; }
+                    .main-img-wrapper { height: 250px; }
                 }
             `}</style>
 

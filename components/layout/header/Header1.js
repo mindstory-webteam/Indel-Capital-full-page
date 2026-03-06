@@ -124,7 +124,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSide
                   <Link href="/">
                     <img 
                       style={{ width: "120px", height: "50px", marginLeft: "35px" }} 
-                      src="assets/images/indel-capital-logo.png" 
+                      src="/assets/images/indel-capital-logo.png" 
                       alt="Indel Capital" 
                     />
                   </Link>
