@@ -120,27 +120,34 @@ export default function InvestmentPhilosophy() {
 
                 @media (max-width: 991px) {
                     .philosophy-section { padding: 60px 0; }
-                    .flex-row { flex-direction: column; align-items: flex-start; gap: 30px; }
+                    .flex-row { 
+                        flex-direction: column; 
+                        align-items: flex-start; 
+                        gap: 30px; 
+                    }
                     .flex-col { width: 100%; }
+                    
+                    .img-col {
+                        order: -1;
+                    }
+
                     .sub-title, .main-title, .description-text, .philosophy-list {
                         text-align: left !important;
                     }
-                    .btn-wrapper { margin: 0 auto; }
-                    
-                    /* Optional: adjust height for mobile if needed */
-                    .main-img-wrapper { height: 300px; }
+                    .btn-wrapper { margin: 0; }
+                    .main-img-wrapper { height: 350px; }
                 }
 
                 @media (max-width: 576px) {
                     .main-title { font-size: 26px; }
-                    .main-img-wrapper { height: 250px; }
+                    .main-img-wrapper { height: 280px; }
                 }
             `}</style>
 
             <section className="philosophy-section">
                 <div className="container-compact">
                     <div className="flex-row">
-                        <div className="flex-col">
+                        <div className="flex-col content-col">
                             <div className="content-box">
                                 <span className="sub-title">{data.subTitle}</span>
                                 <h2 className="main-title">{data.title}</h2>
@@ -159,7 +166,7 @@ export default function InvestmentPhilosophy() {
                             </div>
                         </div>
 
-                        <div className="flex-col">
+                        <div className="flex-col img-col">
                             <div className="image-holder">
                                 <div className="main-img-wrapper">
                                     <img src={data.images.img1} alt="Investment Philosophy" />
