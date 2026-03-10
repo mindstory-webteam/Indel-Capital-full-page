@@ -94,7 +94,7 @@ export const WhatWeDoData = [
     id: 1,
     title: "Fixed Coupon Securities & Asset Securitisation",
     text: "Strategic investments in marketable fixed coupon securities and securitised NBFC assets, aligned with liquidity planning, market conditions, and disciplined capital management.",
-    image: "assets/images/service/service-2.png",
+    image: "assets/images/service/service-2.jpg",
     link: "/service-details",
     list: ["Fixed Income Strategy", "Asset Securitisation", "Liquidity Planning", "Capital Management", "Market Analysis"]
   },
@@ -102,7 +102,7 @@ export const WhatWeDoData = [
     id: 2,
     title: "Corporate & Retail Lending Solutions",
     text: "Structured corporate and retail lending to group and associate entities, supported by transparent evaluation, prudent risk assessment, and long-term financial sustainability.",
-    image: "assets/images/service/service-2.png",
+    image: "assets/images/service/service-2.jpg",
     link: "/service-details-3",
     list: ["Structured Lending", "Risk Assessment", "Group Entities", "Financial Sustainability", "Transparent Evaluation"]
   },
@@ -318,7 +318,7 @@ export const testimonialSliderOneData = [
         descriptionQuote: "We simplify finance through personalised solutions, smart insights, and continuous support ensuring you’re always moving in the right direction.",
         experienceYears: "5",
         experienceText: "Years Experience",
-        imagePath: "assets/images/resource/about-6.jpg",
+        imagePath: "assets/images/who-we-are/who-we-are-img1.png",
         points: [
             "Unlocking better financial possibilities",
             "Fast, practical solutions for everyday financial needs",

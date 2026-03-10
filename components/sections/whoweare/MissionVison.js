@@ -24,7 +24,7 @@ export default function MissionVision() {
 
     const styles = {
         section: {
-            padding: '120px 0 0 0',
+            padding: '40px 0 0 0',
             backgroundColor: '#ffffff',
             fontFamily: "'Plus Jakarta Sans', sans-serif",
         },

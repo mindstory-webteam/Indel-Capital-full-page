@@ -188,11 +188,11 @@ export default function ApproachOverview() {
                             <div className="photo-grid">
 
                                 <div className="photo-a">
-                                    <img src="assets/images/service/service-1.jpg" alt="Financial Strategy" />
+                                    <img src="assets\images\our-approach\our-approach-1.png" alt="Financial Strategy" />
                                 </div>
 
                                 <div className="photo-b">
-                                    <img src="assets/images/service/service-1.jpg" alt="Market Analysis" />
+                                    <img src="assets\images\our-approach\our-approach-2.png" alt="Market Analysis" />
                                 </div>
 
                                 <div className="accent-card">
