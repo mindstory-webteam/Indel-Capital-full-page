@@ -24,7 +24,7 @@ export default function Home() {
                                 >
                                 <div className="inner-box">
                                     <div className="image-box">
-                                        <figure className="image"><img src="assets/images/team/team-1.jpg" alt="" /></figure>
+                                        <figure className="image"><img src="assets/images/team/team-1.png" alt="" /></figure>
                                         <ul className="social-links clearfix">
                                             <li><Link href="/team"><i className="fab fa-facebook-f"></i></Link></li>
                                             <li><Link href="/team"><i className="fab fa-twitter"></i></Link></li>
@@ -46,7 +46,7 @@ export default function Home() {
                                 >
                                     <div className="inner-box">
                                     <div className="image-box">
-                                    <figure className="image"><img src="assets/images/team/team-2.jpg" alt="" /></figure>
+                                    <figure className="image"><img src="assets/images/team/team-2.png" alt="" /></figure>
                                         <ul className="social-links clearfix">
                                             <li><Link href="/team"><i className="fab fa-facebook-f"></i></Link></li>
                                             <li><Link href="/team"><i className="fab fa-twitter"></i></Link></li>
@@ -68,7 +68,7 @@ export default function Home() {
                                 >
                                     <div className="inner-box">
                                         <div className="image-box">
-                                        <figure className="image"><img src="assets/images/team/team-3.jpg" alt="" /></figure>
+                                        <figure className="image"><img src="assets/images/team/team-3.png" alt="" /></figure>
                                             <ul className="social-links clearfix">
                                                 <li><Link href="/team"><i className="fab fa-facebook-f"></i></Link></li>
                                                 <li><Link href="/team"><i className="fab fa-twitter"></i></Link></li>
@@ -90,7 +90,7 @@ export default function Home() {
                                 >
                                     <div className="inner-box">
                                         <div className="image-box">
-                                            <figure className="image"><img src="assets/images/team/team-4.jpg" alt="" /></figure>
+                                            <figure className="image"><img src="assets/images/team/team-4.png" alt="" /></figure>
                                             <ul className="social-links clearfix">
                                                 <li><Link href="/team"><i className="fab fa-facebook-f"></i></Link></li>
                                                 <li><Link href="/team"><i className="fab fa-twitter"></i></Link></li>
@@ -112,7 +112,7 @@ export default function Home() {
                                 >
                                     <div className="inner-box">
                                         <div className="image-box">
-                                            <figure className="image"><img src="assets/images/team/team-5.jpg" alt="" /></figure>
+                                            <figure className="image"><img src="assets/images/team/team-5.png" alt="" /></figure>
                                             <ul className="social-links clearfix">
                                                 <li><Link href="/team"><i className="fab fa-facebook-f"></i></Link></li>
                                                 <li><Link href="/team"><i className="fab fa-twitter"></i></Link></li>
@@ -134,7 +134,7 @@ export default function Home() {
                                 >
                                     <div className="inner-box">
                                         <div className="image-box">
-                                            <figure className="image"><img src="assets/images/team/team-6.jpg" alt="" /></figure>
+                                            <figure className="image"><img src="assets/images/team/team-6.png" alt="" /></figure>
                                             <ul className="social-links clearfix">
                                                 <li><Link href="/team"><i className="fab fa-facebook-f"></i></Link></li>
                                                 <li><Link href="/team"><i className="fab fa-twitter"></i></Link></li>
@@ -156,7 +156,7 @@ export default function Home() {
                                 >
                                     <div className="inner-box">
                                         <div className="image-box">
-                                            <figure className="image"><img src="assets/images/team/team-7.jpg" alt="" /></figure>
+                                            <figure className="image"><img src="assets/images/team/team-7.png" alt="" /></figure>
                                             <ul className="social-links clearfix">
                                                 <li><Link href="/team"><i className="fab fa-facebook-f"></i></Link></li>
                                                 <li><Link href="/team"><i className="fab fa-twitter"></i></Link></li>
@@ -178,7 +178,7 @@ export default function Home() {
                                 >
                                     <div className="inner-box">
                                         <div className="image-box">
-                                            <figure className="image"><img src="assets/images/team/team-8.jpg" alt="" /></figure>
+                                            <figure className="image"><img src="assets/images/team/team-8.png" alt="" /></figure>
                                             <ul className="social-links clearfix">
                                                 <li><Link href="/team"><i className="fab fa-facebook-f"></i></Link></li>
                                                 <li><Link href="/team"><i className="fab fa-twitter"></i></Link></li>

@@ -62,7 +62,7 @@ export default function service() {
                                 <div className="col-lg-6 col-md-12 col-sm-12 image-column">
                                     <div className="image-box ml_40">
                                     <figure className="image">
-                                        <img src="assets/images/service/service-1.jpg" alt="" />
+                                        <img src="assets/images/service/service-2.png" alt="" />
                                     </figure>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@ export default function service() {
                                     <div className="col-lg-6 col-md-12 col-sm-12 image-column">
                                         <div className="image-box ml_40">
                                         <figure className="image">
-                                            <img src="assets/images/service/service-2.jpg" alt="" />
+                                            <img src="assets/images/service/service-2.png" alt="" />
                                         </figure>
                                         </div>
                                     </div>

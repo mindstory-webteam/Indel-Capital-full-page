@@ -94,7 +94,7 @@ export const WhatWeDoData = [
     id: 1,
     title: "Fixed Coupon Securities & Asset Securitisation",
     text: "Strategic investments in marketable fixed coupon securities and securitised NBFC assets, aligned with liquidity planning, market conditions, and disciplined capital management.",
-    image: "assets/images/service/service-1.jpg",
+    image: "assets/images/service/service-2.png",
     link: "/service-details",
     list: ["Fixed Income Strategy", "Asset Securitisation", "Liquidity Planning", "Capital Management", "Market Analysis"]
   },
@@ -102,7 +102,7 @@ export const WhatWeDoData = [
     id: 2,
     title: "Corporate & Retail Lending Solutions",
     text: "Structured corporate and retail lending to group and associate entities, supported by transparent evaluation, prudent risk assessment, and long-term financial sustainability.",
-    image: "assets/images/service/service-2.jpg",
+    image: "assets/images/service/service-2.png",
     link: "/service-details-3",
     list: ["Structured Lending", "Risk Assessment", "Group Entities", "Financial Sustainability", "Transparent Evaluation"]
   },
@@ -368,14 +368,17 @@ export const testimonialSliderOneData = [
 
 
  export const teamMembers = [
-    { name: "Wade Warren",       role: "Founder",           img: "assets/images/team/team-1.jpg" },
-    { name: "Guy Hawkins",       role: "Co-Founder",        img: "assets/images/team/team-2.jpg" },
-    { name: "Bessie Cooper",     role: "Chairman",          img: "assets/images/team/team-3.jpg" },
-    { name: "Devon Lane",        role: "Vice Chairman",     img: "assets/images/team/team-4.jpg" },
-    { name: "Brooklyn Simmons",  role: "Head of Marketing", img: "assets/images/team/team-5.jpg" },
-    { name: "Robert Fox",        role: "Head of Finance",   img: "assets/images/team/team-6.jpg" },
-    { name: "Darlene Robertson", role: "Managing Director", img: "assets/images/team/team-7.jpg" },
-    { name: "Albert Flores",     role: "Chief Marketer",    img: "assets/images/team/team-8.jpg" },
+    { name: "Mohanan Gopalakrishnan",       role: "Managing Director",           img: "assets/images/team/team-1.png" },
+    { name: "Umesh Mohanan",       role: "Director",        img: "assets/images/team/team-2.png" },
+    { name: "Anish Mohan",     role: "Director",          img: "assets/images/team/team-3.png" },
+    // { name: "Devon Lane",        role: "Vice Chairman",     img: "assets/images/team/team-4.png" },
+    // { name: "Brooklyn Simmons",  role: "Head of Marketing", img: "assets/images/team/team-5.png" },
+    // { name: "Robert Fox",        role: "Head of Finance",   img: "assets/images/team/team-6.png" },
+    // { name: "Darlene Robertson", role: "Managing Director", img: "assets/images/team/team-7.png" },
+    // { name: "Albert Flores",     role: "Chief Marketer",    img: "assets/images/team/team-8.png" },
+    // { name: "Albert Flores",     role: "Chief Marketer",    img: "assets/images/team/team-9.png" },
+    // { name: "Albert Flores",     role: "Chief Marketer",    img: "assets/images/team/team-10.png" },
+    // { name: "Guy Hawkins",       role: "Co-Founder",        img: "assets/images/team/team-11.png" },
 ]
 
 

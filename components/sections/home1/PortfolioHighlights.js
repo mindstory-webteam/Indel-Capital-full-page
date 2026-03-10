@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
 import { portfolioData } from "@/public/assets/assest";
-import LiquidButton from '@/components/LiquidButton.js'; // Ensure path is correct
+import LiquidButton from '@/components/LiquidButton.js'; 
 import Link from "next/link";
 
 const statusColors = {
