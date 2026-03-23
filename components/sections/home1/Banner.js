@@ -1,11 +1,11 @@
 'use client'
 import Link from "next/link"
-import { Autoplay, Navigation, Pagination } from "swiper/modules"
+import { Autoplay, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import LiquidButton from "@/components/LiquidButton"
 
 const swiperOptions = {
-    modules: [Autoplay, Pagination, Navigation],
+    modules: [Autoplay, Pagination],
     slidesPerView: 1,
     spaceBetween: 0,
     autoplay: {
@@ -13,10 +13,6 @@ const swiperOptions = {
         disableOnInteraction: false,
     },
     loop: true,
-    navigation: {
-        nextEl: '.h1n',
-        prevEl: '.h1p',
-    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -163,10 +159,6 @@ export default function Banner() {
                             </div>
                         </SwiperSlide>
                     ))}
-                    <div className="owl-nav">
-                        <button type="button" className="owl-prev h1p"><span className="icon-3"></span></button>
-                        <button type="button" className="owl-next h1n"><span className="icon-4"></span></button>
-                    </div>
                 </Swiper>
             </section>
         </>
