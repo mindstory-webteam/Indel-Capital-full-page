@@ -86,7 +86,8 @@ export default function PortfolioHighlights() {
 
 const css = `
   .ph-section {
-    padding: 80px 0;
+    padding-top: 60px ;
+    padding-bottom: 30px ;
     background-color: #fafafa;
     font-family: 'Outfit', sans-serif;
     color: #212226;
