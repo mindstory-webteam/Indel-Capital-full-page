@@ -7,7 +7,7 @@ export default function RiskManagement() {
         <>
             <style jsx>{`
                 .risk-section {
-                    padding: 60px 0;
+                    padding: 32px 0;
                     background-color: #ffffff;
                     position: relative;
                     overflow: hidden;
@@ -19,9 +19,9 @@ export default function RiskManagement() {
                     display: flex;
                     flex-wrap: wrap;
                     align-items: center;
-                    flex-direction: row-reverse; 
+                    flex-direction: row-reverse;
                 }
-                
+
                 .risk-pillars-col {
                     flex: 0 0 50%;
                     max-width: 50%;
@@ -42,11 +42,9 @@ export default function RiskManagement() {
                 .pillar-card:nth-child(even) {
                     transform: translateY(30px);
                 }
-
                 .pillar-card:hover {
                     border-color: #eb2525;
                 }
-
                 .pillar-icon {
                     width: 50px;
                     height: 50px;
@@ -76,7 +74,7 @@ export default function RiskManagement() {
                 .risk-content-col {
                     flex: 0 0 50%;
                     max-width: 50%;
-                    padding-right: 60px; 
+                    padding-right: 60px;
                 }
                 .tagline {
                     color: #eb2525;
@@ -87,43 +85,24 @@ export default function RiskManagement() {
                     margin-bottom: 15px;
                 }
                 .main-title {
-                    font-size: 42px;
+                    font-size: 38px;
                     line-height: 1.2;
                     color: #1f2937;
-                    margin-bottom: 25px;
+                    margin-bottom: 20px;
                     font-weight: 800;
                 }
                 .description {
-                    font-size: 18px;
+                    font-size: 15px;
                     color: #4b5563;
-                    line-height: 1.7;
-                    margin-bottom: 35px;
+                    line-height: 1.75;
+                    margin-bottom: 16px;
                 }
-                
-                .framework-list {
-                    list-style: none;
-                    padding: 0;
-                    margin-bottom: 40px;
+                .description-secondary {
+                    font-size: 15px;
+                    color: #4b5563;
+                    line-height: 1.75;
+                    margin-bottom: 0;
                 }
-                .framework-list li {
-                    position: relative;
-                    padding-left: 28px;
-                    margin-bottom: 12px;
-                    color: #1f2937;
-                    font-weight: 600;
-                }
-                .framework-list li::before {
-                    content: '✓';
-                    position: absolute;
-                    left: 0;
-                    color: #eb2525;
-                    font-weight: 900;
-                }
-
-                // .btn-wrapper {
-                //     width: 220px;
-                //     height: 55px;
-                // }
 
                 @media (max-width: 991px) {
                     .risk-container { flex-direction: column; }
@@ -134,59 +113,57 @@ export default function RiskManagement() {
                     }
                     .risk-pillars-col { margin-bottom: 80px; }
                     .pillar-card:nth-child(even) { transform: translateY(0); }
-                    // .btn-wrapper { margin: 0 auto; }
+                }
+
+                @media (max-width: 575px) {
+                    .main-title { font-size: 28px; }
                 }
             `}</style>
 
             <section className="risk-section">
                 <div className="risk-container">
-                    
+
+                    {/* ── Cards column ── */}
                     <div className="risk-pillars-col">
                         <div className="pillar-card">
                             <div className="pillar-icon">01</div>
-                            <h5>Identify</h5>
-                            <p>Continuous monitoring of market threats.</p>
+                            <h5>Secured Assets</h5>
+                            <p>Instruments structured against immovable assets for strong underlying security.</p>
                         </div>
                         <div className="pillar-card">
                             <div className="pillar-icon">02</div>
-                            <h5>Analyze</h5>
-                            <p>Deep-dive impact assessment and modeling.</p>
+                            <h5>Disciplined Evaluation</h5>
+                            <p>Every lending opportunity assessed through rigorous credit and asset frameworks.</p>
                         </div>
                         <div className="pillar-card">
                             <div className="pillar-icon">03</div>
-                            <h5>Mitigate</h5>
-                            <p>Executing strategic defensive maneuvers.</p>
+                            <h5>Capital Protection</h5>
+                            <p>Balanced approach to growth that prioritises preservation of investor capital.</p>
                         </div>
                         <div className="pillar-card">
                             <div className="pillar-icon">04</div>
-                            <h5>Review</h5>
-                            <p>Regular auditing for compliance & safety.</p>
+                            <h5>Financial Resilience</h5>
+                            <p>Lower risk profile compared to unsecured or portfolio-linked structures.</p>
                         </div>
                     </div>
 
+                    {/* ── Content column ── */}
                     <div className="risk-content-col">
                         <span className="tagline">Risk Management</span>
-                        <h2 className="main-title">A Multi-Layered Defense For Your Capital.</h2>
+                        <h2 className="main-title">Structured for Stability.</h2>
                         <p className="description">
-                            Our risk framework pillars are designed to provide institutional-grade 
-                            protection for private portfolios, ensuring stability even during 
-                            high-velocity market shifts.
+                            Our investment and lending philosophy is built around disciplined risk management.
+                            By structuring our instruments on secured assets and deploying funds through carefully
+                            evaluated lending opportunities, we aim to maintain a strong balance between growth
+                            and capital protection.
                         </p>
-                        
-                        <ul className="framework-list">
-                            <li>Real-time Volatility Tracking</li>
-                            <li>Automated Compliance Guardrails</li>
-                            <li>Strategic Asset Correlation Analysis</li>
-                        </ul>
-
-                        <div className="btn-box">
-                            <div className="btn-wrapper">
-                                {/* <Link href="/framework" style={{ display: 'block', width: '100%', height: '100%', textDecoration: 'none' }}>
-                                    <LiquidButton text="Explore Framework" bgcolor="#eb2525" />
-                                </Link> */}
-                            </div>
-                        </div>
+                        <p className="description-secondary">
+                            This asset-backed model supports a lower risk profile compared to many traditional
+                            unsecured or portfolio-linked structures, ensuring that both investors and stakeholders
+                            benefit from greater financial resilience.
+                        </p>
                     </div>
+
                 </div>
             </section>
         </>

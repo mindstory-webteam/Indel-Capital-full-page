@@ -6,7 +6,7 @@ export default function Whoweare() {
     const whoweareData = {
         subTitle: "Who we are",
         mainTitle: "Your Trusted Finance Partner for Every Stage of Life.",
-        descriptionMain: "At Indel Capital, we help individuals and businesses make confident financial decisions with clarity and expert guidance. Our approach is built on trust, transparency, and a deep understanding of what people need to grow and secure their futures.",
+        descriptionMain: "Indel Capital is the capital markets and structured finance arm backed by Indel Corporation, a diversified business group with a strong presence across financial services and multiple sectors. Built on the legacy and credibility of Indel Money, Indel Capital is designed to expand the group’s financial ecosystem through innovative and responsible capital solutions. Our focus is on creating structured financial products that combine stability, transparency, and long-term value for investors and borrowers alike.",
         descriptionQuote: "We simplify finance through personalised solutions, smart insights, and continuous support ensuring you're always moving in the right direction.",
         experienceYears: "5",
         experienceText: "Years Experience",

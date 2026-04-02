@@ -8,7 +8,7 @@ export default function ValueCreation() {
             <style jsx>{`
                 .value-section {
                     padding: 60px 0;
-                    background-color: #fff; 
+                    background-color: #fff;
                     position: relative;
                 }
                 .value-container {
@@ -82,12 +82,6 @@ export default function ValueCreation() {
                     line-height: 1.6;
                 }
 
-                // .btn-wrapper {
-                //     width: 220px;
-                //     height: 55px;
-                //     margin: 50px auto 0;
-                // }
-
                 @media (max-width: 991px) {
                     .value-grid { grid-template-columns: repeat(2, 1fr); }
                 }
@@ -101,40 +95,41 @@ export default function ValueCreation() {
                 <div className="value-container">
                     <div className="section-header">
                         <span className="tagline">Value Creation</span>
-                        <h2 className="main-title">Driving Sustainable Growth Through Expert Guidance</h2>
+                        <h2 className="main-title">Enabling Growth Through Capital</h2>
                     </div>
 
                     <div className="value-grid">
                         <div className="value-item">
                             <div className="icon-box">
-                                <svg viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                                <svg viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                                </svg>
                             </div>
-                            <h4>Operational Support</h4>
-                            <p>Streamlining internal processes and enhancing workflow efficiency to ensure peak organizational performance.</p>
+                            <h4>Structured Lending Solutions</h4>
+                            <p>Providing tailored financing options that support businesses and entrepreneurs in meeting diverse commercial needs, from working capital to expansion.</p>
                         </div>
 
                         <div className="value-item">
                             <div className="icon-box">
-                                <svg viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <svg viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
                             </div>
-                            <h4>Governance</h4>
-                            <p>Implementing robust oversight frameworks and ethical standards to protect stakeholder interests and brand integrity.</p>
+                            <h4>Business Empowerment</h4>
+                            <p>Enabling enterprises to unlock new opportunities, scale operations, and strengthen financial stability through accessible and reliable capital.</p>
                         </div>
 
                         <div className="value-item">
                             <div className="icon-box">
-                                <svg viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l4 4-4 4M8 12h8"/></svg>
+                                <svg viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 8l4 4-4 4M8 12h8"/>
+                                </svg>
                             </div>
-                            <h4>Strategic Guidance</h4>
-                            <p>Providing data-driven insights and long-term roadmap planning to navigate complex market expansions.</p>
+                            <h4>Economic Impact</h4>
+                            <p>By bridging capital with opportunity, Indel Capital contributes to building a resilient and dynamic business ecosystem that drives sustainable growth.</p>
                         </div>
                     </div>
-
-                    {/* <div className="btn-wrapper"> */}
-                        {/* <Link href="/services" style={{ display: 'block', width: '100%', height: '100%', textDecoration: 'none' }}>
-                            <LiquidButton text="Discover Our Impact" bgcolor="#eb2525" />
-                        </Link> */}
-                    {/* </div> */}
                 </div>
             </section>
         </>

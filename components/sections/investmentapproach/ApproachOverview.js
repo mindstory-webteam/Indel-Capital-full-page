@@ -128,7 +128,7 @@ export default function ApproachOverview() {
                     margin-bottom: 25px;
                 }
                 .description {
-                    font-size: 18px;
+                    font-size: 15px;
                     color: #4b5563;
                     line-height: 1.7;
                     margin-bottom: 30px;
@@ -198,9 +198,9 @@ export default function ApproachOverview() {
                                 <div className="accent-card">
                                     <div className="ac-icon">
                                         <svg viewBox="0 0 24 24">
-                                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                                            <path d="M2 17l10 5 10-5"/>
-                                            <path d="M2 12l10 5 10-5"/>
+                                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                            <path d="M2 17l10 5 10-5" />
+                                            <path d="M2 12l10 5 10-5" />
                                         </svg>
                                     </div>
                                     <span className="ac-text">Structured<br />Investment<br />Framework</span>
@@ -212,18 +212,18 @@ export default function ApproachOverview() {
 
                     <div className="approach-content-col">
                         <span className="tagline">Our Approach</span>
-                        <h2 className="main-title">A Structured Path to Financial Freedom.</h2>
+                        <h2 className="main-title">A Different Approach to Capital</h2>
                         <p className="description">
-                            We don't just provide advice; we build frameworks. Our methodology is designed to 
-                            adapt to market volatility while keeping your long-term goals in clear focus.
+                            Indel Capital adopts a distinctive approach in the NBFC space. While many financial institutions structure Non-Convertible Debentures primarily around gold loan portfolios, Indel Capital introduces a more asset backed model. Our NCDs are structured against immovable assets and secured exposures, providing an additional layer of stability and confidence.
+                            This approach allows us to create financial instruments that are designed with strong underlying security, offering investors the comfort of tangible asset backing while enabling capital to be deployed productively into the real economy.
                         </p>
-                        
-                        <div className="feature-grid">
+
+                        {/* <div className="feature-grid">
                             <div className="feature-item"><span className="icon-dot"></span> Risk Assessment</div>
                             <div className="feature-item"><span className="icon-dot"></span> Market Analysis</div>
                             <div className="feature-item"><span className="icon-dot"></span> Growth Tracking</div>
                             <div className="feature-item"><span className="icon-dot"></span> Asset Protection</div>
-                        </div>
+                        </div> */}
 
                         <div className="btn-box">
                             {/* <div className="btn-wrapper">

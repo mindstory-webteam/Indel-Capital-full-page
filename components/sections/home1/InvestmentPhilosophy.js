@@ -1,10 +1,23 @@
 'use client'
 import Link from "next/link";
-import { investmentPhilosophyData } from '@/public/assets/assest.js';
 import LiquidButton from '@/components/LiquidButton.js';
 
 export default function InvestmentPhilosophy() {
-    const data = investmentPhilosophyData;
+
+const data = {
+    subTitle: "OUR EXPERTISE",
+    title: "Experience That Drives Confidence",
+    description: "At Indel Capital, our strength lies in a team of seasoned financial professionals with deep expertise across lending, structured finance, and capital markets. Their strong understanding of risk, asset valuation, and credit assessment enables us to deliver solutions that are robust, compliant, and aligned with evolving market needs.",
+    points: [
+        "Expert-Led Approach – Driven by industry professionals with proven experience",
+        "Risk-Aware Strategies – Strong focus on credit evaluation and asset quality",
+        "Market-Relevant Solutions – Designed to adapt to dynamic financial environments",
+        "Institutional Strength – Backed by the credibility of Indel Corporation",
+    ],
+    images: {
+        img1: "/assets/images/background/video-bg.jpg",
+    }
+};
 
     return (
         <>
@@ -157,7 +170,7 @@ export default function InvestmentPhilosophy() {
                                         <li key={index}>{point}</li>
                                     ))}
                                 </ul>
-                                
+
                                 <div className="btn-wrapper">
                                     <Link href="/investment-approach" style={{ display: 'block', width: '100%', height: '100%', textDecoration: 'none' }}>
                                         <LiquidButton text="Discover More" bgcolor="#eb2525" />
@@ -169,7 +182,7 @@ export default function InvestmentPhilosophy() {
                         <div className="flex-col img-col">
                             <div className="image-holder">
                                 <div className="main-img-wrapper">
-                                    <img src={data.images.img1} alt="Investment Philosophy" />
+                                    <img src={data.images.img1} alt="Our Expertise" />
                                 </div>
                             </div>
                         </div>

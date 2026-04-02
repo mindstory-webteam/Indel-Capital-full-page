@@ -119,30 +119,6 @@ export const WhatWeDoData = [
 ];
 
 
-export const investmentPhilosophyData = {
-    subTitle: "OUR INVESTMENT PHILOSOPHY",
-    title: "A Disciplined Strategy for Sustainable Wealth Creation",
-    description: "At Indel Capital, our investment philosophy is built on discipline, transparency, and long-term value creation. Our framework combines in-depth market research with proactive portfolio management to help clients navigate volatility while capturing meaningful growth opportunities.",
-    descriptionExtended: "We believe successful investing is not about chasing trends — it’s about applying structured strategies, managing risk intelligently, and staying focused on clearly defined financial goals. Every decision is guided by data, prudence, and a commitment to protecting and growing your capital responsibly.",
-    points: [
-        "Risk-First Planning – Focus on capital preservation",
-        "Research-Driven Decisions – Backed by thorough analysis",
-        "Long-Term Perspective – Sustainable growth over speculation",
-        "Active Monitoring – Continuous performance tracking"
-    ],
-    experience: {
-        years: 5, 
-        text: "Years of Specialized Strategic Investment"
-    },
-    images: {
-        img1: "/assets/images/background/video-bg.jpg",
-        img2: "assets/images/resource/about-3.jpg"
-    }
-};
-
-
-    
-
 
 
 export const testimonialData = [
