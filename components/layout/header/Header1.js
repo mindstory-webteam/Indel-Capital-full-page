@@ -12,10 +12,10 @@ const NAV_ITEMS = [
     children: [
       { label: "Who we are", href: "/who-we-are" },
       { label: "How we invest", href: "/investment-approach" },
-      { label: "FAQ", href: "/faq" },
+      // { label: "FAQ", href: "/faq" },
     ],
   },
-  { label: "Strategies", href: "/strategies" },
+  // { label: "Strategies", href: "/strategies" },
   {
     label: "Insights",
     href: "/",
@@ -28,6 +28,10 @@ const NAV_ITEMS = [
       { label: "Contact", href: "/contact-us" },
       { label: "Career", href: "/career" },
     ],
+  },
+  {
+    label: "FAQ",
+    href: "/faq",
   },
 ]
 
