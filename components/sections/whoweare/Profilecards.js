@@ -124,7 +124,7 @@ function TeamModal({ member, onClose }) {
             </div>
 
             <div style={{ flex: 1, overflowY: "auto", paddingRight: "10px", scrollbarWidth: "thin", scrollbarColor: "#cbd5e1 transparent" }} className="custom-scrollbar">
-              <p style={{ fontSize: "15px", color: "#475569", lineHeight: "1.7", margin: 0, fontWeight: "400" }}>
+              <p style={{ fontSize: "15px", color: "#475569", lineHeight: "1.7", margin: 0, fontWeight: "400" , textAlign:"justify"}}>
                 {member.bio}
               </p>
             </div>

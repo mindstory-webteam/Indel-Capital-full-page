@@ -57,6 +57,7 @@ export default function RiskManagement() {
                     margin: 0 auto 15px;
                     font-size: 20px;
                     font-weight: bold;
+                  
                 }
                 .pillar-card h5 {
                     font-size: 16px;
@@ -96,12 +97,14 @@ export default function RiskManagement() {
                     color: #4b5563;
                     line-height: 1.75;
                     margin-bottom: 16px;
-                }
-                .description-secondary {
-                    font-size: 15px;
-                    color: #4b5563;
-                    line-height: 1.75;
-                    margin-bottom: 0;
+                    text-align:justify;
+                    }
+                    .description-secondary {
+                        font-size: 15px;
+                        color: #4b5563;
+                        line-height: 1.75;
+                        margin-bottom: 0;
+                        text-align:justify;
                 }
 
                 @media (max-width: 991px) {

@@ -1,24 +1,24 @@
 'use client'
 import { motion } from "framer-motion"
-import { mainCards,valueStrip } from "@/public/assets/assest"
+import { mainCards, valueStrip } from "@/public/assets/assest"
 export default function MissionVision() {
-  
-    
+
+
 
     const contentReveal = {
         hidden: { color: "#94a3b8", opacity: 0.5 },
-        visible: { 
-            color: "#475569", 
-            opacity: 1, 
-            transition: { duration: 1, ease: "easeOut" } 
+        visible: {
+            color: "#475569",
+            opacity: 1,
+            transition: { duration: 1, ease: "easeOut" }
         }
     }
 
     const titleReveal = {
         hidden: { color: "#94a3b8" },
-        visible: { 
-            color: "#0f172a", 
-            transition: { duration: 0.8 } 
+        visible: {
+            color: "#0f172a",
+            transition: { duration: 0.8 }
         }
     }
 
@@ -67,6 +67,7 @@ export default function MissionVision() {
             fontSize: '16px',
             lineHeight: '1.8',
             margin: '0',
+            textAlign: 'justify',
         },
         strip: {
             marginTop: '80px',
@@ -102,20 +103,20 @@ export default function MissionVision() {
                 <div style={styles.grid}>
                     {mainCards.map((card) => (
                         <div key={card.id} style={styles.card}>
-                            <motion.div 
+                            <motion.div
                                 initial={{ filter: 'grayscale(1)', opacity: 0.3 }}
                                 whileInView={{ filter: 'grayscale(0)', opacity: 1 }}
                                 transition={{ duration: 1 }}
-                                style={{ 
-                                    ...styles.iconWrapper, 
+                                style={{
+                                    ...styles.iconWrapper,
                                     background: card.gradient,
-                                    color: '#fff' 
+                                    color: '#fff'
                                 }}
                             >
                                 {card.icon}
                             </motion.div>
-                            
-                            <motion.h2 
+
+                            <motion.h2
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: false, amount: 0.5 }}
@@ -124,8 +125,8 @@ export default function MissionVision() {
                             >
                                 {card.title}
                             </motion.h2>
-                            
-                            <motion.p 
+
+                            <motion.p
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: false, amount: 0.5 }}
@@ -138,7 +139,7 @@ export default function MissionVision() {
                     ))}
                 </div>
 
-                <motion.div 
+                <motion.div
                     style={styles.strip}
                     initial={{ opacity: 0.6 }}
                     whileInView={{ opacity: 1 }}

@@ -58,7 +58,7 @@ const data = {
                     line-height: 1.7;
                     color: #555;
                     margin-bottom: 25px;
-                    text-align: left; 
+                    text-align: justify; 
                 }
 
                 .philosophy-list {

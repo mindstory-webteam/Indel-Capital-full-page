@@ -119,7 +119,7 @@ export default function About() {
         line-height: 1.7;
         color: #666;
         margin-bottom: 30px;
-        text-align: left;     
+        text-align: justify;     
       }
 
         .feature-list { 

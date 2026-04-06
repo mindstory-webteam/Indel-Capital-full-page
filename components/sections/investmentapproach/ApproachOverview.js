@@ -132,6 +132,7 @@ export default function ApproachOverview() {
                     color: #4b5563;
                     line-height: 1.7;
                     margin-bottom: 30px;
+                    text-align:justify;
                 }
                 .feature-grid {
                     display: grid;

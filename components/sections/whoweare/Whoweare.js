@@ -63,6 +63,7 @@ export default function Whoweare() {
             color: '#555',
             lineHeight: '1.75',
             margin: '0 0 16px 0',
+            textAlign: 'justify',
         },
         descQuote: {
             fontSize: '14px',
@@ -72,6 +73,7 @@ export default function Whoweare() {
             paddingLeft: '14px',
             margin: '0 0 24px 0',
             lineHeight: '1.7',
+            textAlign: 'justify',
         },
         pointsList: {
             listStyle: 'none',
