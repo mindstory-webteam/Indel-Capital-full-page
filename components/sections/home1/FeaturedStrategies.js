@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, animate, useInView } from "framer-motion";
+import { ShieldCheck, TrendingUp, Coins, Zap, Globe } from "lucide-react";
 
 function Counter({ value, suffix = "" }) {
     const ref = useRef(null);
@@ -35,12 +36,12 @@ export default function FeaturedStrategies() {
     const featuredStrategiesData = {
         subTitle: "Institutional Roadmap",
         mainTitle: "Strategies for Sustainable Value",
-        description: "Indel Capital leverages a resilient gold-backed portfolio and an aggressive phygital expansion strategy to deliver consistent, risk-adjusted growth for our stakeholders.",
+        description: "Supported by governance, expertise, and institutional credibility, enabling efficient capital deployment across sectors.",
         stats: {
-            security: "98%",
-            aum: "5,000",
-            yield: "14.50%",
-            branches: "500+"
+            security: "100",
+            aum: "2026",
+            yield: "12.50",
+            branches: "500"
         }
     };
     const data = featuredStrategiesData;
@@ -51,45 +52,46 @@ export default function FeaturedStrategies() {
             className: "bento-card card-red card-wide",
             type: "main-stat",
             label: "STRUCTURED FINANCE",
-            value: data.stats.security || "100",
+            icon: <ShieldCheck size={24} />,
+            value: "100",
             suffix: "%",
-            title: "Asset-Backed Security Model",
-            description: "Indel Capital specializes in collateralized debt obligations and structured credit, ensuring every investment is backed by tangible high-liquidity assets to protect institutional interest."
+            title: "Asset-Backed Security",
+            description: "Indel Capital structures investments against immovable assets and secured exposures—ensuring stability, transparency, and strong investor confidence."
         },
         {
             id: 1,
             className: "bento-card card-blue",
             type: "growth",
             label: "CAPITAL APPRECIATION",
-            title: "Market Portfolio",
-            value: data.stats.aum || "500",
-            prefix: "₹",
-            suffix: "Cr+",
-            description: "Strategically expanding our credit portfolio across emerging markets for 2026."
+            title: "Capital for Long-Term Growth",
+            value: "2026",
+            prefix: "",
+            suffix: "",
+            description: "Backed by Indel Corporation, Indel Capital deploys capital into carefully selected opportunities that enable sustainable value creation."
         },
         {
             id: 2,
             className: "bento-card card-white",
             type: "yield",
-            icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 2v20M17 5H9.5a4.5 4.5 0 000 9h5a4.5 4.5 0 010 9H7" /></svg>,
+            icon: <Coins size={20} strokeWidth={2.5} />,
             iconClass: "blue",
             title: "Strategic Yields",
-            value: data.stats.yield || "12.5",
+            value: "12.5",
             suffix: "%",
-            subLabel: "Target IRR for NCDs",
-            description: "Focusing on consistent Alpha generation through disciplined credit appraisal and robust monitoring of non-convertible debentures."
+            subLabel: "Structured NCD Opportunities",
+            description: "Non-Convertible Debentures designed with strong underlying security, focusing on consistent returns through disciplined credit evaluation."
         },
         {
             id: 3,
             className: "bento-card card-white",
             type: "tech",
-            icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>,
+            icon: <Zap size={20} strokeWidth={2.5} />,
             iconClass: "red",
             title: "Capital Tech",
-            description: "Advanced risk-assessment algorithms and automated credit scoring systems drive our decision-making efficiency.",
+            description: "Every investment is backed by rigorous risk assessment, asset valuation, and structured credit frameworks.",
             tags: [
-                { text: "Smart-Credit", color: "blue" },
-                { text: "Risk-Auto", color: "red" }
+                { text: "Risk Assessment", color: "blue" },
+                { text: "Credit Discipline", color: "red" }
             ]
         },
         {
@@ -97,9 +99,11 @@ export default function FeaturedStrategies() {
             className: "bento-card card-blue",
             type: "map",
             label: "INSTITUTIONAL FOOTPRINT",
-            value: data.stats.branches || "250",
-            suffix: "+ Nodes",
-            description: "Indel Capital leverages a vast network of financial touchpoints to deploy capital effectively across the Indian subcontinent."
+            icon: <Globe size={20} />,
+            value: "500",
+            suffix: "+",
+            title: "Strong Financial Foundation",
+            description: "Supported by governance, expertise, and institutional credibility, enabling efficient capital deployment across sectors."
         }
     ];
 
@@ -118,9 +122,9 @@ export default function FeaturedStrategies() {
             <section className="indel-bento-section">
                 <div className="container-compact">
                     <div className="header-wrapper">
-                        <span className="badge-modern">Featured Strategies</span>
-                        <h2 className="title-bold">Precision in Capital Management.</h2>
-                        <p className="description-text">We navigate complex financial landscapes to provide structured investment opportunities that balance high-growth potential with institutional-grade security.</p>
+                        <span className="badge-modern">{data.subTitle}</span>
+                        <h2 className="title-bold">{data.mainTitle}</h2>
+                        <p className="description-text">{data.description}</p>
                     </div>
 
                     <div className="bento-layout">
@@ -137,8 +141,9 @@ export default function FeaturedStrategies() {
                                 <div className="card-inner">
                                     {item.type === "main-stat" && (
                                         <>
-                                            <div className="label-group">
+                                            <div className="label-group" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                                 <span className="indicator">{item.label}</span>
+                                                <span style={{ opacity: 0.6 }}>{item.icon}</span>
                                             </div>
                                             <div className="content-mid">
                                                 <h3 className="card-big-stat">
@@ -157,9 +162,6 @@ export default function FeaturedStrategies() {
                                             <span className="pill-outline">{item.label}</span>
                                             <div className="center-content">
                                                 <span className="scaling-label">{item.title}</span>
-                                                <div className="scaling-value">
-                                                    {item.prefix}<Counter value={item.value} /><span>{item.suffix}</span>
-                                                </div>
                                                 <p className="mini-desc">{item.description}</p>
                                             </div>
                                             <div className="growth-viz">
@@ -208,18 +210,18 @@ export default function FeaturedStrategies() {
 
                                     {item.type === "map" && (
                                         <>
-                                            <span className="pill-outline">{item.label}</span>
-                                            <div className="footer-content">
-                                                <h4 className="white-text">
+                                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                                <span className="pill-outline">{item.label}</span>
+                                                <span style={{ opacity: 0.4 }}>{item.icon}</span>
+                                            </div>
+                                            <div className="footer-content" style={{ marginTop: 'auto' }}>
+                                                <h4 className="white-text" style={{ fontSize: '38px', marginBottom: '5px' }}>
                                                     <Counter value={item.value} />{item.suffix}
                                                 </h4>
-                                                <p className="white-text-dim">{item.description}</p>
+                                                <p className="white-text-dim" style={{ fontWeight: 'bold', marginBottom: '5px' }}>{item.title}</p>
+                                                <p className="white-text-dim" style={{ fontSize: '13px' }}>{item.description}</p>
                                             </div>
-                                            <div className="network-map">
-                                                <div className="map-dot" style={{ top: '25%', left: '45%' }}></div>
-                                                <div className="map-dot" style={{ top: '55%', left: '55%' }}></div>
-                                                <div className="map-dot" style={{ top: '75%', left: '35%' }}></div>
-                                            </div>
+                                           
                                         </>
                                     )}
                                 </div>
@@ -251,8 +253,6 @@ const styles = `
     .white-text-dim { color: rgba(255,255,255,0.8) !important; font-size: 15px; line-height: 1.5; }
     .card-big-stat { font-size: 110px; font-weight: 950; line-height: 0.8; letter-spacing: -6px; margin-top: 10px; color: #ffffff !important; }
     .scaling-label { font-size: 14px; opacity: 0.8; font-weight: 600; }
-    .scaling-value { font-size: 60px; font-weight: 900; margin-top: 5px; line-height: 1; }
-    .scaling-value span { font-size: 20px; opacity: 0.6; margin-left: 4px; }
     .mini-desc { font-size: 13px; opacity: 0.7; margin-top: 12px; color: white; }
     .pill-outline { border: 1px solid rgba(255,255,255,0.3); padding: 6px 16px; border-radius: 100px; font-size: 11px; font-weight: 700; align-self: flex-start; }
     .header-small { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
@@ -270,9 +270,8 @@ const styles = `
     .growth-viz { display: flex; align-items: flex-end; gap: 6px; height: 50px; margin-top: 25px; }
     .viz-bar { flex: 1; background: rgba(255,255,255,0.15); border-radius: 4px; }
     .viz-bar.active { background: #ee3824; }
-    .network-map { position: absolute; right: 0; bottom: 0; width: 140px; height: 140px; pointer-events: none; }
     .map-dot { position: absolute; width: 6px; height: 6px; background: #ee3824; border-radius: 50%; box-shadow: 0 0 15px #ee3824; animation: pulse 2s infinite; }
     @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.5; } 100% { transform: scale(1); opacity: 1; } }
     @media (max-width: 1024px) { .bento-layout { grid-template-columns: repeat(2, 1fr); grid-auto-rows: auto; } .card-wide { grid-column: span 2; } .title-bold { font-size: 38px; } .bento-card { min-height: 300px; } }
-    @media (max-width: 768px) { .header-wrapper { text-align: center; } .description-text { margin: 0 10px; text-align: start; } .bento-layout { grid-template-columns: 1fr; grid-auto-rows: auto; } .card-wide { grid-column: span 1; } .card-big-stat { font-size: 80px; } .scaling-value { font-size: 50px; } .title-bold { font-size: 22px; } .card-inner { padding: 25px; } .bento-card { min-height: 280px; } }
+    @media (max-width: 768px) { .header-wrapper { text-align: center; } .description-text { margin: 0 10px; text-align: start; } .bento-layout { grid-template-columns: 1fr; grid-auto-rows: auto; } .card-wide { grid-column: span 1; } .card-big-stat { font-size: 80px; }  .title-bold { font-size: 22px; } .card-inner { padding: 25px; } .bento-card { min-height: 280px; } }
 `;
