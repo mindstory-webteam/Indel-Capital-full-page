@@ -48,7 +48,7 @@ const data = {
                     font-size: clamp(28px, 5vw, 38px);
                     line-height: 1.2;
                     font-weight: 800;
-                    color: #17479d;
+                    color: #000;
                     margin-bottom: 20px;
                     text-align: left; 
                 }

@@ -239,7 +239,7 @@ const styles = `
     .container-compact { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
     .header-wrapper { margin-bottom: 50px; text-align: left; }
     .badge-modern { color: #ee3824; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 12px; }
-    .title-bold { font-size: 44px; font-weight: 800; color: #17479e; letter-spacing: -1.5px; margin-bottom: 20px; line-height: 1.1; }
+    .title-bold { font-size: 44px; font-weight: 800; color: #000; letter-spacing: -1.5px; margin-bottom: 20px; line-height: 1.1; }
     .description-text { color: #475569; font-size: 18px; max-width: 700px; line-height: 1.6; }
     .bento-layout { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 320px; gap: 20px; }
     .bento-card { border-radius: 32px; position: relative; overflow: hidden; border: 1px solid #f1f5f9; background: #fff; }

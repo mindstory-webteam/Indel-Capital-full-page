@@ -193,7 +193,7 @@ export default function Profilecards() {
         .team-section { 
           background: #ffffff; 
           font-family: 'Plus Jakarta Sans', sans-serif; 
-          padding: 100px 0 50px 0;
+          padding: 50px 0 80px 0;
         }
 
         .team-container {
@@ -256,7 +256,7 @@ export default function Profilecards() {
             <h6 style={{ color: "#ee3824", textTransform: "uppercase", fontWeight: 800, letterSpacing: "3px", marginBottom: "8px" }}>
               Our People
             </h6>
-            <h2 style={{ fontSize: "36px", fontWeight: 800, color: "#17479e" }}>
+            <h2 style={{ fontSize: "36px", fontWeight: 800, color: "#000" }}>
               Our Board Members
             </h2>
           </div>

@@ -52,7 +52,7 @@ export default function Whoweare() {
             margin: '0 0 10px 0',
         },
         mainTitle: {
-            color: '#17479d',
+            color: '#000',
             fontSize: 'clamp(26px, 2.8vw, 36px)',
             fontWeight: '800',
             lineHeight: '1.25',

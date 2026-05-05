@@ -17,7 +17,7 @@ export default function Home() {
         .faq-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
         
         .faq-sidebar h6 { color: #ee3824; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
-        .faq-sidebar h2 { color: #17479e; font-size: 42px; font-weight: 800; line-height: 1.2; margin-bottom: 25px; }
+        .faq-sidebar h2 { color: #000; font-size: 42px; font-weight: 800; line-height: 1.2; margin-bottom: 25px; }
         .faq-sidebar p { color: #666; font-size: 17px; line-height: 1.7; }
 
         .faq-accordion { border-top: 2px solid #f0f4fa; }

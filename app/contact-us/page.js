@@ -102,12 +102,12 @@ export default function ContactPage() {
                         </p>
                         <h1 style={{
                             fontWeight: '800',
-                            color: '#17479e',
+                            color: '#000',
                             margin: 0,
                             fontSize: isMobile ? '38px' : isTablet ? '60px' : 'clamp(50px, 6vw, 90px)',
                             lineHeight: 1.05,
                         }}>
-                            LET'S<br /><span style={{ color: '#ee3824' }}>CONNECT.</span>
+                            LET'S<br /><span style={{ color: '#000' }}>CONNECT.</span>
                         </h1>
                         <p style={{
                             maxWidth: '420px', color: '#64748b',

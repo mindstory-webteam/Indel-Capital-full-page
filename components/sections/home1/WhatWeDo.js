@@ -200,7 +200,7 @@ export default function WhatWeDo() {
                 <div className="container">
                     <div className="sec-title">
                         <h6 style={{ color: '#eb2525', textTransform: 'uppercase', letterSpacing: '3px', fontWeight: '700', fontSize: '14px', marginBottom: '10px' }}>What we do</h6>
-                        <h2 className="responsive-h2" style={{ fontWeight: '800', color: '#17479d', letterSpacing: '-0.5px' }}>
+                        <h2 className="responsive-h2" style={{ fontWeight: '800', color: '#000', letterSpacing: '-0.5px' }}>
                             Strategic Investment Solutions
                         </h2>
                     </div>
