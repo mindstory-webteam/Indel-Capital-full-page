@@ -10,8 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const quickLinks = [
   { label: "Who We Are", href: "/who-we-are" },
-  { label: "Investment Approach", href: "/investment-approach" },
-  { label: "Strategies", href: "/strategies" },
+  { label: "How we invest", href: "/investment-approach" },
+  { label: "FAQ", href: "/faq" },
   { label: "Blogs", href: "/blog-page" },
   { label: "Careers", href: "/career" },
   { label: "Contact", href: "/contact-us" },

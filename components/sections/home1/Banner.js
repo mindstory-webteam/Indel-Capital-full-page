@@ -41,7 +41,7 @@ export default function Banner() {
             bgImage: 'url(assets/images/banner/banner-3.jpeg)',
             titleLine1: 'Accelerating Your',
             titleLine2: 'Wealth Journey ',
-            description: <>Experience seamless, technology-driven growth with Indel Capital's digital-first platforms.</>,
+            description: <>Experience smarter financial growth with Indel Capital’s digital-first platforms.</>,
             btnText: 'Get Started',
             btnLink: '/contact-us'
         }

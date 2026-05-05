@@ -1,161 +1,198 @@
-'use client'
-import { motion } from "framer-motion"
-import { mainCards, valueStrip } from "@/public/assets/assest"
-export default function MissionVision() {
+import React from "react";
 
+const styles = `
+  .indel-section {
+    padding: 3rem 8rem;
+    background: transparent;
+    color: inherit;
+  }
 
+  .section-heading {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+  }
 
-    const contentReveal = {
-        hidden: { color: "#94a3b8", opacity: 0.5 },
-        visible: {
-            color: "#475569",
-            opacity: 1,
-            transition: { duration: 1, ease: "easeOut" }
-        }
-    }
+  .section-heading span {
+    color: #ee3824;
+  }
 
-    const titleReveal = {
-        hidden: { color: "#94a3b8" },
-        visible: {
-            color: "#0f172a",
-            transition: { duration: 0.8 }
-        }
-    }
+  .section-sub {
+    font-size: 15px;
+    color: #6b7280;
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    font-weight: 300;
+  }
 
-    const styles = {
-        section: {
-            padding: '40px 0 0 0',
-            backgroundColor: '#ffffff',
-            fontFamily: "'Plus Jakarta Sans', sans-serif",
-        },
-        container: {
-            maxWidth: '1200px',
-            margin: '0 auto',
-            padding: '0 20px',
-        },
-        grid: {
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-            gap: '30px',
-        },
-        card: {
-            backgroundColor: '#ffffff',
-            padding: '60px 40px',
-            borderRadius: '24px',
-            border: '1px solid #f1f5f9',
-            boxShadow: '0 10px 30px rgba(0,0,0,0.02)',
-            position: 'relative',
-            overflow: 'hidden',
-        },
-        iconWrapper: {
-            width: '70px',
-            height: '70px',
-            borderRadius: '16px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            marginBottom: '30px',
-            transition: 'all 0.8s ease',
-        },
-        title: {
-            fontSize: '28px',
-            fontWeight: '800',
-            marginBottom: '20px',
-            letterSpacing: '-0.5px'
-        },
-        text: {
-            fontSize: '16px',
-            lineHeight: '1.8',
-            margin: '0',
-            textAlign: 'justify',
-        },
-        strip: {
-            marginTop: '80px',
-            background: '#17479e',
-            padding: '40px',
-            borderRadius: '30px',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            gap: '30px',
-        },
-        valueItem: {
-            textAlign: 'center',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '12px'
-        },
-        valueTitle: {
-            fontSize: '18px',
-            fontWeight: '700',
-            color: '#ffd700',
-        },
-        valueSub: {
-            fontSize: '14px',
-            color: 'rgba(255,255,255,0.8)',
-            fontWeight: '500'
-        }
-    };
+  .values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: #e5e7eb;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    overflow: hidden;
+  }
 
-    return (
-        <section style={styles.section}>
-            <div style={styles.container}>
-                <div style={styles.grid}>
-                    {mainCards.map((card) => (
-                        <div key={card.id} style={styles.card}>
-                            <motion.div
-                                initial={{ filter: 'grayscale(1)', opacity: 0.3 }}
-                                whileInView={{ filter: 'grayscale(0)', opacity: 1 }}
-                                transition={{ duration: 1 }}
-                                style={{
-                                    ...styles.iconWrapper,
-                                    background: card.gradient,
-                                    color: '#fff'
-                                }}
-                            >
-                                {card.icon}
-                            </motion.div>
+  .value-card {
+    background: #ffffff;
+    padding: 2rem 1.75rem;
+    transition: background 0.25s;
+    cursor: default;
+    box-sizing: border-box;
+  }
 
-                            <motion.h2
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: false, amount: 0.5 }}
-                                variants={titleReveal}
-                                style={styles.title}
-                            >
-                                {card.title}
-                            </motion.h2>
+  .value-card:hover {
+    background: #f9fafb;
+  }
 
-                            <motion.p
-                                initial="hidden"
-                                whileInView="visible"
-                                viewport={{ once: false, amount: 0.5 }}
-                                variants={contentReveal}
-                                style={styles.text}
-                            >
-                                {card.text}
-                            </motion.p>
-                        </div>
-                    ))}
-                </div>
+  .value-card.fifth-card {
+    grid-column: 1 / -1;
+  }
 
-                <motion.div
-                    style={styles.strip}
-                    initial={{ opacity: 0.6 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                >
-                    {valueStrip.map((item, index) => (
-                        <div key={index} style={styles.valueItem}>
-                            {item.icon}
-                            <div>
-                                <span style={styles.valueTitle}>{item.title}</span>
-                                <div style={styles.valueSub}>{item.sub}</div>
-                            </div>
-                        </div>
-                    ))}
-                </motion.div>
+  .card-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    background: #eef2fb;
+  }
+
+  .card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.3;
+  }
+
+  .card-text {
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: #6b7280;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .card-tag {
+    display: inline-block;
+    margin-top: 1.25rem;
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+
+  .tag-blue  { background: #e8edf8; color: #17479e; }
+  .tag-red   { background: #fdecea; color: #c0321e; }
+  .tag-navy  { background: #e6eaf4; color: #1a2c5b; }
+  .tag-gold  { background: #fef5e7; color: #8a5b06; }
+  .tag-green { background: #e8f5ee; color: #166534; }
+
+  @media (max-width: 768px) {
+    .indel-section { padding: 2rem 1.5rem; }
+    .values-grid { grid-template-columns: 1fr; }
+    .value-card.fifth-card { grid-column: 1; }
+  }
+`;
+
+const values = [
+  {
+    tagClass: "tag-blue",
+    tag: "Growth mindset",
+    title: "Aspiring Beyond Excellence",
+    text: "At Indel Capital, we view excellence not as a destination but as a stepping stone toward our ultimate goals. We are dedicated to exceeding excellence in every initiative we pursue.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17479e" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+      </svg>
+    ),
+  },
+  {
+    tagClass: "tag-red",
+    tag: "Business ethics",
+    title: "Cultivating Trust and Transparency",
+    text: "Indel Capital places primary importance on trust and transparency while operating with determined business ethics. These core values are rooted in every aspect of our operations, guaranteeing integrity at each step.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17479e" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    ),
+  },
+  {
+    tagClass: "tag-navy",
+    tag: "Customer first",
+    title: "Prioritising Our Customers",
+    text: 'Our customers are the foundation of our business. We work with the "customer first" principle, and we design every service and process with the customer\'s perspective in mind. Our primary aim is to exceed every expectation of customers by constantly innovating our products and services.',
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a2c5b" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+    ),
+  },
+  {
+    tagClass: "tag-gold",
+    tag: "Social responsibility",
+    title: "Dedicated to Social Advancement",
+    text: "Our foremost responsibility is to society and humanity. Business comes second to humanity in our principles, by which every team member at Indel Capital is committed to conducting business with the highest moral and ethical standards. This helps us in serving our customers, employees, regulatory bodies, the finance industry, and the nation with integrity and transparency.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17479e" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+    ),
+  },
+  {
+    tagClass: "tag-green",
+    tag: "Employer of choice",
+    title: "Striving to Be the Employer of Choice",
+    text: "Relentless effort for an employee-friendly culture is engraved in our values, through which we make sure that every individual feels valued and comfortable. By creating an environment that attracts top talent and encourages professional growth with relentless support from strong management, we promote innovation and entrepreneurial spirit.",
+    className: "fifth-card",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17479e" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </svg>
+    ),
+  },
+];
+
+export default function IndelValues() {
+  return (
+    <>
+      <style>{styles}</style>
+      <div className="indel-section">
+        <h2 className="section-heading">
+          Our Core <span>Values</span>
+        </h2>
+        <p className="section-sub">
+          Five principles that guide every decision we make, from boardrooms to customer conversations.
+        </p>
+
+        <div className="values-grid">
+          {values.map((v) => (
+            <div
+              className={`value-card${v.className ? ` ${v.className}` : ""}`}
+              key={v.title}
+            >
+              <div className="card-icon-wrap">{v.icon}</div>
+              <h3 className="card-title">{v.title}</h3>
+              <p className="card-text">{v.text}</p>
+              {/* <span className={`card-tag ${v.tagClass}`}>{v.tag}</span> */}
             </div>
-        </section>
-    )
+          ))}
+        </div>
+      </div>
+    </>
+  );
 }

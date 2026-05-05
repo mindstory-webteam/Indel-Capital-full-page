@@ -101,7 +101,7 @@ const FILTER_GROUPS = [
 const CSS = `
   @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
   .sl-root * { box-sizing: border-box; margin: 0; padding: 0; }
-  .sl-root { font-family: 'DM Sans', sans-serif; background: #f8f9fb; min-height: 100vh; padding: 60px 0; }
+  .sl-root {  background: #f8f9fb; min-height: 100vh; padding: 60px 0; }
   .sl-wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
   .sl-header { margin-bottom: 36px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px; }
   .sl-eyebrow { font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #eb2525; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }

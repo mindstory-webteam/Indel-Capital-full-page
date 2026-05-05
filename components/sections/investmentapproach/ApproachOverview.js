@@ -215,7 +215,7 @@ export default function ApproachOverview() {
                         <span className="tagline">Our Approach</span>
                         <h2 className="main-title">A Different Approach to Capital</h2>
                         <p className="description">
-                            Indel Capital adopts a distinctive approach in the NBFC space. While many financial institutions structure Non-Convertible Debentures primarily around gold loan portfolios, Indel Capital introduces a more asset backed model. Our NCDs are structured against immovable assets and secured exposures, providing an additional layer of stability and confidence.
+                            Indel Capital adopts a distinctive approach in the NBFC space. While many financial institutions structure Non-Convertible Debentures primarily around loan collaterals, Indel Capital introduces a more asset backed model. Our NCDs are structured against immovable assets and secured exposures, providing an additional layer of stability and confidence.
                             This approach allows us to create financial instruments that are designed with strong underlying security, offering investors the comfort of tangible asset backing while enabling capital to be deployed productively into the real economy.
                         </p>
 
