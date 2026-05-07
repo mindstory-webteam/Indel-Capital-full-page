@@ -19,7 +19,7 @@ const NAV_ITEMS = [
   {
     label: "Insights",
     href: "/",
-    children: [{ label: "Blog", href: "/blog-page" }],
+    children: [{ label: "Blog", href: "/blog-details" }],
   },
   {
     label: "Contact Us",

@@ -40,7 +40,7 @@ export default function Menu() {
                     <Link href="/">Insights</Link>
                     <ul>
                         <li>
-                            <Link href="/blog-page">Blog</Link>
+                            <Link href="/blog-details">Blog</Link>
                         </li>
                         {/* <li><Link href="/team">Board of Directors</Link></li>
                         <li><Link href="/team-details">Director Details</Link></li>

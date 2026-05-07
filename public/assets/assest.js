@@ -157,6 +157,83 @@ export const testimonialData = [
 ];
 
 
+export const allBlogPosts = [
+    {
+        id: 1,
+        slug: "future-of-web-development-2024",
+        date: "Oct 12, 2025",
+        title: "The Future of Web Development in 2024",
+        image: "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg",
+        delay: "00ms",
+        content: {
+            heroImage: "assets/images/news/news-25.jpg",
+            heading: "The Future of Web Development in 2024",
+            body: [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+                "Pulvinar dolor aliquet netus ultrices neque...",
+            ],
+            listItems: [
+                "Platea sed fames at egestas amet feugiat laoreet",
+                "Duis et enim justo, in mauris posuere dolor magnis felis sapien.",
+                "Mauris donec ociis et magnis sapien etiam sapien sagittis.",
+                "Amet minim mollit non deserunt ullamco est sit aliqua dolor.",
+            ],
+            blockquote: {
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit amet purus tempor dui pharet consequat nibh.",
+                author: "Donald Richard",
+                role: "Finance Advisor",
+                authorImg: "assets/images/news/author-1.jpg",
+            },
+            subHeading: "How to Know Your Credit Score",
+            subBody: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+            galleryImages: [
+                "assets/images/news/news-30.jpg",
+                "assets/images/news/news-31.jpg",
+            ],
+            secondSection: {
+                heading: "When You Pay Your Credit Card Bill",
+                body: "Pulvinar dolor aliquet netus ultrices neque, mi non accumsan ullamcorper...",
+            },
+        },
+    },
+    {
+        id: 2,
+        slug: "mastering-gsap-animations",
+        date: "Oct 15, 2025",
+        title: "Mastering GSAP for Stunning Web Animations",
+        image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg",
+        delay: "300ms",
+        content: {
+            heroImage: "assets/images/news/news-25.jpg",
+            heading: "Mastering GSAP for Stunning Web Animations",
+            body: [
+                "GSAP is the gold standard for web animations...",
+                "With GSAP, you can animate anything CSS can touch...",
+            ],
+            subHeading: "Getting Started with GSAP",
+            subBody: "Install via npm and import into your project...",
+        },
+    },
+    {
+        id: 3,
+        slug: "seo-strategies-real-traffic",
+        date: "Oct 18, 2025",
+        title: "SEO Strategies That Drive Real Traffic",
+        image: "https://images.pexels.com/photos/5900226/pexels-photo-5900226.jpeg",
+        delay: "600ms",
+        content: {
+            heroImage: "assets/images/news/news-25.jpg",
+            heading: "SEO Strategies That Drive Real Traffic",
+            body: [
+                "Search engine optimization has evolved dramatically...",
+                "Modern SEO focuses on user intent and content quality...",
+            ],
+            subHeading: "Technical SEO Fundamentals",
+            subBody: "Core Web Vitals are now a ranking factor...",
+        },
+    },
+]
+
 export const insightsData = {
     subTitle: "Insights",
     mainTitle: "Our Latest Media Update",
