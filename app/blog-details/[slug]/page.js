@@ -40,7 +40,7 @@ export default async function BlogDetailPage({ params }) {
                                     <div className="news-block-three">
                                         <div className="inner-box">
                                             <figure className="image-box">
-                                                <img src={content.heroImage} alt={post.title} />
+                                                <img src={content.heroImage}  />
                                             </figure>
                                             <div className="lower-content">
                                                 <h3>{content.heading}</h3>
@@ -57,7 +57,7 @@ export default async function BlogDetailPage({ params }) {
                                                         <div className="icon-box">
                                                             <img src="assets/images/icons/icon-5.png" alt="" />
                                                         </div>
-                                                        <h5>"{content.blockquote.text}</h5>
+                                                        <h5>“{content.blockquote.text}”</h5>
                                                         <div className="author-inner">
                                                             <figure className="author-thumb">
                                                                 <img src={content.blockquote.authorImg || "assets/images/news/author-1.jpg"} alt="" />
