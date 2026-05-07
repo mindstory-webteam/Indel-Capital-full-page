@@ -158,16 +158,15 @@ export const testimonialData = [
 
 
 export const allBlogPosts = [
-   
     {
         id: 1,
         slug: "improve-credit-score-before-loan",
         date: "Jan 20, 2026",
         title: "How to Improve Your Credit Score",
-        image: "assets/images/blog-details/business-details1.webp",
+        image: "/assets/images/blog-details/businessdetails1.webp",
         delay: "00ms",
         content: {
-            heroImage: "assets/images/blog-details/business-details1.webp",
+            heroImage: "/assets/images/blog-details/businessdetails1.webp",
             heading: "How to Improve Your Credit Score Before Applying for a Loan",
             body: [
                 "When you apply for a loan, one of the first things lenders evaluate is your credit score. This three-digit number plays a major role in determining whether your loan gets approved, the interest rate you receive, and even the loan amount you're eligible for. A higher score can unlock better financial opportunities, while a low score can lead to rejections or costly borrowing.",
@@ -188,7 +187,7 @@ export const allBlogPosts = [
                 text: "Consistent financial discipline can make a significant difference over time. Paying your dues on time and managing credit wisely can boost your score and increase loan approval chances.",
                 author: "Indel Capital",
                 role: "Financial Advisory",
-                authorImg: "assets/images/news/author-1.jpg",
+                authorImg: "/assets/images/blog-details/person-img.jpeg",
             },
             subHeading: "What Is a Credit Score and Why Does It Matter?",
             subBody: "A credit score is a numerical summary of your creditworthiness based on your past financial behavior. In India, scores typically range from 300 to 900, and anything above 750 is considered good. Lenders use this score to assess your ability to repay a loan, your past repayment habits, and your overall financial discipline. A better score means faster loan approvals, lower interest rates, and higher loan limits.",
@@ -203,10 +202,10 @@ export const allBlogPosts = [
         slug: "personal-loan-vs-credit-card",
         date: "Jan 25, 2026",
         title: "Personal Loan vs Credit Card: Which is Better?",
-        image: "assets/images/blog-details/business-details2.webp",
+        image: "/assets/images/blog-details/businessdetails2.webp",
         delay: "300ms",
         content: {
-            heroImage: "assets/images/blog-details/business-details2.webp",
+            heroImage: "/assets/images/blog-details/businessdetails2.webp",
             heading: "Personal Loan vs Credit Card: Which is Better?",
             body: [
                 "When it comes to managing expenses or handling financial emergencies, two of the most common options people consider are personal loans and credit cards. Both offer quick access to funds, but they work very differently.",
@@ -224,7 +223,7 @@ export const allBlogPosts = [
                 text: "There is no one-size-fits-all answer. For large, planned expenses a personal loan is better. For small, short-term expenses a credit card is better. Used wisely, both can be powerful financial tools.",
                 author: "Indel Capital",
                 role: "Financial Advisory",
-                authorImg: "assets/images/news/author-1.jpg",
+                authorImg: "/assets/images/blog-details/person-img.jpeg",
             },
             subHeading: "When Should You Choose a Personal Loan?",
             subBody: "A personal loan is the better option if you need a large amount of money, want lower interest rates, prefer structured repayment, or are consolidating existing debts. It provides clarity and helps you plan your finances without surprises.",
@@ -239,10 +238,10 @@ export const allBlogPosts = [
         slug: "mistakes-to-avoid-personal-loan",
         date: "Feb 20, 2026",
         title: "10 Mistakes to Avoid When Taking a Personal Loan",
-        image: "assets/images/blog-details/business-details3.webp",
+        image: "/assets/images/blog-details/businessdetails3.webp",
         delay: "600ms",
         content: {
-            heroImage: "aassets/images/blog-details/business-details3.webp",
+            heroImage: "/assets/images/blog-details/businessdetails3.webp",
             heading: "10 Mistakes to Avoid When Taking a Personal Loan",
             body: [
                 "Taking a personal loan can be a smart financial move when managed properly. Whether it's for medical emergencies, home renovation, education, or consolidating debt, personal loans offer flexibility and quick access to funds.",
@@ -264,7 +263,7 @@ export const allBlogPosts = [
                 text: "Taking a personal loan is a responsibility that requires careful planning. Avoiding common mistakes can save you from financial stress and help you manage your loan efficiently.",
                 author: "Indel Capital",
                 role: "Financial Advisory",
-                authorImg: "assets/images/news/author-1.jpg",
+                authorImg: "/assets/images/blog-details/person-img.jpeg",
             },
             subHeading: "Final Thoughts",
             subBody: "Always take time to research, compare options, and understand the complete cost of borrowing before making a commitment. If you're looking for a reliable lending partner, consider exploring trusted financial institutions like Indel Capital, known for offering transparent and customer-friendly personal loan solutions.",

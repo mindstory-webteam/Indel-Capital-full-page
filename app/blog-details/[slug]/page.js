@@ -1,8 +1,5 @@
-// app/blog-details/[slug]/page.js
-
 import Layout from "@/components/layout/Layout"
 import { allBlogPosts } from "@/public/assets/assest"
-import Link from "next/link"
 import { notFound } from "next/navigation"
 
 export async function generateStaticParams() {
@@ -19,6 +16,8 @@ export default async function BlogDetailPage({ params }) {
 
     const { content } = post
 
+    if (!content) return notFound()
+
     return (
         <>
             <Layout
@@ -34,33 +33,61 @@ export default async function BlogDetailPage({ params }) {
             >
                 <section className="sidebar-page-container pt_120 pb_120">
                     <div className="auto-container">
-                        <div className="row clearfix">
-                            <div className="col-lg-8 col-md-12 col-sm-12 content-side">
+                        <div className="row clearfix justify-content-center">
+
+                            <div className="col-lg-10 col-md-12 col-sm-12 content-side">
                                 <div className="blog-details-content">
                                     <div className="news-block-three">
                                         <div className="inner-box">
-                                            <figure className="image-box">
-                                                <img src={content.heroImage}  />
+
+                                            {/* ── Hero image — height capped ── */}
+                                            <figure
+                                                className="image-box"
+                                                style={{ maxHeight: "420px", overflow: "hidden", margin: 0 }}
+                                            >
+                                                <img
+                                                    src={content.heroImage}
+                                                    alt={post.title}
+                                                    style={{
+                                                        width: "100%",
+                                                        height: "420px",
+                                                        objectFit: "cover",
+                                                        display: "block",
+                                                    }}
+                                                />
                                             </figure>
+
                                             <div className="lower-content">
-                                                <h3>{content.heading}</h3>
-                                                {content.body.map((para, i) => (
-                                                    <p key={i}>{para}</p>
-                                                ))}
-                                                <ul className="list-item mb_50 clearfix">
-                                                    {content.listItems && content.listItems.map((item, i) => (
-                                                        <li key={i}>{item}</li>
+                                                {content.heading && (
+                                                    <h3>{content.heading}</h3>
+                                                )}
+
+                                                {Array.isArray(content.body) &&
+                                                    content.body.map((para, i) => (
+                                                        <p key={i}>{para}</p>
                                                     ))}
-                                                </ul>
+
+                                                {Array.isArray(content.listItems) &&
+                                                    content.listItems.length > 0 && (
+                                                        <ul className="list-item mb_50 clearfix">
+                                                            {content.listItems.map((item, i) => (
+                                                                <li key={i}>{item}</li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
+
                                                 {content.blockquote && (
                                                     <blockquote>
                                                         <div className="icon-box">
-                                                            <img src="assets/images/icons/icon-5.png" alt="" />
+                                                            <img src="/assets/images/icons/icon-5.png" alt="quote icon" />
                                                         </div>
-                                                        <h5>“{content.blockquote.text}”</h5>
+                                                        <h5>"{content.blockquote.text}"</h5>
                                                         <div className="author-inner">
                                                             <figure className="author-thumb">
-                                                                <img src={content.blockquote.authorImg || "assets/images/news/author-1.jpg"} alt="" />
+                                                                <img
+                                                                    src={content.blockquote.authorImg || "/assets/images/news/author-1.jpg"}
+                                                                    alt={content.blockquote.author || "Author"}
+                                                                />
                                                             </figure>
                                                             <h3>{content.blockquote.author}</h3>
                                                             <span>{content.blockquote.role}</span>
@@ -73,38 +100,52 @@ export default async function BlogDetailPage({ params }) {
 
                                     <div className="content-one pb_20">
                                         <div className="text-box mb_50">
-                                            <h2>{content.subHeading}</h2>
-                                            <p>{content.subBody}</p>
+                                            {content.subHeading && (
+                                                <h2>{content.subHeading}</h2>
+                                            )}
+                                            {content.subBody && (
+                                                <p>{content.subBody}</p>
+                                            )}
                                         </div>
-                                        {content.galleryImages && (
-                                            <div className="image-box">
-                                                <div className="row clearfix">
-                                                    {content.galleryImages.map((img, i) => (
-                                                        <div key={i} className="col-lg-6 col-md-6 col-sm-12 image-column">
-                                                            <figure className="image">
-                                                                <img src={img} alt="" />
-                                                            </figure>
-                                                        </div>
-                                                    ))}
+
+                                        {Array.isArray(content.galleryImages) &&
+                                            content.galleryImages.length > 0 && (
+                                                <div className="image-box">
+                                                    <div className="row clearfix">
+                                                        {content.galleryImages.map((img, i) => (
+                                                            <div key={i} className="col-lg-6 col-md-6 col-sm-12 image-column">
+                                                                <figure className="image">
+                                                                    <img src={img} alt={`gallery image ${i + 1}`} />
+                                                                </figure>
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        )}
+                                            )}
                                     </div>
 
                                     {content.secondSection && (
                                         <div className="content-two mb_50">
-                                            <h2>{content.secondSection.heading}</h2>
-                                            <p>{content.secondSection.body}</p>
+                                            {content.secondSection.heading && (
+                                                <h2>{content.secondSection.heading}</h2>
+                                            )}
+                                            {content.secondSection.body && (
+                                                <p>{content.secondSection.body}</p>
+                                            )}
                                         </div>
                                     )}
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </section>
 
                 <section className="subscribe-section">
-                    <div className="pattern-layer" style={{ backgroundImage: "url(assets/images/shape/shape-5.png)" }}></div>
+                    <div
+                        className="pattern-layer"
+                        style={{ backgroundImage: "url(/assets/images/shape/shape-5.png)" }}
+                    ></div>
                     <div className="auto-container">
                         <div className="row align-items-center">
                             <div className="col-lg-6 col-md-12 col-sm-12 text-column">
@@ -116,8 +157,15 @@ export default async function BlogDetailPage({ params }) {
                                 <div className="form-inner ml_40">
                                     <form method="post" action="contact">
                                         <div className="form-group">
-                                            <input type="email" name="email" placeholder="Your email" required />
-                                            <button type="submit" className="theme-btn btn-two">Subscribe Now</button>
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                placeholder="Your email"
+                                                required
+                                            />
+                                            <button type="submit" className="theme-btn btn-two">
+                                                Subscribe Now
+                                            </button>
                                         </div>
                                     </form>
                                 </div>
