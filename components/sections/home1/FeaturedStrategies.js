@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, animate, useInView } from "framer-motion";
-import { ShieldCheck, TrendingUp, Coins, Zap, Globe } from "lucide-react";
+
 
 function Counter({ value, suffix = "" }) {
     const ref = useRef(null);
@@ -52,11 +52,10 @@ export default function FeaturedStrategies() {
             className: "bento-card card-red card-wide",
             type: "main-stat",
             label: "STRUCTURED FINANCE",
-            icon: <ShieldCheck size={24} />,
             value: "100",
             suffix: "%",
             title: "Asset-Backed Security",
-            description: "Indel Capital structures investments against immovable assets and secured exposures—ensuring stability, transparency, and strong investor confidence."
+            description: "Indel Capital structures investments against immovable assets and secured exposures ensuring stability, transparency, and strong investor confidence."
         },
         {
             id: 1,
@@ -70,23 +69,9 @@ export default function FeaturedStrategies() {
             description: "Backed by Indel Corporation, Indel Capital deploys capital into carefully selected opportunities that enable sustainable value creation."
         },
         {
-            id: 2,
-            className: "bento-card card-white",
-            type: "yield",
-            icon: <Coins size={20} strokeWidth={2.5} />,
-            iconClass: "blue",
-            title: "Strategic Yields",
-            value: "12.5",
-            suffix: "%",
-            subLabel: "Structured NCD Opportunities",
-            description: "Non-Convertible Debentures designed with strong underlying security, focusing on consistent returns through disciplined credit evaluation."
-        },
-        {
             id: 3,
-            className: "bento-card card-white",
+            className: "bento-card card-white card-wide",
             type: "tech",
-            icon: <Zap size={20} strokeWidth={2.5} />,
-            iconClass: "red",
             title: "Capital Tech",
             description: "Every investment is backed by rigorous risk assessment, asset valuation, and structured credit frameworks.",
             tags: [
@@ -99,7 +84,6 @@ export default function FeaturedStrategies() {
             className: "bento-card card-blue",
             type: "map",
             label: "INSTITUTIONAL FOOTPRINT",
-            icon: <Globe size={20} />,
             value: "500",
             suffix: "+",
             title: "Strong Financial Foundation",
@@ -143,7 +127,6 @@ export default function FeaturedStrategies() {
                                         <>
                                             <div className="label-group" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                                 <span className="indicator">{item.label}</span>
-                                                <span style={{ opacity: 0.6 }}>{item.icon}</span>
                                             </div>
                                             <div className="content-mid">
                                                 <h3 className="card-big-stat">
@@ -176,9 +159,6 @@ export default function FeaturedStrategies() {
                                     {item.type === "yield" && (
                                         <>
                                             <div className="header-small">
-                                                <div className={`icon-box ${item.iconClass}`}>
-                                                    {item.icon}
-                                                </div>
                                                 <h5>{item.title}</h5>
                                             </div>
                                             <div className="yield-content">
@@ -194,9 +174,6 @@ export default function FeaturedStrategies() {
                                     {item.type === "tech" && (
                                         <>
                                             <div className="header-small">
-                                                <div className={`icon-box ${item.iconClass}`}>
-                                                    {item.icon}
-                                                </div>
                                                 <h5>{item.title}</h5>
                                             </div>
                                             <p className="reach-text">{item.description}</p>
@@ -212,7 +189,6 @@ export default function FeaturedStrategies() {
                                         <>
                                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                                 <span className="pill-outline">{item.label}</span>
-                                                <span style={{ opacity: 0.4 }}>{item.icon}</span>
                                             </div>
                                             <div className="footer-content" style={{ marginTop: 'auto' }}>
                                                 <h4 className="white-text" style={{ fontSize: '38px', marginBottom: '5px' }}>
