@@ -260,7 +260,7 @@ export default function Footer() {
             </div>
 
             <div className="footer-col">
-              <h4>Touch with us</h4>
+              <h4>GET IN TOUCH</h4>
               <ul className="nav-list">
                 {quickLinks.slice(4).map((link) => (
                   <li key={link.label} className="nav-item">
