@@ -68,7 +68,7 @@ export default function Home() {
                                         <span><i className="icon-34"></i> {job.loc}</span>
                                         <span><i className="icon-35"></i> {job.date}</span>
                                     </div>
-                                    <Link href="/career-details" className="apply-btn">
+                                    <Link href="#" className="apply-btn">
                                         Apply Now
                                     </Link>
                                 </div>
