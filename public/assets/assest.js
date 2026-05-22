@@ -315,7 +315,7 @@ export const insightsData = {
 export const testimonialSliderOneData = [
     {
         id: "t1",
-        name: "Arjun K M",
+        name: "Arjun P M",
         designation: "Managing Director",
         image: "assets/images/testimonial/testimonials-1.jpeg",
         rating: 5,
@@ -323,7 +323,7 @@ export const testimonialSliderOneData = [
     },
     {
         id: "t2",
-        name: "Vishnu Menon",
+        name: "Vishnu T R ",
         designation: "CFO",
         image: "assets/images/testimonial/testimonials-2.jpeg",
         rating: 5,
@@ -331,7 +331,7 @@ export const testimonialSliderOneData = [
     },
     {
         id: "t3",
-        name: "Lakshmi K K",
+        name: "Lakshmi K M",
         designation: "CFO",
         image: "assets/images/testimonial/testimonials-3.jpeg",
         rating: 5,
@@ -347,7 +347,7 @@ export const testimonialSliderOneData = [
     },
     {
         id: "t5",
-        name: "Anjali Nair",
+        name: "Anjali N N",
         designation: "Managing Director",
         image: "assets/images/testimonial/testimonials-5.jpeg",
         rating: 5,
@@ -355,7 +355,7 @@ export const testimonialSliderOneData = [
     },
     {
         id: "t6",
-        name: "Suresh Pillai",
+        name: "Suresh P N",
         designation: "Director",
         image: "assets/images/testimonial/testimonials-6.jpeg",
         rating: 5,
