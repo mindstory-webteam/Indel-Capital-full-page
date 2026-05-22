@@ -22,7 +22,7 @@ export const AboutFeatures = [
  export   const featureData = [
         {
             icon: <ShieldCheck size={35} />,
-            title: "Secure Investment Solutions",
+            title: "Secured Investment Solutions",
             desc: "Your capital is protected with robust risk-managed strategies and disciplined financial oversight.",
             delay: "0ms"
         },

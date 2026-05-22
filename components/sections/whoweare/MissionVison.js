@@ -104,17 +104,27 @@ const styles = `
 `;
 
 const values = [
-  {
-    tagClass: "tag-blue",
-    tag: "Growth mindset",
-    title: "Aspiring Beyond Excellence",
-    text: "At Indel Capital, we view excellence not as a destination but as a stepping stone toward our ultimate goals. We are dedicated to exceeding excellence in every initiative we pursue.",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#17479e" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-      </svg>
-    ),
-  },
+{
+  tagClass: "tag-blue",
+  tag: "Growth mindset",
+  title: "Aspiring Beyond Excellence",
+  text: "At Indel Capital, we view excellence not as a destination but as a stepping stone toward our ultimate goals. We are dedicated to exceeding excellence in every initiative we pursue.",
+  icon: (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#17479e"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M4 16L10 10L14 14L20 8" />
+      <path d="M15 8H20V13" />
+    </svg>
+  ),
+},
   {
     tagClass: "tag-red",
     tag: "Business ethics",

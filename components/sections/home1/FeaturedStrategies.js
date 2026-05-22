@@ -73,11 +73,7 @@ export default function FeaturedStrategies() {
             className: "bento-card card-white card-wide",
             type: "tech",
             title: "Capital Tech",
-            description: "Every investment is backed by rigorous risk assessment, asset valuation, and structured credit frameworks.",
-            tags: [
-                { text: "Risk Assessment", color: "blue" },
-                { text: "Credit Discipline", color: "red" }
-            ]
+            description: "Every investment is backed by rigorous risk assessment, asset valuation, and structured credit frameworks. Our approach combines financial discipline with deep market understanding to ensure sustainable growth, capital protection, and long-term value creation."
         },
         {
             id: 4,
@@ -125,9 +121,9 @@ export default function FeaturedStrategies() {
                                 <div className="card-inner">
                                     {item.type === "main-stat" && (
                                         <>
-                                            <div className="label-group" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                            {/* <div className="label-group" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                                 <span className="indicator">{item.label}</span>
-                                            </div>
+                                            </div> */}
                                             <div className="content-mid">
                                                 <h3 className="card-big-stat">
                                                     <Counter value={item.value} />{item.suffix}
@@ -172,17 +168,12 @@ export default function FeaturedStrategies() {
                                     )}
 
                                     {item.type === "tech" && (
-                                        <>
-                                            <div className="header-small">
+                                        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start', height: '100%', textAlign: 'start' }}>
+                                            <div className="header-small" style={{ justifyContent: 'center',  }}>
                                                 <h5>{item.title}</h5>
                                             </div>
-                                            <p className="reach-text">{item.description}</p>
-                                            <div className="tag-group">
-                                                {item.tags.map((tag, idx) => (
-                                                    <span key={idx} className={`tag ${tag.color}`}>{tag.text}</span>
-                                                ))}
-                                            </div>
-                                        </>
+                                            <p className="reach-text" style={{ maxWidth: '800px' }}>{item.description}</p>
+                                        </div>
                                     )}
 
                                     {item.type === "map" && (
