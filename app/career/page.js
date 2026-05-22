@@ -5,20 +5,15 @@ import Link from "next/link"
 import { useState } from 'react'
 
 export default function Home() {
-    const allJobs = [
-        { id: 1, title: "Application Technical Analyst", dept: "Marketing", loc: "Manhattan, NY", date: "July 22, 2023" },
-        { id: 2, title: "Marketing Coordinator", dept: "Marketing", loc: "Manhattan, NY", date: "July 22, 2023" },
-        { id: 3, title: "Software Development Manager", dept: "Engineering", loc: "Manhattan, NY", date: "July 22, 2023" },
-        { id: 4, title: "Senior Operations Director", dept: "Operations", loc: "Manhattan, NY", date: "July 22, 2023" },
-        { id: 5, title: "Office Administration Manager", dept: "Administration", loc: "Manhattan, NY", date: "July 22, 2023" }
-    ];
+    const allJobs = [];
+
 
     return (
         <>
             <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Career Page" breadcrumbImg='assets/images/background/page-title.jpg'>
                 <div>
                     <style jsx>{`
-                        .custom-career-section { background: #f8fafc; padding: 60px 0; }
+                        .custom-career-section { background: #f8fafc; padding: 10px 0px 50px 0; }
                         .career-container { max-width: 1300px; margin: 0 auto; padding: 0 30px; }
                         .career-header { text-align: center; margin-bottom: 80px; }
                         .career-header h2 { font-size: 48px; font-weight: 800; color: #1a1a1a; letter-spacing: -1px; }
@@ -48,31 +43,30 @@ export default function Home() {
                         @media (max-width: 1200px) { .job-card { grid-template-columns: 80px 1fr 1fr; padding: 30px; } .apply-btn { grid-column: span 3; } }
                         @media (max-width: 991px) { .career-header h2 { font-size: 36px; } .job-card { grid-template-columns: 1fr; text-align: center; justify-items: center; gap: 20px; padding: 40px 20px; } .job-meta { flex-direction: row; justify-content: center; flex-wrap: wrap; margin-bottom: 10px; } .apply-btn { width: 100%; grid-column: auto; } }
                         @media (max-width: 575px) { .job-meta { flex-direction: column; align-items: center; } }
+
+                        .empty-state { text-align: center; padding: 80px 20px;  margin-top: 40px; transition: all 0.3s ease; }
+                        .empty-state .icon-wrapper { display: inline-flex; align-items: center; justify-content: center; width: 100px; height: 100px; background: rgba(23, 71, 158, 0.05); border-radius: 50%; color: #17479e; margin-bottom: 24px; }
+                        .empty-state h3 { font-size: 28px; font-weight: 800; color: #1a1a1a; margin-bottom: 12px; }
+                        .empty-state p { font-size: 18px; color: #555; max-width: 500px; margin: 0 auto; line-height: 1.6; }
                     `}</style>
 
                     <section className="custom-career-section">
                         <div className="career-container">
-                            <div className="career-header">
+                            {/* <div className="career-header">
                                 <span className="sub-t">Join Our Team</span>
                                 <h2>Explore Your Next Career Move</h2>
-                            </div>
+                            </div> */}
                             
-                            {allJobs.map((job) => (
-                                <div className="job-card" key={job.id}>
-                                    <img src={`assets/images/resource/career-${job.id}.jpg`} alt={job.title} className="job-img" />
-                                    <div className="job-info">
-                                        <h3>{job.title}</h3>
-                                        <span className="job-dept">{job.dept} Department</span>
-                                    </div>
-                                    <div className="job-meta">
-                                        <span><i className="icon-34"></i> {job.loc}</span>
-                                        <span><i className="icon-35"></i> {job.date}</span>
-                                    </div>
-                                    <Link href="#" className="apply-btn">
-                                        Apply Now
-                                    </Link>
+                            <div className="empty-state">
+                                <div className="icon-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
                                 </div>
-                            ))}
+                                <h3>No Openings Available Right Now</h3>
+                                <p>We're currently not hiring for any roles, but check back later! We'll post new opportunities as our team grows.</p>
+                            </div>
                         </div>
                     </section>
                 </div>
